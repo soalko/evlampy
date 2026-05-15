@@ -1,0 +1,574 @@
+Start testing: May 15 13:57 MSK
+----------------------------------------------------------
+1/16 Testing: test_message
+1/16 Test: test_message
+Command: "/Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/test_message"
+Directory: /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests
+"test_message" start time: May 15 13:57 MSK
+Output:
+----------------------------------------------------------
+Running main() from /Users/soldatov_a/CLionProjects/messanger_project/build-tests/_deps/googletest-src/googletest/src/gtest_main.cc
+[==========] Running 7 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 7 tests from MessageTests
+[ RUN      ] MessageTests.BuildSetsSenderReceiverAndPayload
+[       OK ] MessageTests.BuildSetsSenderReceiverAndPayload (0 ms)
+[ RUN      ] MessageTests.BuildSetsGroupFields
+[       OK ] MessageTests.BuildSetsGroupFields (0 ms)
+[ RUN      ] MessageTests.BuildGeneratesNonEmptyId
+[       OK ] MessageTests.BuildGeneratesNonEmptyId (0 ms)
+[ RUN      ] MessageTests.BuildGeneratesUniqueIds
+[       OK ] MessageTests.BuildGeneratesUniqueIds (0 ms)
+[ RUN      ] MessageTests.BuildSetsTimestampCloseToNow
+[       OK ] MessageTests.BuildSetsTimestampCloseToNow (0 ms)
+[ RUN      ] MessageTests.BuildSetsDefaultStatusToSent
+[       OK ] MessageTests.BuildSetsDefaultStatusToSent (0 ms)
+[ RUN      ] MessageTests.BuildSetsDeletedForAllFalse
+[       OK ] MessageTests.BuildSetsDeletedForAllFalse (0 ms)
+[----------] 7 tests from MessageTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 7 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 7 tests.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"test_message" end time: May 15 13:57 MSK
+"test_message" time elapsed: 00:00:00
+----------------------------------------------------------
+
+2/16 Testing: test_message_protocol
+2/16 Test: test_message_protocol
+Command: "/Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/test_message_protocol"
+Directory: /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests
+"test_message_protocol" start time: May 15 13:57 MSK
+Output:
+----------------------------------------------------------
+Running main() from /Users/soldatov_a/CLionProjects/messanger_project/build-tests/_deps/googletest-src/googletest/src/gtest_main.cc
+[==========] Running 7 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 7 tests from MessageProtocolTests
+[ RUN      ] MessageProtocolTests.SerializeDeserializeRoundtripDirectMessage
+[       OK ] MessageProtocolTests.SerializeDeserializeRoundtripDirectMessage (0 ms)
+[ RUN      ] MessageProtocolTests.SerializeDeserializeRoundtripGroupDeletedMessage
+[       OK ] MessageProtocolTests.SerializeDeserializeRoundtripGroupDeletedMessage (0 ms)
+[ RUN      ] MessageProtocolTests.DeserializeRejectsInvalidFieldCount
+[       OK ] MessageProtocolTests.DeserializeRejectsInvalidFieldCount (0 ms)
+[ RUN      ] MessageProtocolTests.Base64EncodeDecodeRoundtripBinary
+[       OK ] MessageProtocolTests.Base64EncodeDecodeRoundtripBinary (0 ms)
+[ RUN      ] MessageProtocolTests.Base64DecodeInvalidTextThrows
+[       OK ] MessageProtocolTests.Base64DecodeInvalidTextThrows (0 ms)
+[ RUN      ] MessageProtocolTests.Base64EncodeEmptyReturnsEmptyString
+[       OK ] MessageProtocolTests.Base64EncodeEmptyReturnsEmptyString (0 ms)
+[ RUN      ] MessageProtocolTests.Base64DecodeEmptyReturnsEmptyVector
+[       OK ] MessageProtocolTests.Base64DecodeEmptyReturnsEmptyVector (0 ms)
+[----------] 7 tests from MessageProtocolTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 7 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 7 tests.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"test_message_protocol" end time: May 15 13:57 MSK
+"test_message_protocol" time elapsed: 00:00:00
+----------------------------------------------------------
+
+3/16 Testing: test_tcp_server
+3/16 Test: test_tcp_server
+Command: "/Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/test_tcp_server"
+Directory: /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests
+"test_tcp_server" start time: May 15 13:57 MSK
+Output:
+----------------------------------------------------------
+Running main() from /Users/soldatov_a/CLionProjects/messanger_project/build-tests/_deps/googletest-src/googletest/src/gtest_main.cc
+[==========] Running 7 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 7 tests from TcpServerTests
+[ RUN      ] TcpServerTests.ConnectClientSucceeds
+[       OK ] TcpServerTests.ConnectClientSucceeds (0 ms)
+[ RUN      ] TcpServerTests.ConnectClientDuplicateFails
+[       OK ] TcpServerTests.ConnectClientDuplicateFails (0 ms)
+[ RUN      ] TcpServerTests.DisconnectRemovesFromOnline
+[       OK ] TcpServerTests.DisconnectRemovesFromOnline (0 ms)
+[ RUN      ] TcpServerTests.SendToOnlineClientDeliversPayload
+[       OK ] TcpServerTests.SendToOnlineClientDeliversPayload (0 ms)
+[ RUN      ] TcpServerTests.SendToOfflineClientFails
+[       OK ] TcpServerTests.SendToOfflineClientFails (0 ms)
+[ RUN      ] TcpServerTests.ListOnlineUsersContainsAllConnected
+[       OK ] TcpServerTests.ListOnlineUsersContainsAllConnected (0 ms)
+[ RUN      ] TcpServerTests.SendAfterDisconnectFails
+[       OK ] TcpServerTests.SendAfterDisconnectFails (0 ms)
+[----------] 7 tests from TcpServerTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 7 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 7 tests.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"test_tcp_server" end time: May 15 13:57 MSK
+"test_tcp_server" time elapsed: 00:00:00
+----------------------------------------------------------
+
+4/16 Testing: test_tcp_client
+4/16 Test: test_tcp_client
+Command: "/Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/test_tcp_client"
+Directory: /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests
+"test_tcp_client" start time: May 15 13:57 MSK
+Output:
+----------------------------------------------------------
+Running main() from /Users/soldatov_a/CLionProjects/messanger_project/build-tests/_deps/googletest-src/googletest/src/gtest_main.cc
+[==========] Running 7 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 7 tests from TcpClientTests
+[ RUN      ] TcpClientTests.ConnectSetsStateAndUsername
+[       OK ] TcpClientTests.ConnectSetsStateAndUsername (0 ms)
+[ RUN      ] TcpClientTests.ConnectTwiceFails
+[       OK ] TcpClientTests.ConnectTwiceFails (0 ms)
+[ RUN      ] TcpClientTests.DisconnectClearsState
+[       OK ] TcpClientTests.DisconnectClearsState (0 ms)
+[ RUN      ] TcpClientTests.SendBeforeConnectFails
+[       OK ] TcpClientTests.SendBeforeConnectFails (0 ms)
+[ RUN      ] TcpClientTests.SendAfterConnectDelivers
+[       OK ] TcpClientTests.SendAfterConnectDelivers (0 ms)
+[ RUN      ] TcpClientTests.ReceiveCallbackInvokedWithSender
+[       OK ] TcpClientTests.ReceiveCallbackInvokedWithSender (0 ms)
+[ RUN      ] TcpClientTests.SendAfterDisconnectFails
+[       OK ] TcpClientTests.SendAfterDisconnectFails (0 ms)
+[----------] 7 tests from TcpClientTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 7 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 7 tests.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"test_tcp_client" end time: May 15 13:57 MSK
+"test_tcp_client" time elapsed: 00:00:00
+----------------------------------------------------------
+
+5/16 Testing: test_encryption_aes
+5/16 Test: test_encryption_aes
+Command: "/Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/test_encryption_aes"
+Directory: /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests
+"test_encryption_aes" start time: May 15 13:57 MSK
+Output:
+----------------------------------------------------------
+Running main() from /Users/soldatov_a/CLionProjects/messanger_project/build-tests/_deps/googletest-src/googletest/src/gtest_main.cc
+[==========] Running 7 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 7 tests from AES256GCMStrategyTests
+[ RUN      ] AES256GCMStrategyTests.EncryptDecryptRoundtripText
+[       OK ] AES256GCMStrategyTests.EncryptDecryptRoundtripText (0 ms)
+[ RUN      ] AES256GCMStrategyTests.EncryptDecryptRoundtripEmptyPayload
+[       OK ] AES256GCMStrategyTests.EncryptDecryptRoundtripEmptyPayload (0 ms)
+[ RUN      ] AES256GCMStrategyTests.EncryptRejectsInvalidKeySize
+[       OK ] AES256GCMStrategyTests.EncryptRejectsInvalidKeySize (0 ms)
+[ RUN      ] AES256GCMStrategyTests.DecryptRejectsInvalidKeySize
+[       OK ] AES256GCMStrategyTests.DecryptRejectsInvalidKeySize (0 ms)
+[ RUN      ] AES256GCMStrategyTests.DecryptRejectsTooShortEnvelope
+[       OK ] AES256GCMStrategyTests.DecryptRejectsTooShortEnvelope (0 ms)
+[ RUN      ] AES256GCMStrategyTests.DecryptRejectsTamperedCiphertext
+[       OK ] AES256GCMStrategyTests.DecryptRejectsTamperedCiphertext (0 ms)
+[ RUN      ] AES256GCMStrategyTests.EncryptUsesRandomIv
+[       OK ] AES256GCMStrategyTests.EncryptUsesRandomIv (0 ms)
+[----------] 7 tests from AES256GCMStrategyTests (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 7 tests from 1 test suite ran. (1 ms total)
+[  PASSED  ] 7 tests.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"test_encryption_aes" end time: May 15 13:57 MSK
+"test_encryption_aes" time elapsed: 00:00:00
+----------------------------------------------------------
+
+6/16 Testing: test_encryption_key_factory
+6/16 Test: test_encryption_key_factory
+Command: "/Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/test_encryption_key_factory"
+Directory: /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests
+"test_encryption_key_factory" start time: May 15 13:57 MSK
+Output:
+----------------------------------------------------------
+Running main() from /Users/soldatov_a/CLionProjects/messanger_project/build-tests/_deps/googletest-src/googletest/src/gtest_main.cc
+[==========] Running 7 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 7 tests from OpenSSLKeyFactoryTests
+[ RUN      ] OpenSSLKeyFactoryTests.GenerateRsaPairHasPemHeaders
+[       OK ] OpenSSLKeyFactoryTests.GenerateRsaPairHasPemHeaders (40 ms)
+[ RUN      ] OpenSSLKeyFactoryTests.GenerateSymmetricKeyDefaultSizeIs32
+[       OK ] OpenSSLKeyFactoryTests.GenerateSymmetricKeyDefaultSizeIs32 (0 ms)
+[ RUN      ] OpenSSLKeyFactoryTests.GenerateSymmetricKeyCustomSize
+[       OK ] OpenSSLKeyFactoryTests.GenerateSymmetricKeyCustomSize (0 ms)
+[ RUN      ] OpenSSLKeyFactoryTests.EncryptDecryptRoundtrip
+[       OK ] OpenSSLKeyFactoryTests.EncryptDecryptRoundtrip (51 ms)
+[ RUN      ] OpenSSLKeyFactoryTests.EncryptWithInvalidPublicKeyThrows
+[       OK ] OpenSSLKeyFactoryTests.EncryptWithInvalidPublicKeyThrows (0 ms)
+[ RUN      ] OpenSSLKeyFactoryTests.DecryptWithInvalidPrivateKeyThrows
+[       OK ] OpenSSLKeyFactoryTests.DecryptWithInvalidPrivateKeyThrows (29 ms)
+[ RUN      ] OpenSSLKeyFactoryTests.OaepProducesDifferentCiphertextForSameInput
+[       OK ] OpenSSLKeyFactoryTests.OaepProducesDifferentCiphertextForSameInput (44 ms)
+[----------] 7 tests from OpenSSLKeyFactoryTests (166 ms total)
+
+[----------] Global test environment tear-down
+[==========] 7 tests from 1 test suite ran. (166 ms total)
+[  PASSED  ] 7 tests.
+<end of output>
+Test time =   0.17 sec
+----------------------------------------------------------
+Test Passed.
+"test_encryption_key_factory" end time: May 15 13:57 MSK
+"test_encryption_key_factory" time elapsed: 00:00:00
+----------------------------------------------------------
+
+7/16 Testing: test_chat_server
+7/16 Test: test_chat_server
+Command: "/Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/test_chat_server"
+Directory: /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests
+"test_chat_server" start time: May 15 13:57 MSK
+Output:
+----------------------------------------------------------
+Running main() from /Users/soldatov_a/CLionProjects/messanger_project/build-tests/_deps/googletest-src/googletest/src/gtest_main.cc
+[==========] Running 12 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 12 tests from ChatServerTests
+[ RUN      ] ChatServerTests.RegisterUserSuccess
+[       OK ] ChatServerTests.RegisterUserSuccess (0 ms)
+[ RUN      ] ChatServerTests.RegisterDuplicateFails
+[       OK ] ChatServerTests.RegisterDuplicateFails (0 ms)
+[ RUN      ] ChatServerTests.AuthenticateSuccessAndFail
+[       OK ] ChatServerTests.AuthenticateSuccessAndFail (0 ms)
+[ RUN      ] ChatServerTests.PublicKeyLookupWorks
+[       OK ] ChatServerTests.PublicKeyLookupWorks (0 ms)
+[ RUN      ] ChatServerTests.BlockAndUnblockFlow
+[       OK ] ChatServerTests.BlockAndUnblockFlow (1 ms)
+[ RUN      ] ChatServerTests.ResetPasswordHashByAdmin
+[       OK ] ChatServerTests.ResetPasswordHashByAdmin (0 ms)
+[ RUN      ] ChatServerTests.ContactsAddRemoveList
+[       OK ] ChatServerTests.ContactsAddRemoveList (0 ms)
+[ RUN      ] ChatServerTests.StoreAndReadConversation
+[       OK ] ChatServerTests.StoreAndReadConversation (0 ms)
+[ RUN      ] ChatServerTests.MarkDeliveredAndReadFlow
+[       OK ] ChatServerTests.MarkDeliveredAndReadFlow (0 ms)
+[ RUN      ] ChatServerTests.DeleteMessageForAllOnlyBySender
+[       OK ] ChatServerTests.DeleteMessageForAllOnlyBySender (0 ms)
+[ RUN      ] ChatServerTests.GroupCreateAndSendConversation
+[       OK ] ChatServerTests.GroupCreateAndSendConversation (0 ms)
+[ RUN      ] ChatServerTests.AuditLogHasEntriesAfterOperations
+[       OK ] ChatServerTests.AuditLogHasEntriesAfterOperations (0 ms)
+[----------] 12 tests from ChatServerTests (6 ms total)
+
+[----------] Global test environment tear-down
+[==========] 12 tests from 1 test suite ran. (6 ms total)
+[  PASSED  ] 12 tests.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"test_chat_server" end time: May 15 13:57 MSK
+"test_chat_server" time elapsed: 00:00:00
+----------------------------------------------------------
+
+8/16 Testing: test_chat_client
+8/16 Test: test_chat_client
+Command: "/Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/test_chat_client"
+Directory: /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests
+"test_chat_client" start time: May 15 13:57 MSK
+Output:
+----------------------------------------------------------
+Running main() from /Users/soldatov_a/CLionProjects/messanger_project/build-tests/_deps/googletest-src/googletest/src/gtest_main.cc
+[==========] Running 11 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 11 tests from ChatClientTests
+[ RUN      ] ChatClientTests.RegisterAndLoginSuccess
+[INFO] 2026-05-15 13:57:57 | User 'alice' registered
+[INFO] 2026-05-15 13:57:57 | User 'alice' logged in
+[       OK ] ChatClientTests.RegisterAndLoginSuccess (34 ms)
+[ RUN      ] ChatClientTests.LoginFailsWithWrongPassword
+[INFO] 2026-05-15 13:57:57 | User 'alice' registered
+[       OK ] ChatClientTests.LoginFailsWithWrongPassword (50 ms)
+[ RUN      ] ChatClientTests.LoginFailsForUnknownUser
+[       OK ] ChatClientTests.LoginFailsForUnknownUser (0 ms)
+[ RUN      ] ChatClientTests.ReloginAfterLogoutSucceeds
+[INFO] 2026-05-15 13:57:57 | User 'alice' registered
+[INFO] 2026-05-15 13:57:57 | User 'alice' logged in
+[INFO] 2026-05-15 13:57:57 | User 'alice' logged out
+[INFO] 2026-05-15 13:57:57 | User 'alice' logged in
+[       OK ] ChatClientTests.ReloginAfterLogoutSucceeds (26 ms)
+[ RUN      ] ChatClientTests.LoginNewClientInstanceWithPersistedKeysSucceeds
+[INFO] 2026-05-15 13:57:57 | User 'alice' registered
+[INFO] 2026-05-15 13:57:57 | User 'alice' logged in
+[INFO] 2026-05-15 13:57:57 | User 'alice' logged out
+[INFO] 2026-05-15 13:57:57 | User 'alice' logged in
+[       OK ] ChatClientTests.LoginNewClientInstanceWithPersistedKeysSucceeds (19 ms)
+[ RUN      ] ChatClientTests.SendMessageAndReadConversation
+[INFO] 2026-05-15 13:57:57 | User 'alice' registered
+[INFO] 2026-05-15 13:57:57 | User 'bob' registered
+[INFO] 2026-05-15 13:57:57 | User 'alice' logged in
+[INFO] 2026-05-15 13:57:57 | User 'bob' logged in
+[INFO] 2026-05-15 13:57:57 | User 'bob' received message from 'alice'
+[       OK ] ChatClientTests.SendMessageAndReadConversation (35 ms)
+[ RUN      ] ChatClientTests.SendMessageToUnknownUserFails
+[INFO] 2026-05-15 13:57:57 | User 'alice' registered
+[INFO] 2026-05-15 13:57:57 | User 'alice' logged in
+[ERROR] 2026-05-15 13:57:57 | Receiver 'nobody' not found
+[       OK ] ChatClientTests.SendMessageToUnknownUserFails (31 ms)
+[ RUN      ] ChatClientTests.ContactsAddAndRemoveFlow
+[INFO] 2026-05-15 13:57:57 | User 'alice' registered
+[INFO] 2026-05-15 13:57:58 | User 'bob' registered
+[INFO] 2026-05-15 13:57:58 | User 'alice' logged in
+[       OK ] ChatClientTests.ContactsAddAndRemoveFlow (39 ms)
+[ RUN      ] ChatClientTests.CreateGroupAndSendGroupMessage
+[INFO] 2026-05-15 13:57:58 | User 'alice' registered
+[INFO] 2026-05-15 13:57:58 | User 'bob' registered
+[INFO] 2026-05-15 13:57:58 | User 'alice' logged in
+[INFO] 2026-05-15 13:57:58 | User 'bob' logged in
+[INFO] 2026-05-15 13:57:58 | User 'bob' received message from 'alice'
+[       OK ] ChatClientTests.CreateGroupAndSendGroupMessage (114 ms)
+[ RUN      ] ChatClientTests.DeleteMessageForAllFlow
+[INFO] 2026-05-15 13:57:58 | User 'alice' registered
+[INFO] 2026-05-15 13:57:58 | User 'bob' registered
+[INFO] 2026-05-15 13:57:58 | User 'alice' logged in
+[INFO] 2026-05-15 13:57:58 | User 'bob' logged in
+[INFO] 2026-05-15 13:57:58 | User 'bob' received message from 'alice'
+[       OK ] ChatClientTests.DeleteMessageForAllFlow (34 ms)
+[ RUN      ] ChatClientTests.ListOnlineUsersReflectsCurrentState
+[INFO] 2026-05-15 13:57:58 | User 'alice' registered
+[INFO] 2026-05-15 13:57:58 | User 'bob' registered
+[INFO] 2026-05-15 13:57:58 | User 'alice' logged in
+[INFO] 2026-05-15 13:57:58 | User 'bob' logged in
+[       OK ] ChatClientTests.ListOnlineUsersReflectsCurrentState (130 ms)
+[----------] 11 tests from ChatClientTests (515 ms total)
+
+[----------] Global test environment tear-down
+[==========] 11 tests from 1 test suite ran. (515 ms total)
+[  PASSED  ] 11 tests.
+<end of output>
+Test time =   0.52 sec
+----------------------------------------------------------
+Test Passed.
+"test_chat_client" end time: May 15 13:57 MSK
+"test_chat_client" time elapsed: 00:00:00
+----------------------------------------------------------
+
+9/16 Testing: test_patterns_observer
+9/16 Test: test_patterns_observer
+Command: "/Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/test_patterns_observer"
+Directory: /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests
+"test_patterns_observer" start time: May 15 13:57 MSK
+Output:
+----------------------------------------------------------
+Running main() from /Users/soldatov_a/CLionProjects/messanger_project/build-tests/_deps/googletest-src/googletest/src/gtest_main.cc
+[==========] Running 7 tests from 1 test suite.
+[----------] Global test environment set-up.
+[----------] 7 tests from ObserverTests
+[ RUN      ] ObserverTests.AttachNotifiesObserver
+[       OK ] ObserverTests.AttachNotifiesObserver (0 ms)
+[ RUN      ] ObserverTests.DetachStopsNotifications
+[       OK ] ObserverTests.DetachStopsNotifications (0 ms)
+[ RUN      ] ObserverTests.MultipleObserversReceiveEvent
+[       OK ] ObserverTests.MultipleObserversReceiveEvent (0 ms)
+[ RUN      ] ObserverTests.DuplicateAttachProducesDuplicateNotification
+[       OK ] ObserverTests.DuplicateAttachProducesDuplicateNotification (0 ms)
+[ RUN      ] ObserverTests.NullObserverIgnored
+[       OK ] ObserverTests.NullObserverIgnored (0 ms)
+[ RUN      ] ObserverTests.DetachUnknownObserverHasNoEffect
+[       OK ] ObserverTests.DetachUnknownObserverHasNoEffect (0 ms)
+[ RUN      ] ObserverTests.NotificationOrderMatchesAttachOrder
+[       OK ] ObserverTests.NotificationOrderMatchesAttachOrder (0 ms)
+[----------] 7 tests from ObserverTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 7 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 7 tests.
+<end of output>
+Test time =   0.01 sec
+----------------------------------------------------------
+Test Passed.
+"test_patterns_observer" end time: May 15 13:57 MSK
+"test_patterns_observer" time elapsed: 00:00:00
+----------------------------------------------------------
+
+10/16 Testing: test_patterns_command_logger
+10/16 Test: test_patterns_command_logger
+Command: "/Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/test_patterns_command_logger"
+Directory: /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests
+"test_patterns_command_logger" start time: May 15 13:57 MSK
+Output:
+----------------------------------------------------------
+Running main() from /Users/soldatov_a/CLionProjects/messanger_project/build-tests/_deps/googletest-src/googletest/src/gtest_main.cc
+[==========] Running 7 tests from 2 test suites.
+[----------] Global test environment set-up.
+[----------] 3 tests from CommandLoggerTests
+[ RUN      ] CommandLoggerTests.SendMessageCommandExecuteSuccess
+[INFO] 2026-05-15 13:57:58 | User 'alice' registered
+[INFO] 2026-05-15 13:57:58 | User 'bob' registered
+[INFO] 2026-05-15 13:57:58 | User 'alice' logged in
+[INFO] 2026-05-15 13:57:58 | User 'bob' logged in
+[INFO] 2026-05-15 13:57:58 | User 'bob' received message from 'alice'
+[       OK ] CommandLoggerTests.SendMessageCommandExecuteSuccess (36 ms)
+[ RUN      ] CommandLoggerTests.SendMessageCommandFailsWhenNotLoggedIn
+[INFO] 2026-05-15 13:57:58 | User 'alice' registered
+[INFO] 2026-05-15 13:57:58 | User 'bob' registered
+[       OK ] CommandLoggerTests.SendMessageCommandFailsWhenNotLoggedIn (32 ms)
+[ RUN      ] CommandLoggerTests.SendMessageCommandFailsForUnknownReceiver
+[INFO] 2026-05-15 13:57:58 | User 'alice' registered
+[INFO] 2026-05-15 13:57:58 | User 'alice' logged in
+[ERROR] 2026-05-15 13:57:58 | Receiver 'ghost' not found
+[       OK ] CommandLoggerTests.SendMessageCommandFailsForUnknownReceiver (19 ms)
+[----------] 3 tests from CommandLoggerTests (88 ms total)
+
+[----------] 4 tests from CommandLoggerStandaloneTests
+[ RUN      ] CommandLoggerStandaloneTests.LoggerSingletonReturnsSameInstance
+[       OK ] CommandLoggerStandaloneTests.LoggerSingletonReturnsSameInstance (0 ms)
+[ RUN      ] CommandLoggerStandaloneTests.LoggerInfoDoesNotThrow
+[INFO] 2026-05-15 13:57:58 | test info
+[       OK ] CommandLoggerStandaloneTests.LoggerInfoDoesNotThrow (0 ms)
+[ RUN      ] CommandLoggerStandaloneTests.LoggerErrorDoesNotThrow
+[ERROR] 2026-05-15 13:57:58 | test error
+[       OK ] CommandLoggerStandaloneTests.LoggerErrorDoesNotThrow (0 ms)
+[ RUN      ] CommandLoggerStandaloneTests.LoggerSupportsMultipleCalls
+[INFO] 2026-05-15 13:57:58 | line1
+[INFO] 2026-05-15 13:57:58 | line2
+[ERROR] 2026-05-15 13:57:58 | line3
+[       OK ] CommandLoggerStandaloneTests.LoggerSupportsMultipleCalls (0 ms)
+[----------] 4 tests from CommandLoggerStandaloneTests (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 7 tests from 2 test suites ran. (88 ms total)
+[  PASSED  ] 7 tests.
+<end of output>
+Test time =   0.10 sec
+----------------------------------------------------------
+Test Passed.
+"test_patterns_command_logger" end time: May 15 13:57 MSK
+"test_patterns_command_logger" time elapsed: 00:00:00
+----------------------------------------------------------
+
+11/16 Testing: scenario_auth_flow
+11/16 Test: scenario_auth_flow
+Command: "/Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/scenario_auth_flow"
+Directory: /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests
+"scenario_auth_flow" start time: May 15 13:57 MSK
+Output:
+----------------------------------------------------------
+[INFO] 2026-05-15 13:57:58 | User 'scenario_alice' registered
+[INFO] 2026-05-15 13:57:58 | User 'scenario_alice' logged in
+[INFO] 2026-05-15 13:57:58 | User 'scenario_alice' logged out
+[INFO] 2026-05-15 13:57:58 | User 'scenario_alice' logged in
+scenario_auth_flow: PASS
+<end of output>
+Test time =   0.45 sec
+----------------------------------------------------------
+Test Passed.
+"scenario_auth_flow" end time: May 15 13:57 MSK
+"scenario_auth_flow" time elapsed: 00:00:00
+----------------------------------------------------------
+
+12/16 Testing: scenario_direct_message
+12/16 Test: scenario_direct_message
+Command: "/Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/scenario_direct_message"
+Directory: /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests
+"scenario_direct_message" start time: May 15 13:57 MSK
+Output:
+----------------------------------------------------------
+[INFO] 2026-05-15 13:57:59 | User 'dm_alice' registered
+[INFO] 2026-05-15 13:57:59 | User 'dm_bob' registered
+[INFO] 2026-05-15 13:57:59 | User 'dm_alice' logged in
+[INFO] 2026-05-15 13:57:59 | User 'dm_bob' logged in
+[INFO] 2026-05-15 13:57:59 | User 'dm_bob' received message from 'dm_alice'
+scenario_direct_message: PASS
+<end of output>
+Test time =   0.42 sec
+----------------------------------------------------------
+Test Passed.
+"scenario_direct_message" end time: May 15 13:57 MSK
+"scenario_direct_message" time elapsed: 00:00:00
+----------------------------------------------------------
+
+13/16 Testing: scenario_group_flow
+13/16 Test: scenario_group_flow
+Command: "/Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/scenario_group_flow"
+Directory: /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests
+"scenario_group_flow" start time: May 15 13:57 MSK
+Output:
+----------------------------------------------------------
+[INFO] 2026-05-15 13:57:59 | User 'group_alice' registered
+[INFO] 2026-05-15 13:57:59 | User 'group_bob' registered
+[INFO] 2026-05-15 13:57:59 | User 'group_alice' logged in
+[INFO] 2026-05-15 13:57:59 | User 'group_bob' logged in
+[INFO] 2026-05-15 13:57:59 | User 'group_bob' received message from 'group_alice'
+scenario_group_flow: PASS
+<end of output>
+Test time =   0.36 sec
+----------------------------------------------------------
+Test Passed.
+"scenario_group_flow" end time: May 15 13:57 MSK
+"scenario_group_flow" time elapsed: 00:00:00
+----------------------------------------------------------
+
+14/16 Testing: scenario_delete_for_all
+14/16 Test: scenario_delete_for_all
+Command: "/Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/scenario_delete_for_all"
+Directory: /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests
+"scenario_delete_for_all" start time: May 15 13:57 MSK
+Output:
+----------------------------------------------------------
+[INFO] 2026-05-15 13:58:00 | User 'del_alice' registered
+[INFO] 2026-05-15 13:58:00 | User 'del_bob' registered
+[INFO] 2026-05-15 13:58:00 | User 'del_alice' logged in
+[INFO] 2026-05-15 13:58:00 | User 'del_bob' logged in
+[INFO] 2026-05-15 13:58:00 | User 'del_bob' received message from 'del_alice'
+scenario_delete_for_all: PASS
+<end of output>
+Test time =   0.38 sec
+----------------------------------------------------------
+Test Passed.
+"scenario_delete_for_all" end time: May 15 13:58 MSK
+"scenario_delete_for_all" time elapsed: 00:00:00
+----------------------------------------------------------
+
+15/16 Testing: scenario_admin_actions
+15/16 Test: scenario_admin_actions
+Command: "/Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/scenario_admin_actions"
+Directory: /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests
+"scenario_admin_actions" start time: May 15 13:58 MSK
+Output:
+----------------------------------------------------------
+scenario_admin_actions: PASS
+<end of output>
+Test time =   0.34 sec
+----------------------------------------------------------
+Test Passed.
+"scenario_admin_actions" end time: May 15 13:58 MSK
+"scenario_admin_actions" time elapsed: 00:00:00
+----------------------------------------------------------
+
+16/16 Testing: scenario_persistence_relogin
+16/16 Test: scenario_persistence_relogin
+Command: "/Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/scenario_persistence_relogin"
+Directory: /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests
+"scenario_persistence_relogin" start time: May 15 13:58 MSK
+Output:
+----------------------------------------------------------
+[INFO] 2026-05-15 13:58:00 | User 'persist_user' registered
+[INFO] 2026-05-15 13:58:00 | User 'persist_user' logged in
+[INFO] 2026-05-15 13:58:00 | User 'persist_user' logged out
+[INFO] 2026-05-15 13:58:00 | User 'persist_user' logged in
+scenario_persistence_relogin: PASS
+<end of output>
+Test time =   0.32 sec
+----------------------------------------------------------
+Test Passed.
+"scenario_persistence_relogin" end time: May 15 13:58 MSK
+"scenario_persistence_relogin" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: May 15 13:58 MSK

@@ -1,0 +1,1 @@
+CMakeLists.txt not found in /Users/soldatov_a/CLionProjects/messanger_project Select CMakeLists.txt

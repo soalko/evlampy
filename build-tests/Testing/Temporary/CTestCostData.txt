@@ -1,0 +1,17 @@
+test_message 2 0.00321106
+test_message_protocol 2 0.00310919
+test_tcp_server 2 0.0031515
+test_tcp_client 2 0.00303673
+test_encryption_aes 2 0.00374798
+test_encryption_key_factory 2 0.0865757
+test_chat_server 2 0.00726137
+test_chat_client 2 0.26158
+test_patterns_observer 2 0.00359063
+test_patterns_command_logger 2 0.0482941
+scenario_auth_flow 2 0.227175
+scenario_direct_message 2 0.209537
+scenario_group_flow 2 0.181737
+scenario_delete_for_all 2 0.18841
+scenario_admin_actions 1 0.336456
+scenario_persistence_relogin 2 0.158297
+---

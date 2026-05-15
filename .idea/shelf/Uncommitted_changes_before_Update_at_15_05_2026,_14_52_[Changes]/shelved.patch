@@ -1,0 +1,1413 @@
+Index: src/network/MessageProtocol.cpp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#include \"network/MessageProtocol.h\"\n\n#include <openssl/evp.h>\n\n#include <sstream>\n#include <stdexcept>\n\nnamespace {\nstd::vector<std::string> split(const std::string& text, char delimiter) {\n\tstd::vector<std::string> parts;\n\tstd::string current;\n\tfor (char ch : text) {\n\t\tif (ch == delimiter) {\n\t\t\tparts.push_back(current);\n\t\t\tcurrent.clear();\n\t\t} else {\n\t\t\tcurrent.push_back(ch);\n\t\t}\n\t}\n\tparts.push_back(current);\n\treturn parts;\n}\n}\n\nstd::string MessageProtocol::serialize(const Message& message) {\n\tstd::ostringstream os;\n\tos << message.messageId << '|'\n\t   << message.sender << '|'\n\t   << message.receiver << '|'\n\t   << message.timestamp << '|'\n\t   << static_cast<int>(message.status) << '|'\n\t   << base64Encode(message.encryptedSessionKey) << '|'\n\t   << base64Encode(message.encryptedPayload);\n\treturn os.str();\n}\n\nMessage MessageProtocol::deserialize(const std::string& wireData) {\n\tconst auto parts = split(wireData, '|');\n\tif (parts.size() != 7) {\n\t\tthrow std::invalid_argument(\"Wire message has invalid field count\");\n\t}\n\n\tMessage message;\n\tmessage.messageId = parts[0];\n\tmessage.sender = parts[1];\n\tmessage.receiver = parts[2];\n\tmessage.timestamp = std::stoll(parts[3]);\n\tmessage.status = static_cast<MessageStatus>(std::stoi(parts[4]));\n\tmessage.encryptedSessionKey = base64Decode(parts[5]);\n\tmessage.encryptedPayload = base64Decode(parts[6]);\n\treturn message;\n}\n\nstd::string MessageProtocol::base64Encode(const std::vector<uint8_t>& data) {\n\tif (data.empty()) {\n\t\treturn {};\n\t}\n\n\tconst int outLen = 4 * ((static_cast<int>(data.size()) + 2) / 3);\n\tstd::string out(static_cast<std::size_t>(outLen), '\\0');\n\tconst int written = EVP_EncodeBlock(reinterpret_cast<unsigned char*>(&out[0]),\n\t\t\t\t\t\t\t\t\t\tdata.data(),\n\t\t\t\t\t\t\t\t\t\tstatic_cast<int>(data.size()));\n\tif (written <= 0) {\n\t\tthrow std::runtime_error(\"Base64 encode failed\");\n\t}\n\tout.resize(static_cast<std::size_t>(written));\n\treturn out;\n}\n\nstd::vector<uint8_t> MessageProtocol::base64Decode(const std::string& base64) {\n\tif (base64.empty()) {\n\t\treturn {};\n\t}\n\n\tstd::vector<uint8_t> out((base64.size() * 3) / 4 + 2);\n\tconst int written = EVP_DecodeBlock(out.data(),\n\t\t\t\t\t\t\t\t\t\treinterpret_cast<const unsigned char*>(base64.data()),\n\t\t\t\t\t\t\t\t\t\tstatic_cast<int>(base64.size()));\n\tif (written < 0) {\n\t\tthrow std::runtime_error(\"Base64 decode failed\");\n\t}\n\n\tstd::size_t pad = 0;\n\tif (!base64.empty() && base64.back() == '=') {\n\t\tpad++;\n\t\tif (base64.size() > 1 && base64[base64.size() - 2] == '=') {\n\t\t\tpad++;\n\t\t}\n\t}\n\n\tout.resize(static_cast<std::size_t>(written) - pad);\n\treturn out;\n}\n\n
+===================================================================
+diff --git a/src/network/MessageProtocol.cpp b/src/network/MessageProtocol.cpp
+--- a/src/network/MessageProtocol.cpp	(revision e6ed47be9e5bd23ff94a4fecbc1255876a7339f4)
++++ b/src/network/MessageProtocol.cpp	(date 1778839959643)
+@@ -27,16 +27,20 @@
+ 	os << message.messageId << '|'
+ 	   << message.sender << '|'
+ 	   << message.receiver << '|'
++	   << message.chatId << '|'
++	   << (message.isGroupMessage ? 1 : 0) << '|'
+ 	   << message.timestamp << '|'
+ 	   << static_cast<int>(message.status) << '|'
+ 	   << base64Encode(message.encryptedSessionKey) << '|'
+-	   << base64Encode(message.encryptedPayload);
++	   << base64Encode(message.senderEncryptedSessionKey) << '|'
++	   << base64Encode(message.encryptedPayload) << '|'
++	   << (message.deletedForAll ? 1 : 0);
+ 	return os.str();
+ }
+ 
+ Message MessageProtocol::deserialize(const std::string& wireData) {
+ 	const auto parts = split(wireData, '|');
+-	if (parts.size() != 7) {
++	if (parts.size() != 11) {
+ 		throw std::invalid_argument("Wire message has invalid field count");
+ 	}
+ 
+@@ -44,10 +48,14 @@
+ 	message.messageId = parts[0];
+ 	message.sender = parts[1];
+ 	message.receiver = parts[2];
+-	message.timestamp = std::stoll(parts[3]);
+-	message.status = static_cast<MessageStatus>(std::stoi(parts[4]));
+-	message.encryptedSessionKey = base64Decode(parts[5]);
+-	message.encryptedPayload = base64Decode(parts[6]);
++	message.chatId = parts[3];
++	message.isGroupMessage = (parts[4] == "1");
++	message.timestamp = std::stoll(parts[5]);
++	message.status = static_cast<MessageStatus>(std::stoi(parts[6]));
++	message.encryptedSessionKey = base64Decode(parts[7]);
++	message.senderEncryptedSessionKey = base64Decode(parts[8]);
++	message.encryptedPayload = base64Decode(parts[9]);
++	message.deletedForAll = (parts[10] == "1");
+ 	return message;
+ }
+ 
+Index: src/chat/ChatClient.cpp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#include \"chat/ChatClient.h\"\n\n#include \"network/MessageProtocol.h\"\n#include \"patterns/Logger.h\"\n\n#include <openssl/evp.h>\n\n#include <stdexcept>\n\nChatClient::ChatClient(std::string username,\n\t\t\t\t\t   ChatServer& server,\n\t\t\t\t\t   OpenSSLKeyFactory& keyFactory,\n\t\t\t\t\t   AES256GCMStrategy& encryption)\n\t: username_(std::move(username)),\n\t  server_(server),\n\t  keyFactory_(keyFactory),\n\t  encryption_(encryption),\n\t  transport_(server.transport()) {\n\ttransport_.setOnMessage([this](const std::string& fromUser, const std::string& payload) {\n\t\thandleIncoming(fromUser, payload);\n\t});\n}\n\nbool ChatClient::registerOnServer(const std::string& rawPassword) {\n\tif (registered_) {\n\t\treturn false;\n\t}\n\n\tkeyPair_ = keyFactory_.generateRsaKeyPair();\n\tregistered_ = server_.registerUser(username_, hashPassword(rawPassword), keyPair_.publicKeyPem);\n\tif (registered_) {\n\t\tLogger::instance().info(\"User '\" + username_ + \"' registered\");\n\t}\n\treturn registered_;\n}\n\nbool ChatClient::login(const std::string& rawPassword) {\n\tif (!registered_) {\n\t\treturn false;\n\t}\n\tif (!server_.authenticate(username_, hashPassword(rawPassword))) {\n\t\treturn false;\n\t}\n\n\tloggedIn_ = transport_.connect(username_);\n\tif (loggedIn_) {\n\t\tLogger::instance().info(\"User '\" + username_ + \"' logged in\");\n\t}\n\treturn loggedIn_;\n}\n\nvoid ChatClient::logout() {\n\ttransport_.disconnect();\n\tloggedIn_ = false;\n\tLogger::instance().info(\"User '\" + username_ + \"' logged out\");\n}\n\nbool ChatClient::sendMessage(const std::string& toUser, const std::string& plaintext) {\n\tif (!loggedIn_) {\n\t\treturn false;\n\t}\n\n\tconst std::string receiverPublicKey = server_.getPublicKey(toUser);\n\tif (receiverPublicKey.empty()) {\n\t\tLogger::instance().error(\"Receiver '\" + toUser + \"' not found\");\n\t\treturn false;\n\t}\n\n\tconst auto sessionKey = keyFactory_.generateSymmetricKey(32);\n\tconst auto encryptedPayload = encryption_.encrypt(toBytes(plaintext), sessionKey);\n\tconst auto encryptedSessionKey = keyFactory_.encryptWithPublicKey(receiverPublicKey, sessionKey);\n\n\tMessage message = Message::build(username_, toUser, encryptedSessionKey, encryptedPayload);\n\tmessage.status = transport_.send(toUser, MessageProtocol::serialize(message))\n\t\t\t\t\t\t ? MessageStatus::Delivered\n\t\t\t\t\t\t : MessageStatus::Sent;\n\n\tserver_.storeMessage(message);\n\treturn true;\n}\n\nconst std::string& ChatClient::username() const {\n\treturn username_;\n}\n\nbool ChatClient::isLoggedIn() const {\n\treturn loggedIn_;\n}\n\nstd::string ChatClient::hashPassword(const std::string& rawPassword) {\n\tunsigned char digest[EVP_MAX_MD_SIZE];\n\tunsigned int digestLen = 0;\n\n\tif (EVP_Digest(rawPassword.data(),\n\t\t\t\t   rawPassword.size(),\n\t\t\t\t   digest,\n\t\t\t\t   &digestLen,\n\t\t\t\t   EVP_sha256(),\n\t\t\t\t   nullptr) != 1) {\n\t\tthrow std::runtime_error(\"Failed to hash password\");\n\t}\n\n\tstatic const char* hex = \"0123456789abcdef\";\n\tstd::string out;\n\tout.reserve(digestLen * 2);\n\tfor (unsigned int i = 0; i < digestLen; ++i) {\n\t\tconst auto b = static_cast<unsigned char>(digest[i]);\n\t\tout.push_back(hex[(b >> 4) & 0x0f]);\n\t\tout.push_back(hex[b & 0x0f]);\n\t}\n\treturn out;\n}\n\nstd::vector<uint8_t> ChatClient::toBytes(const std::string& value) const {\n\treturn {value.begin(), value.end()};\n}\n\nstd::string ChatClient::fromBytes(const std::vector<uint8_t>& value) const {\n\treturn {value.begin(), value.end()};\n}\n\nvoid ChatClient::handleIncoming(const std::string& fromUser, const std::string& payload) {\n\ttry {\n\t\tconst Message message = MessageProtocol::deserialize(payload);\n\t\tconst auto sessionKey = keyFactory_.decryptWithPrivateKey(keyPair_.privateKeyPem, message.encryptedSessionKey);\n\t\tconst auto plaintext = encryption_.decrypt(message.encryptedPayload, sessionKey);\n\n\t\tnotify({fromUser, fromBytes(plaintext)});\n\t\tLogger::instance().info(\"User '\" + username_ + \"' received message from '\" + fromUser + \"'\");\n\t} catch (const std::exception& ex) {\n\t\tLogger::instance().error(\"Failed to decode message for '\" + username_ + \"': \" + ex.what());\n\t}\n}\n\n
+===================================================================
+diff --git a/src/chat/ChatClient.cpp b/src/chat/ChatClient.cpp
+--- a/src/chat/ChatClient.cpp	(revision e6ed47be9e5bd23ff94a4fecbc1255876a7339f4)
++++ b/src/chat/ChatClient.cpp	(date 1778841821437)
+@@ -5,8 +5,41 @@
+ 
+ #include <openssl/evp.h>
+ 
++#include <algorithm>
++#include <cstdlib>
++#include <filesystem>
++#include <fstream>
++#include <iterator>
+ #include <stdexcept>
+ 
++namespace {
++std::string sanitizeForFileName(std::string value) {
++	for (char& ch : value) {
++		const bool ok = (ch >= 'a' && ch <= 'z') ||
++						(ch >= 'A' && ch <= 'Z') ||
++						(ch >= '0' && ch <= '9') ||
++						(ch == '_') ||
++						(ch == '-') ||
++						(ch == '.');
++		if (!ok) {
++			ch = '_';
++		}
++	}
++	if (value.empty()) {
++		return "user";
++	}
++	return value;
++}
++
++std::filesystem::path keyStoreDir() {
++	const char* home = std::getenv("HOME");
++	if (home != nullptr && *home != '\0') {
++		return std::filesystem::path(home) / ".evlampy" / "keys";
++	}
++	return std::filesystem::current_path() / ".evlampy" / "keys";
++}
++}
++
+ ChatClient::ChatClient(std::string username,
+ 					   ChatServer& server,
+ 					   OpenSSLKeyFactory& keyFactory,
+@@ -21,27 +54,56 @@
+ 	});
+ }
+ 
+-bool ChatClient::registerOnServer(const std::string& rawPassword) {
++
++bool ChatClient::registerOnServer(const std::string& rawPassword, const std::string& email) {
+ 	if (registered_) {
+ 		return false;
+ 	}
++	if (server_.userExists(username_)) {
++		registered_ = true;
++		if ((keyPair_.publicKeyPem.empty() || keyPair_.privateKeyPem.empty()) && !loadKeyPairFromDisk()) {
++			Logger::instance().error("User already exists, but local key pair is missing for '" + username_ + "'");
++		}
++		return false;
++	}
+ 
+ 	keyPair_ = keyFactory_.generateRsaKeyPair();
+-	registered_ = server_.registerUser(username_, hashPassword(rawPassword), keyPair_.publicKeyPem);
++	registered_ = server_.registerUser(username_, hashPassword(rawPassword), keyPair_.publicKeyPem, email);
+ 	if (registered_) {
++		if (!saveKeyPairToDisk()) {
++			Logger::instance().error("Failed to persist key pair for user '" + username_ + "'");
++		}
+ 		Logger::instance().info("User '" + username_ + "' registered");
+ 	}
+ 	return registered_;
+ }
+ 
+ bool ChatClient::login(const std::string& rawPassword) {
+-	if (!registered_) {
++	if (loggedIn_) {
++		return true;
++	}
++
++	if (!registered_ && !server_.userExists(username_)) {
+ 		return false;
++	}
++	registered_ = true;
++
++	if (keyPair_.publicKeyPem.empty() || keyPair_.privateKeyPem.empty()) {
++		if (!loadKeyPairFromDisk()) {
++			Logger::instance().error("Missing local key pair for user '" + username_ + "'");
++			return false;
++		}
+ 	}
++
+ 	if (!server_.authenticate(username_, hashPassword(rawPassword))) {
+ 		return false;
+ 	}
+ 
++	if (transport_.isConnected()) {
++		loggedIn_ = true;
++		return true;
++	}
++
+ 	loggedIn_ = transport_.connect(username_);
+ 	if (loggedIn_) {
+ 		Logger::instance().info("User '" + username_ + "' logged in");
+@@ -69,16 +131,122 @@
+ 	const auto sessionKey = keyFactory_.generateSymmetricKey(32);
+ 	const auto encryptedPayload = encryption_.encrypt(toBytes(plaintext), sessionKey);
+ 	const auto encryptedSessionKey = keyFactory_.encryptWithPublicKey(receiverPublicKey, sessionKey);
++	const auto senderCopySessionKey = keyFactory_.encryptWithPublicKey(keyPair_.publicKeyPem, sessionKey);
+ 
+-	Message message = Message::build(username_, toUser, encryptedSessionKey, encryptedPayload);
++	Message message = Message::build(username_, toUser, {}, false, encryptedSessionKey, senderCopySessionKey, encryptedPayload);
+ 	message.status = transport_.send(toUser, MessageProtocol::serialize(message))
+ 						 ? MessageStatus::Delivered
+ 						 : MessageStatus::Sent;
+ 
+ 	server_.storeMessage(message);
++	if (message.status == MessageStatus::Delivered) {
++		server_.markDelivered(message.messageId, toUser);
++	}
+ 	return true;
+ }
+ 
++bool ChatClient::sendGroupMessage(const std::string& groupId, const std::string& plaintext) {
++	if (!loggedIn_) {
++		return false;
++	}
++
++	const auto members = server_.getGroupMembers(groupId);
++	if (members.empty()) {
++		return false;
++	}
++
++	bool sentAny = false;
++	for (const auto& member : members) {
++		if (member == username_) {
++			continue;
++		}
++
++		const std::string receiverPublicKey = server_.getPublicKey(member);
++		if (receiverPublicKey.empty()) {
++			continue;
++		}
++
++		const auto sessionKey = keyFactory_.generateSymmetricKey(32);
++		const auto encryptedPayload = encryption_.encrypt(toBytes(plaintext), sessionKey);
++		const auto encryptedSessionKey = keyFactory_.encryptWithPublicKey(receiverPublicKey, sessionKey);
++		const auto senderCopySessionKey = keyFactory_.encryptWithPublicKey(keyPair_.publicKeyPem, sessionKey);
++
++		Message message = Message::build(username_, member, groupId, true, encryptedSessionKey, senderCopySessionKey, encryptedPayload);
++		message.status = transport_.send(member, MessageProtocol::serialize(message)) ? MessageStatus::Delivered : MessageStatus::Sent;
++		server_.storeMessage(message);
++		if (message.status == MessageStatus::Delivered) {
++			server_.markDelivered(message.messageId, member);
++		}
++		sentAny = true;
++	}
++
++	return sentAny;
++}
++
++bool ChatClient::deleteMessageForAll(const std::string& messageId) {
++	if (!loggedIn_) {
++		return false;
++	}
++	return server_.deleteMessageForAll(username_, messageId);
++}
++
++bool ChatClient::addContact(const std::string& contactUsername) {
++	if (!loggedIn_) {
++		return false;
++	}
++	return server_.addContact(username_, contactUsername);
++}
++
++bool ChatClient::removeContact(const std::string& contactUsername) {
++	if (!loggedIn_) {
++		return false;
++	}
++	return server_.removeContact(username_, contactUsername);
++}
++
++std::vector<std::string> ChatClient::listContacts() const {
++	return server_.getContacts(username_);
++}
++
++std::vector<std::string> ChatClient::listUsers() const {
++	auto users = server_.listUsers();
++	users.erase(std::remove(users.begin(), users.end(), username_), users.end());
++	return users;
++}
++
++std::vector<std::string> ChatClient::listOnlineUsers() const {
++	return server_.listOnlineUsers();
++}
++
++std::optional<std::string> ChatClient::createGroup(const std::string& name, const std::vector<std::string>& members) {
++	if (!loggedIn_) {
++		return std::nullopt;
++	}
++	return server_.createGroup(username_, name, members);
++}
++
++std::vector<std::string> ChatClient::listGroups() const {
++	return server_.listUserGroups(username_);
++}
++
++std::vector<MessageView> ChatClient::getConversation(const std::string& peerUser) const {
++	std::vector<MessageView> out;
++	for (const auto& message : server_.getConversation(username_, peerUser)) {
++		out.push_back(decryptMessageForView(message));
++	}
++	return out;
++}
++
++std::vector<MessageView> ChatClient::getGroupConversation(const std::string& groupId) const {
++	std::vector<MessageView> out;
++	for (const auto& message : server_.getGroupConversation(groupId)) {
++		if (message.sender == username_ || message.receiver == username_) {
++			out.push_back(decryptMessageForView(message));
++		}
++	}
++	return out;
++}
++
+ const std::string& ChatClient::username() const {
+ 	return username_;
+ }
+@@ -111,6 +279,65 @@
+ 	return out;
+ }
+ 
++bool ChatClient::saveKeyPairToDisk() const {
++	if (keyPair_.publicKeyPem.empty() || keyPair_.privateKeyPem.empty()) {
++		return false;
++	}
++
++	const auto dir = keyStoreDir();
++	std::error_code ec;
++	std::filesystem::create_directories(dir, ec);
++	if (ec) {
++		return false;
++	}
++
++	const auto safeUser = sanitizeForFileName(username_);
++	const auto pubPath = dir / (safeUser + ".pub.pem");
++	const auto privPath = dir / (safeUser + ".priv.pem");
++
++	{
++		std::ofstream out(pubPath, std::ios::binary | std::ios::trunc);
++		if (!out) {
++			return false;
++		}
++		out << keyPair_.publicKeyPem;
++	}
++
++	{
++		std::ofstream out(privPath, std::ios::binary | std::ios::trunc);
++		if (!out) {
++			return false;
++		}
++		out << keyPair_.privateKeyPem;
++	}
++
++	return true;
++}
++
++bool ChatClient::loadKeyPairFromDisk() {
++	const auto safeUser = sanitizeForFileName(username_);
++	const auto dir = keyStoreDir();
++	const auto pubPath = dir / (safeUser + ".pub.pem");
++	const auto privPath = dir / (safeUser + ".priv.pem");
++
++	std::ifstream pub(pubPath, std::ios::binary);
++	std::ifstream priv(privPath, std::ios::binary);
++	if (!pub || !priv) {
++		return false;
++	}
++
++	const std::string publicPem((std::istreambuf_iterator<char>(pub)), std::istreambuf_iterator<char>());
++	const std::string privatePem((std::istreambuf_iterator<char>(priv)), std::istreambuf_iterator<char>());
++
++	if (publicPem.empty() || privatePem.empty()) {
++		return false;
++	}
++
++	keyPair_.publicKeyPem = publicPem;
++	keyPair_.privateKeyPem = privatePem;
++	return true;
++}
++
+ std::vector<uint8_t> ChatClient::toBytes(const std::string& value) const {
+ 	return {value.begin(), value.end()};
+ }
+@@ -119,13 +346,51 @@
+ 	return {value.begin(), value.end()};
+ }
+ 
++MessageView ChatClient::decryptMessageForView(const Message& message) const {
++	MessageView view;
++	view.messageId = message.messageId;
++	view.fromUser = message.sender;
++	view.toUser = message.receiver;
++	view.chatId = message.chatId;
++	view.isGroupMessage = message.isGroupMessage;
++	view.timestamp = message.timestamp;
++	view.status = message.status;
++	view.deletedForAll = message.deletedForAll;
++
++	if (message.deletedForAll) {
++		view.text = "[message deleted]";
++		return view;
++	}
++
++	try {
++		if (message.sender == username_) {
++			const auto key = keyFactory_.decryptWithPrivateKey(keyPair_.privateKeyPem, message.senderEncryptedSessionKey);
++			view.text = fromBytes(encryption_.decrypt(message.encryptedPayload, key));
++		} else if (message.receiver == username_) {
++			const auto key = keyFactory_.decryptWithPrivateKey(keyPair_.privateKeyPem, message.encryptedSessionKey);
++			view.text = fromBytes(encryption_.decrypt(message.encryptedPayload, key));
++		} else {
++			view.text = "[not available]";
++		}
++	} catch (...) {
++		view.text = "[decrypt failed]";
++	}
++	return view;
++}
++
+ void ChatClient::handleIncoming(const std::string& fromUser, const std::string& payload) {
+ 	try {
+ 		const Message message = MessageProtocol::deserialize(payload);
++		if (message.deletedForAll) {
++			notify({message.messageId, fromUser, message.receiver, message.chatId, message.isGroupMessage, "[message deleted]"});
++			return;
++		}
+ 		const auto sessionKey = keyFactory_.decryptWithPrivateKey(keyPair_.privateKeyPem, message.encryptedSessionKey);
+ 		const auto plaintext = encryption_.decrypt(message.encryptedPayload, sessionKey);
++		server_.markDelivered(message.messageId, username_);
++		server_.markRead(message.messageId, username_);
+ 
+-		notify({fromUser, fromBytes(plaintext)});
++		notify({message.messageId, fromUser, message.receiver, message.chatId, message.isGroupMessage, fromBytes(plaintext)});
+ 		Logger::instance().info("User '" + username_ + "' received message from '" + fromUser + "'");
+ 	} catch (const std::exception& ex) {
+ 		Logger::instance().error("Failed to decode message for '" + username_ + "': " + ex.what());
+Index: src/chat/ChatServer.cpp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#include \"chat/ChatServer.h\"\n\n#include <algorithm>\n\nbool ChatServer::registerUser(const std::string& username,\n\t\t\t\t\t\t\t  const std::string& passwordHash,\n\t\t\t\t\t\t\t  const std::string& publicKeyPem) {\n\tstd::lock_guard<std::mutex> lock(mutex_);\n\tif (users_.find(username) != users_.end()) {\n\t\treturn false;\n\t}\n\n\tusers_.emplace(username, UserRecord{passwordHash, publicKeyPem});\n\treturn true;\n}\n\nbool ChatServer::authenticate(const std::string& username, const std::string& passwordHash) const {\n\tstd::lock_guard<std::mutex> lock(mutex_);\n\tconst auto it = users_.find(username);\n\treturn it != users_.end() && it->second.passwordHash == passwordHash;\n}\n\nstd::string ChatServer::getPublicKey(const std::string& username) const {\n\tstd::lock_guard<std::mutex> lock(mutex_);\n\tconst auto it = users_.find(username);\n\tif (it == users_.end()) {\n\t\treturn {};\n\t}\n\treturn it->second.publicKeyPem;\n}\n\nvoid ChatServer::storeMessage(const Message& message) {\n\tstd::lock_guard<std::mutex> lock(mutex_);\n\thistory_[makeConversationKey(message.sender, message.receiver)].push_back(message);\n}\n\nstd::vector<Message> ChatServer::getConversation(const std::string& userA, const std::string& userB) const {\n\tstd::lock_guard<std::mutex> lock(mutex_);\n\tconst auto key = makeConversationKey(userA, userB);\n\tconst auto it = history_.find(key);\n\tif (it == history_.end()) {\n\t\treturn {};\n\t}\n\treturn it->second;\n}\n\nTcpServer& ChatServer::transport() {\n\treturn transport_;\n}\n\nconst TcpServer& ChatServer::transport() const {\n\treturn transport_;\n}\n\nstd::string ChatServer::makeConversationKey(const std::string& a, const std::string& b) {\n\tif (a <= b) {\n\t\treturn a + \"::\" + b;\n\t}\n\treturn b + \"::\" + a;\n}\n\n
+===================================================================
+diff --git a/src/chat/ChatServer.cpp b/src/chat/ChatServer.cpp
+--- a/src/chat/ChatServer.cpp	(revision e6ed47be9e5bd23ff94a4fecbc1255876a7339f4)
++++ b/src/chat/ChatServer.cpp	(date 1778841767624)
+@@ -1,23 +1,67 @@
+ #include "chat/ChatServer.h"
+ 
+ #include <algorithm>
++#include <chrono>
++#include <cstdlib>
++#include <filesystem>
++#include <fstream>
++#include <sstream>
++
++namespace {
++std::filesystem::path userStorePath() {
++	const char* home = std::getenv("HOME");
++	const auto base = (home != nullptr && *home != '\0')
++		? std::filesystem::path(home)
++		: std::filesystem::current_path();
++	return base / ".evlampy" / "server" / "users.bin";
++}
++
++void writeString(std::ostream& out, const std::string& value) {
++	const std::uint32_t len = static_cast<std::uint32_t>(value.size());
++	out.write(reinterpret_cast<const char*>(&len), sizeof(len));
++	out.write(value.data(), static_cast<std::streamsize>(value.size()));
++}
++
++bool readString(std::istream& in, std::string& out) {
++	std::uint32_t len = 0;
++	in.read(reinterpret_cast<char*>(&len), sizeof(len));
++	if (!in) {
++		return false;
++	}
++	out.resize(len);
++	in.read(out.data(), static_cast<std::streamsize>(len));
++	return static_cast<bool>(in);
++}
++}
++
++ChatServer::ChatServer() {
++	loadUsersFromDisk();
++}
+ 
+ bool ChatServer::registerUser(const std::string& username,
+ 							  const std::string& passwordHash,
+-							  const std::string& publicKeyPem) {
++							  const std::string& publicKeyPem,
++							  const std::string& email) {
+ 	std::lock_guard<std::mutex> lock(mutex_);
+ 	if (users_.find(username) != users_.end()) {
+ 		return false;
+ 	}
+ 
+-	users_.emplace(username, UserRecord{passwordHash, publicKeyPem});
++	UserRecord record;
++	record.passwordHash = passwordHash;
++	record.publicKeyPem = publicKeyPem;
++	record.email = email;
++	record.isAdmin = users_.empty();
++	users_.emplace(username, std::move(record));
++	persistUsersToDiskUnlocked();
++	appendAudit(username, "register", "new account");
+ 	return true;
+ }
+ 
+ bool ChatServer::authenticate(const std::string& username, const std::string& passwordHash) const {
+ 	std::lock_guard<std::mutex> lock(mutex_);
+ 	const auto it = users_.find(username);
+-	return it != users_.end() && it->second.passwordHash == passwordHash;
++	return it != users_.end() && !it->second.blocked && it->second.passwordHash == passwordHash;
+ }
+ 
+ std::string ChatServer::getPublicKey(const std::string& username) const {
+@@ -29,9 +73,78 @@
+ 	return it->second.publicKeyPem;
+ }
+ 
++bool ChatServer::userExists(const std::string& username) const {
++	std::lock_guard<std::mutex> lock(mutex_);
++	return users_.find(username) != users_.end();
++}
++
++std::vector<std::string> ChatServer::listUsers() const {
++	std::lock_guard<std::mutex> lock(mutex_);
++	std::vector<std::string> out;
++	out.reserve(users_.size());
++	for (const auto& [username, _] : users_) {
++		out.push_back(username);
++	}
++	std::sort(out.begin(), out.end());
++	return out;
++}
++
++std::vector<std::string> ChatServer::listOnlineUsers() const {
++	return transport_.listOnlineUsers();
++}
++
++bool ChatServer::blockUser(const std::string& adminUser, const std::string& targetUser) {
++	std::lock_guard<std::mutex> lock(mutex_);
++	const auto adminIt = users_.find(adminUser);
++	auto targetIt = users_.find(targetUser);
++	if (adminIt == users_.end() || targetIt == users_.end() || !adminIt->second.isAdmin) {
++		return false;
++	}
++	targetIt->second.blocked = true;
++	persistUsersToDiskUnlocked();
++	appendAudit(adminUser, "block_user", targetUser);
++	return true;
++}
++
++bool ChatServer::unblockUser(const std::string& adminUser, const std::string& targetUser) {
++	std::lock_guard<std::mutex> lock(mutex_);
++	const auto adminIt = users_.find(adminUser);
++	auto targetIt = users_.find(targetUser);
++	if (adminIt == users_.end() || targetIt == users_.end() || !adminIt->second.isAdmin) {
++		return false;
++	}
++	targetIt->second.blocked = false;
++	persistUsersToDiskUnlocked();
++	appendAudit(adminUser, "unblock_user", targetUser);
++	return true;
++}
++
++bool ChatServer::resetPasswordHash(const std::string& adminUser, const std::string& targetUser, const std::string& passwordHash) {
++	std::lock_guard<std::mutex> lock(mutex_);
++	const auto adminIt = users_.find(adminUser);
++	auto targetIt = users_.find(targetUser);
++	if (adminIt == users_.end() || targetIt == users_.end() || !adminIt->second.isAdmin) {
++		return false;
++	}
++	targetIt->second.passwordHash = passwordHash;
++	persistUsersToDiskUnlocked();
++	appendAudit(adminUser, "reset_password", targetUser);
++	return true;
++}
++
+ void ChatServer::storeMessage(const Message& message) {
+ 	std::lock_guard<std::mutex> lock(mutex_);
+-	history_[makeConversationKey(message.sender, message.receiver)].push_back(message);
++	if (message.isGroupMessage) {
++		auto& bucket = groupHistory_[message.chatId];
++		bucket.push_back(message);
++		messageIndex_[message.messageId] = MessageIndex{message.chatId, bucket.size() - 1, true};
++	} else {
++		const auto key = makeConversationKey(message.sender, message.receiver);
++		auto& bucket = history_[key];
++		bucket.push_back(message);
++		messageIndex_[message.messageId] = MessageIndex{key, bucket.size() - 1, false};
++	}
++	appendAudit(message.sender, "store_message", message.messageId);
+ }
+ 
+ std::vector<Message> ChatServer::getConversation(const std::string& userA, const std::string& userB) const {
+@@ -44,6 +157,197 @@
+ 	return it->second;
+ }
+ 
++std::vector<Message> ChatServer::getGroupConversation(const std::string& groupId) const {
++	std::lock_guard<std::mutex> lock(mutex_);
++	const auto it = groupHistory_.find(groupId);
++	if (it == groupHistory_.end()) {
++		return {};
++	}
++	return it->second;
++}
++
++bool ChatServer::markDelivered(const std::string& messageId, const std::string& receiver) {
++	std::lock_guard<std::mutex> lock(mutex_);
++	const auto idxIt = messageIndex_.find(messageId);
++	if (idxIt == messageIndex_.end()) {
++		return false;
++	}
++
++	auto& bucket = idxIt->second.isGroup ? groupHistory_[idxIt->second.key] : history_[idxIt->second.key];
++	if (idxIt->second.index >= bucket.size()) {
++		return false;
++	}
++	auto& message = bucket[idxIt->second.index];
++	if (message.receiver != receiver || message.deletedForAll) {
++		return false;
++	}
++	if (message.status == MessageStatus::Sent) {
++		message.status = MessageStatus::Delivered;
++	}
++	return true;
++}
++
++bool ChatServer::markRead(const std::string& messageId, const std::string& reader) {
++	std::lock_guard<std::mutex> lock(mutex_);
++	const auto idxIt = messageIndex_.find(messageId);
++	if (idxIt == messageIndex_.end()) {
++		return false;
++	}
++
++	auto& bucket = idxIt->second.isGroup ? groupHistory_[idxIt->second.key] : history_[idxIt->second.key];
++	if (idxIt->second.index >= bucket.size()) {
++		return false;
++	}
++	auto& message = bucket[idxIt->second.index];
++	if (message.receiver != reader || message.deletedForAll) {
++		return false;
++	}
++	message.status = MessageStatus::Read;
++	appendAudit(reader, "mark_read", messageId);
++	return true;
++}
++
++bool ChatServer::deleteMessageForAll(const std::string& requester, const std::string& messageId) {
++	std::lock_guard<std::mutex> lock(mutex_);
++	const auto idxIt = messageIndex_.find(messageId);
++	if (idxIt == messageIndex_.end()) {
++		return false;
++	}
++
++	auto& bucket = idxIt->second.isGroup ? groupHistory_[idxIt->second.key] : history_[idxIt->second.key];
++	if (idxIt->second.index >= bucket.size()) {
++		return false;
++	}
++	auto& message = bucket[idxIt->second.index];
++	if (message.sender != requester) {
++		return false;
++	}
++	message.deletedForAll = true;
++	message.encryptedPayload.clear();
++	message.encryptedSessionKey.clear();
++	message.senderEncryptedSessionKey.clear();
++	appendAudit(requester, "delete_message", messageId);
++	return true;
++}
++
++bool ChatServer::addContact(const std::string& owner, const std::string& contactUsername) {
++	std::lock_guard<std::mutex> lock(mutex_);
++	auto ownerIt = users_.find(owner);
++	const auto contactIt = users_.find(contactUsername);
++	if (ownerIt == users_.end() || contactIt == users_.end() || owner == contactUsername) {
++		return false;
++	}
++	ownerIt->second.contacts.insert(contactUsername);
++	persistUsersToDiskUnlocked();
++	appendAudit(owner, "add_contact", contactUsername);
++	return true;
++}
++
++bool ChatServer::removeContact(const std::string& owner, const std::string& contactUsername) {
++	std::lock_guard<std::mutex> lock(mutex_);
++	auto ownerIt = users_.find(owner);
++	if (ownerIt == users_.end()) {
++		return false;
++	}
++	const auto removed = ownerIt->second.contacts.erase(contactUsername) > 0;
++	if (removed) {
++		persistUsersToDiskUnlocked();
++		appendAudit(owner, "remove_contact", contactUsername);
++	}
++	return removed;
++}
++
++std::vector<std::string> ChatServer::getContacts(const std::string& owner) const {
++	std::lock_guard<std::mutex> lock(mutex_);
++	const auto it = users_.find(owner);
++	if (it == users_.end()) {
++		return {};
++	}
++	std::vector<std::string> out(it->second.contacts.begin(), it->second.contacts.end());
++	std::sort(out.begin(), out.end());
++	return out;
++}
++
++std::optional<std::string> ChatServer::createGroup(const std::string& owner,
++													const std::string& groupName,
++													const std::vector<std::string>& members) {
++	std::lock_guard<std::mutex> lock(mutex_);
++	if (users_.find(owner) == users_.end() || groupName.empty()) {
++		return std::nullopt;
++	}
++	const auto groupId = makeGroupId(owner, groupName);
++	if (groups_.find(groupId) != groups_.end()) {
++		return std::nullopt;
++	}
++
++	GroupRecord group;
++	group.groupId = groupId;
++	group.owner = owner;
++	group.name = groupName;
++	group.members.insert(owner);
++	for (const auto& member : members) {
++		if (users_.find(member) != users_.end()) {
++			group.members.insert(member);
++		}
++	}
++	groups_.emplace(groupId, std::move(group));
++	persistUsersToDiskUnlocked();
++	appendAudit(owner, "create_group", groupId);
++	return groupId;
++}
++
++bool ChatServer::addGroupMember(const std::string& owner, const std::string& groupId, const std::string& member) {
++	std::lock_guard<std::mutex> lock(mutex_);
++	auto groupIt = groups_.find(groupId);
++	if (groupIt == groups_.end() || groupIt->second.owner != owner || users_.find(member) == users_.end()) {
++		return false;
++	}
++	groupIt->second.members.insert(member);
++	persistUsersToDiskUnlocked();
++	appendAudit(owner, "add_group_member", groupId + ":" + member);
++	return true;
++}
++
++bool ChatServer::removeGroupMember(const std::string& owner, const std::string& groupId, const std::string& member) {
++	std::lock_guard<std::mutex> lock(mutex_);
++	auto groupIt = groups_.find(groupId);
++	if (groupIt == groups_.end() || groupIt->second.owner != owner || member == owner) {
++		return false;
++	}
++	const auto removed = groupIt->second.members.erase(member) > 0;
++	if (removed) {
++		persistUsersToDiskUnlocked();
++		appendAudit(owner, "remove_group_member", groupId + ":" + member);
++	}
++	return removed;
++}
++
++std::vector<std::string> ChatServer::listUserGroups(const std::string& username) const {
++	std::lock_guard<std::mutex> lock(mutex_);
++	std::vector<std::string> out;
++	for (const auto& [groupId, group] : groups_) {
++		if (group.members.find(username) != group.members.end()) {
++			out.push_back(groupId);
++		}
++	}
++	std::sort(out.begin(), out.end());
++	return out;
++}
++
++std::vector<std::string> ChatServer::getGroupMembers(const std::string& groupId) const {
++	std::lock_guard<std::mutex> lock(mutex_);
++	const auto it = groups_.find(groupId);
++	if (it == groups_.end()) {
++		return {};
++	}
++	return {it->second.members.begin(), it->second.members.end()};
++}
++
++std::vector<ChatServer::AuditRecord> ChatServer::getAuditLog() const {
++	std::lock_guard<std::mutex> lock(mutex_);
++	return audit_;
++}
++
+ TcpServer& ChatServer::transport() {
+ 	return transport_;
+ }
+@@ -59,3 +363,112 @@
+ 	return b + "::" + a;
+ }
+ 
++std::string ChatServer::makeGroupId(const std::string& owner, const std::string& groupName) {
++	std::ostringstream os;
++	os << "group:" << owner << ':' << groupName;
++	return os.str();
++}
++
++void ChatServer::appendAudit(const std::string& actor, const std::string& action, const std::string& details) {
++	using namespace std::chrono;
++	const auto ts = duration_cast<milliseconds>(system_clock::now().time_since_epoch()).count();
++	audit_.push_back(AuditRecord{ts, actor, action, details});
++}
++
++void ChatServer::persistUsersToDiskUnlocked() const {
++	const auto path = userStorePath();
++	std::error_code ec;
++	std::filesystem::create_directories(path.parent_path(), ec);
++	if (ec) {
++		return;
++	}
++
++	std::ofstream out(path, std::ios::binary | std::ios::trunc);
++	if (!out) {
++		return;
++	}
++
++	const char magic[4] = {'E', 'V', 'U', '1'};
++	out.write(magic, sizeof(magic));
++	const std::uint32_t count = static_cast<std::uint32_t>(users_.size());
++	out.write(reinterpret_cast<const char*>(&count), sizeof(count));
++
++	for (const auto& [username, user] : users_) {
++		writeString(out, username);
++		writeString(out, user.passwordHash);
++		writeString(out, user.publicKeyPem);
++		writeString(out, user.email);
++
++		const std::uint8_t blocked = user.blocked ? 1 : 0;
++		const std::uint8_t isAdmin = user.isAdmin ? 1 : 0;
++		out.write(reinterpret_cast<const char*>(&blocked), sizeof(blocked));
++		out.write(reinterpret_cast<const char*>(&isAdmin), sizeof(isAdmin));
++
++		const std::uint32_t contactsCount = static_cast<std::uint32_t>(user.contacts.size());
++		out.write(reinterpret_cast<const char*>(&contactsCount), sizeof(contactsCount));
++		for (const auto& contact : user.contacts) {
++			writeString(out, contact);
++		}
++	}
++}
++
++void ChatServer::loadUsersFromDisk() {
++	const auto path = userStorePath();
++	std::ifstream in(path, std::ios::binary);
++	if (!in) {
++		return;
++	}
++
++	char magic[4] = {};
++	in.read(magic, sizeof(magic));
++	if (!in || magic[0] != 'E' || magic[1] != 'V' || magic[2] != 'U' || magic[3] != '1') {
++		return;
++	}
++
++	std::uint32_t count = 0;
++	in.read(reinterpret_cast<char*>(&count), sizeof(count));
++	if (!in) {
++		return;
++	}
++
++	for (std::uint32_t i = 0; i < count; ++i) {
++		std::string username;
++		UserRecord user;
++		if (!readString(in, username) ||
++			!readString(in, user.passwordHash) ||
++			!readString(in, user.publicKeyPem) ||
++			!readString(in, user.email)) {
++			users_.clear();
++			return;
++		}
++
++		std::uint8_t blocked = 0;
++		std::uint8_t isAdmin = 0;
++		in.read(reinterpret_cast<char*>(&blocked), sizeof(blocked));
++		in.read(reinterpret_cast<char*>(&isAdmin), sizeof(isAdmin));
++		if (!in) {
++			users_.clear();
++			return;
++		}
++		user.blocked = blocked != 0;
++		user.isAdmin = isAdmin != 0;
++
++		std::uint32_t contactsCount = 0;
++		in.read(reinterpret_cast<char*>(&contactsCount), sizeof(contactsCount));
++		if (!in) {
++			users_.clear();
++			return;
++		}
++		for (std::uint32_t c = 0; c < contactsCount; ++c) {
++			std::string contact;
++			if (!readString(in, contact)) {
++				users_.clear();
++				return;
++			}
++			user.contacts.insert(std::move(contact));
++		}
++
++		users_.emplace(std::move(username), std::move(user));
++	}
++}
++
+Index: src/chat/main.cpp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#include \"chat/ChatClient.h\"\n#include \"patterns/Command.h\"\n\n#include <iostream>\n\nclass ConsoleMessageObserver final : public Observer<DecryptedMessageEvent> {\npublic:\n\texplicit ConsoleMessageObserver(std::string owner)\n\t\t: owner_(std::move(owner)) {\n\t}\n\n\tvoid onNotify(const DecryptedMessageEvent& event) override {\n\t\tstd::cout << \"[\" << owner_ << \"] new message from \" << event.fromUser << \": \" << event.text << '\\n';\n\t}\n\nprivate:\n\tstd::string owner_;\n};\n\nint main() {\n\ttry {\n\t\tChatServer server;\n\t\tOpenSSLKeyFactory keyFactory;\n\t\tAES256GCMStrategy encryption;\n\n\t\tChatClient alice(\"alice\", server, keyFactory, encryption);\n\t\tChatClient bob(\"bob\", server, keyFactory, encryption);\n\n\t\tConsoleMessageObserver aliceObserver(\"alice\");\n\t\tConsoleMessageObserver bobObserver(\"bob\");\n\t\talice.attach(&aliceObserver);\n\t\tbob.attach(&bobObserver);\n\n\t\tif (!alice.registerOnServer(\"alice_pass\") || !bob.registerOnServer(\"bob_pass\")) {\n\t\t\tstd::cerr << \"Registration failed\\n\";\n\t\t\treturn 1;\n\t\t}\n\t\tif (!alice.login(\"alice_pass\") || !bob.login(\"bob_pass\")) {\n\t\t\tstd::cerr << \"Login failed\\n\";\n\t\t\treturn 1;\n\t\t}\n\n\t\tSendMessageCommand send(alice, \"bob\", \"Privet, Bob! Eto Evlampy demo s RSA + AES-GCM.\");\n\t\tif (!send.execute()) {\n\t\t\tstd::cerr << \"Send failed\\n\";\n\t\t\treturn 1;\n\t\t}\n\n\t\talice.logout();\n\t\tbob.logout();\n\t\treturn 0;\n\t} catch (const std::exception& ex) {\n\t\tstd::cerr << \"Fatal error: \" << ex.what() << '\\n';\n\t\treturn 2;\n\t}\n}\n\n
+===================================================================
+diff --git a/src/chat/main.cpp b/src/chat/main.cpp
+--- a/src/chat/main.cpp	(revision e6ed47be9e5bd23ff94a4fecbc1255876a7339f4)
++++ b/src/chat/main.cpp	(date 1778841793279)
+@@ -10,6 +10,11 @@
+ 	}
+ 
+ 	void onNotify(const DecryptedMessageEvent& event) override {
++		if (event.isGroupMessage) {
++			std::cout << "[" << owner_ << "] group(" << event.chatId << ") "
++					  << event.fromUser << ": " << event.text << '\n';
++			return;
++		}
+ 		std::cout << "[" << owner_ << "] new message from " << event.fromUser << ": " << event.text << '\n';
+ 	}
+ 
+@@ -31,21 +36,36 @@
+ 		alice.attach(&aliceObserver);
+ 		bob.attach(&bobObserver);
+ 
+-		if (!alice.registerOnServer("alice_pass") || !bob.registerOnServer("bob_pass")) {
+-			std::cerr << "Registration failed\n";
+-			return 1;
++		if (!alice.registerOnServer("alice_pass")) {
++			std::cout << "alice already registered, continue with login\n";
++		}
++		if (!bob.registerOnServer("bob_pass")) {
++			std::cout << "bob already registered, continue with login\n";
+ 		}
+ 		if (!alice.login("alice_pass") || !bob.login("bob_pass")) {
+ 			std::cerr << "Login failed\n";
+ 			return 1;
+ 		}
+ 
++		alice.addContact("bob");
++		bob.addContact("alice");
++
+ 		SendMessageCommand send(alice, "bob", "Privet, Bob! Eto Evlampy demo s RSA + AES-GCM.");
+ 		if (!send.execute()) {
+ 			std::cerr << "Send failed\n";
+ 			return 1;
+ 		}
+ 
++		auto groupId = alice.createGroup("team", {"bob"});
++		if (groupId.has_value()) {
++			alice.sendGroupMessage(*groupId, "Soobshchenie v gruppu team");
++		}
++
++		const auto history = alice.getConversation("bob");
++		if (!history.empty()) {
++			alice.deleteMessageForAll(history.front().messageId);
++		}
++
+ 		alice.logout();
+ 		bob.logout();
+ 		return 0;
+Index: include/chat/ChatClient.h
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#pragma once\n\n#include \"chat/ChatServer.h\"\n#include \"encryption/AES256GCMStrategy.h\"\n#include \"encryption/OpenSSLKeyFactory.h\"\n#include \"network/TcpClient.h\"\n#include \"patterns/Observer.h\"\n\n#include <string>\n\nstruct DecryptedMessageEvent {\n\tstd::string fromUser;\n\tstd::string text;\n};\n\nclass ChatClient : public Subject<DecryptedMessageEvent> {\npublic:\n\tChatClient(std::string username,\n\t\t\t   ChatServer& server,\n\t\t\t   OpenSSLKeyFactory& keyFactory,\n\t\t\t   AES256GCMStrategy& encryption);\n\n\tbool registerOnServer(const std::string& rawPassword);\n\tbool login(const std::string& rawPassword);\n\tvoid logout();\n\n\tbool sendMessage(const std::string& toUser, const std::string& plaintext);\n\n\t[[nodiscard]] const std::string& username() const;\n\t[[nodiscard]] bool isLoggedIn() const;\n\nprivate:\n\tstatic std::string hashPassword(const std::string& rawPassword);\n\tstd::vector<uint8_t> toBytes(const std::string& value) const;\n\tstd::string fromBytes(const std::vector<uint8_t>& value) const;\n\tvoid handleIncoming(const std::string& fromUser, const std::string& payload);\n\n\tstd::string username_;\n\tChatServer& server_;\n\tOpenSSLKeyFactory& keyFactory_;\n\tAES256GCMStrategy& encryption_;\n\tTcpClient transport_;\n\n\tKeyPair keyPair_;\n\tbool registered_ = false;\n\tbool loggedIn_ = false;\n};\n\n
+===================================================================
+diff --git a/include/chat/ChatClient.h b/include/chat/ChatClient.h
+--- a/include/chat/ChatClient.h	(revision e6ed47be9e5bd23ff94a4fecbc1255876a7339f4)
++++ b/include/chat/ChatClient.h	(date 1778841233464)
+@@ -6,10 +6,29 @@
+ #include "network/TcpClient.h"
+ #include "patterns/Observer.h"
+ 
++#include <cstdint>
++#include <optional>
+ #include <string>
++#include <vector>
+ 
+ struct DecryptedMessageEvent {
++	std::string messageId;
++	std::string fromUser;
++	std::string toUser;
++	std::string chatId;
++	bool isGroupMessage = false;
++	std::string text;
++};
++
++struct MessageView {
++	std::string messageId;
+ 	std::string fromUser;
++	std::string toUser;
++	std::string chatId;
++	bool isGroupMessage = false;
++	std::int64_t timestamp = 0;
++	MessageStatus status = MessageStatus::Sent;
++	bool deletedForAll = false;
+ 	std::string text;
+ };
+ 
+@@ -20,19 +39,35 @@
+ 			   OpenSSLKeyFactory& keyFactory,
+ 			   AES256GCMStrategy& encryption);
+ 
+-	bool registerOnServer(const std::string& rawPassword);
++	bool registerOnServer(const std::string& rawPassword, const std::string& email = {});
+ 	bool login(const std::string& rawPassword);
+ 	void logout();
+ 
+ 	bool sendMessage(const std::string& toUser, const std::string& plaintext);
++	bool sendGroupMessage(const std::string& groupId, const std::string& plaintext);
++	bool deleteMessageForAll(const std::string& messageId);
++
++	bool addContact(const std::string& contactUsername);
++	bool removeContact(const std::string& contactUsername);
++	std::vector<std::string> listContacts() const;
++	std::vector<std::string> listUsers() const;
++	std::vector<std::string> listOnlineUsers() const;
++
++	std::optional<std::string> createGroup(const std::string& name, const std::vector<std::string>& members);
++	std::vector<std::string> listGroups() const;
++	std::vector<MessageView> getConversation(const std::string& peerUser) const;
++	std::vector<MessageView> getGroupConversation(const std::string& groupId) const;
+ 
+ 	[[nodiscard]] const std::string& username() const;
+ 	[[nodiscard]] bool isLoggedIn() const;
+ 
+ private:
+ 	static std::string hashPassword(const std::string& rawPassword);
++	bool saveKeyPairToDisk() const;
++	bool loadKeyPairFromDisk();
+ 	std::vector<uint8_t> toBytes(const std::string& value) const;
+ 	std::string fromBytes(const std::vector<uint8_t>& value) const;
++	MessageView decryptMessageForView(const Message& message) const;
+ 	void handleIncoming(const std::string& fromUser, const std::string& payload);
+ 
+ 	std::string username_;
+Index: README.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># Evlampy Messenger (C++/CMake)\n\n`Evlampy` — клиент-серверный мессенджер с шифрованием сообщений.\n\nТекущая версия реализует минимальный MVP-демо-сценарий:\n- регистрация и аутентификация пользователей на сервере;\n- обмен сообщениями в реальном времени через серверный транспорт;\n- шифрование сообщения AES-256-GCM;\n- шифрование сеансового AES-ключа RSA-2048 (OpenSSL);\n- хранение серверной истории сообщений в памяти процесса.\n\n## Стек и зависимости\n\n- C++17\n- CMake >= 3.10\n- OpenSSL (Crypto)\n- Threads (pthread на Linux/macOS)\n\n## Структура проекта\n\n- `include/` — публичные заголовочные файлы по модулям\n  - `chat/`\n  - `network/`\n  - `encryption/`\n  - `patterns/`\n- `src/` — исходники модулей\n  - `chat/`\n  - `network/`\n  - `encryption/`\n  - `patterns/` \n- `CMakeLists.txt` — конфигурация сборки\n\n## Сборка (out-of-source)\n\n```bash\ncmake -S . -B build\ncmake --build build\n```\n\n## Запуск\n\n```bash\ncd build\n./target_exec\n```\n\nОжидаемый результат: в консоли появится лог регистрации/входа пользователей и расшифрованное сообщение у получателя.\n\n## Что демонстрирует `target_exec`\n\n1. Создает сервер и двух клиентов (`alice`, `bob`).\n2. Регистрирует пользователей и генерирует RSA-пары ключей.\n3. Выполняет логин пользователей.\n4. Отправляет сообщение от `alice` к `bob` через `SendMessageCommand`.\n5. `bob` получает и расшифровывает текст сообщения.\n\n## Примечания\n\n- Это учебная реализация, ориентированная на архитектуру и паттерны.\n- Для production-версии необходимо добавить БД, настоящий TCP/WebSocket слой, bcrypt, аудит-лог, обработку офлайн-доставки и UI (Qt).\n\n\n
+===================================================================
+diff --git a/README.md b/README.md
+--- a/README.md	(revision e6ed47be9e5bd23ff94a4fecbc1255876a7339f4)
++++ b/README.md	(date 1778842574416)
+@@ -2,12 +2,16 @@
+ 
+ `Evlampy` — клиент-серверный мессенджер с шифрованием сообщений.
+ 
+-Текущая версия реализует минимальный MVP-демо-сценарий:
+-- регистрация и аутентификация пользователей на сервере;
+-- обмен сообщениями в реальном времени через серверный транспорт;
+-- шифрование сообщения AES-256-GCM;
+-- шифрование сеансового AES-ключа RSA-2048 (OpenSSL);
+-- хранение серверной истории сообщений в памяти процесса.
++Текущая версия реализует расширенный учебный MVP:
++- регистрация/аутентификация пользователей;
++- контакты (добавление/удаление);
++- личные сообщения и групповые чаты;
++- статусы доставки/прочтения;
++- удаление сообщения для всех;
++- хранение истории сообщений на сервере (in-memory);
++- шифрование AES-256-GCM + RSA-OAEP для сеансового ключа;
++- минимальный графический интерфейс для macOS (AppKit).
++- unit-тесты (GoogleTest) и сценарные тестовые мини-программы.
+ 
+ ## Стек и зависимости
+ 
+@@ -15,6 +19,8 @@
+ - CMake >= 3.10
+ - OpenSSL (Crypto)
+ - Threads (pthread на Linux/macOS)
++- Cocoa/AppKit framework (для `messenger_gui` на macOS)
++- GoogleTest (подтягивается автоматически через CMake `FetchContent`)
+ 
+ ## Структура проекта
+ 
+@@ -28,6 +34,7 @@
+   - `network/`
+   - `encryption/`
+   - `patterns/` 
++- `src/gui/` + `include/gui/` — минимальный GUI
+ - `CMakeLists.txt` — конфигурация сборки
+ 
+ ## Сборка (out-of-source)
+@@ -37,14 +44,69 @@
+ cmake --build build
+ ```
+ 
+-## Запуск
++## Запуск CLI-демо
+ 
+ ```bash
+ cd build
+ ./target_exec
+ ```
+ 
+-Ожидаемый результат: в консоли появится лог регистрации/входа пользователей и расшифрованное сообщение у получателя.
++Ожидаемый результат: в консоли появится лог регистрации/входа и обмена сообщениями.
++
++## Запуск GUI
++
++GUI собирается при включении опции `BUILD_GUI=ON` (на macOS).
++
++```bash
++cmake -S . -B build-gui -DBUILD_GUI=ON
++cmake --build build-gui
++```
++
++```bash
++cd build-gui
++./messenger_gui
++```
++
++В GUI доступны:
++- регистрация и вход;
++- добавление контакта;
++- личная переписка;
++- создание группы и отправка сообщений в группу;
++- удаление сообщения для всех по `messageId`;
++- обновление истории (`Refresh`).
++
++## Unit-тесты и сценарии
++
++Тесты лежат в каталоге `tests/`:
++- `tests/unit/` — unit-тесты по модулям/классам;
++- `tests/scenarios/` — отдельные мини-программы со сквозными сценариями;
++- `tests/docs/unit_test_matrix.md` — матрица покрытия классов;
++- `tests/docs/test_scenarios.md` — список сценариев.
++
++Сборка тестов:
++
++```bash
++cmake -S . -B build-tests -DBUILD_TESTS=ON
++cmake --build build-tests
++```
++
++Запуск всех тестов через CTest:
++
++```bash
++cd build-tests
++ctest --output-on-failure
++```
++
++Запуск отдельных сценарных программ:
++
++```bash
++./tests/scenario_auth_flow
++./tests/scenario_direct_message
++./tests/scenario_group_flow
++./tests/scenario_delete_for_all
++./tests/scenario_admin_actions
++./tests/scenario_persistence_relogin
++```
+ 
+ ## Что демонстрирует `target_exec`
+ 
+@@ -57,6 +119,6 @@
+ ## Примечания
+ 
+ - Это учебная реализация, ориентированная на архитектуру и паттерны.
+-- Для production-версии необходимо добавить БД, настоящий TCP/WebSocket слой, bcrypt, аудит-лог, обработку офлайн-доставки и UI (Qt).
++- Для production-версии необходимо добавить полноценный сетевой транспорт (TCP/WebSocket между процессами), БД, bcrypt и хранение приватных ключей между сессиями.
+ 
+ 
+Index: include/chat/ChatServer.h
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#pragma once\n\n#include \"chat/Message.h\"\n#include \"network/TcpServer.h\"\n\n#include <mutex>\n#include <string>\n#include <unordered_map>\n#include <vector>\n\nclass ChatServer {\npublic:\n\tbool registerUser(const std::string& username,\n\t\t\t\t\t  const std::string& passwordHash,\n\t\t\t\t\t  const std::string& publicKeyPem);\n\n\tbool authenticate(const std::string& username, const std::string& passwordHash) const;\n\tstd::string getPublicKey(const std::string& username) const;\n\n\tvoid storeMessage(const Message& message);\n\tstd::vector<Message> getConversation(const std::string& userA, const std::string& userB) const;\n\n\tTcpServer& transport();\n\tconst TcpServer& transport() const;\n\nprivate:\n\tstruct UserRecord {\n\t\tstd::string passwordHash;\n\t\tstd::string publicKeyPem;\n\t};\n\n\tstatic std::string makeConversationKey(const std::string& a, const std::string& b);\n\n\tmutable std::mutex mutex_;\n\tstd::unordered_map<std::string, UserRecord> users_;\n\tstd::unordered_map<std::string, std::vector<Message>> history_;\n\tTcpServer transport_;\n};\n
+===================================================================
+diff --git a/include/chat/ChatServer.h b/include/chat/ChatServer.h
+--- a/include/chat/ChatServer.h	(revision e6ed47be9e5bd23ff94a4fecbc1255876a7339f4)
++++ b/include/chat/ChatServer.h	(date 1778841744028)
+@@ -3,22 +3,60 @@
+ #include "chat/Message.h"
+ #include "network/TcpServer.h"
+ 
++#include <cstdint>
+ #include <mutex>
++#include <optional>
++#include <set>
+ #include <string>
+ #include <unordered_map>
++#include <unordered_set>
+ #include <vector>
+ 
+ class ChatServer {
+ public:
++	ChatServer();
++
+ 	bool registerUser(const std::string& username,
+ 					  const std::string& passwordHash,
+-					  const std::string& publicKeyPem);
++					  const std::string& publicKeyPem,
++					  const std::string& email = {});
+ 
+ 	bool authenticate(const std::string& username, const std::string& passwordHash) const;
+ 	std::string getPublicKey(const std::string& username) const;
++	bool userExists(const std::string& username) const;
++	std::vector<std::string> listUsers() const;
++	std::vector<std::string> listOnlineUsers() const;
++
++	bool blockUser(const std::string& adminUser, const std::string& targetUser);
++	bool unblockUser(const std::string& adminUser, const std::string& targetUser);
++	bool resetPasswordHash(const std::string& adminUser, const std::string& targetUser, const std::string& passwordHash);
+ 
+ 	void storeMessage(const Message& message);
+ 	std::vector<Message> getConversation(const std::string& userA, const std::string& userB) const;
++	std::vector<Message> getGroupConversation(const std::string& groupId) const;
++	bool markDelivered(const std::string& messageId, const std::string& receiver);
++	bool markRead(const std::string& messageId, const std::string& reader);
++	bool deleteMessageForAll(const std::string& requester, const std::string& messageId);
++
++	bool addContact(const std::string& owner, const std::string& contactUsername);
++	bool removeContact(const std::string& owner, const std::string& contactUsername);
++	std::vector<std::string> getContacts(const std::string& owner) const;
++
++	std::optional<std::string> createGroup(const std::string& owner,
++										   const std::string& groupName,
++										   const std::vector<std::string>& members);
++	bool addGroupMember(const std::string& owner, const std::string& groupId, const std::string& member);
++	bool removeGroupMember(const std::string& owner, const std::string& groupId, const std::string& member);
++	std::vector<std::string> listUserGroups(const std::string& username) const;
++	std::vector<std::string> getGroupMembers(const std::string& groupId) const;
++
++	struct AuditRecord {
++		std::int64_t timestamp = 0;
++		std::string actor;
++		std::string action;
++		std::string details;
++	};
++	std::vector<AuditRecord> getAuditLog() const;
+ 
+ 	TcpServer& transport();
+ 	const TcpServer& transport() const;
+@@ -27,12 +65,37 @@
+ 	struct UserRecord {
+ 		std::string passwordHash;
+ 		std::string publicKeyPem;
++		std::string email;
++		bool blocked = false;
++		std::unordered_set<std::string> contacts;
++		bool isAdmin = false;
++	};
++
++	struct GroupRecord {
++		std::string groupId;
++		std::string owner;
++		std::string name;
++		std::set<std::string> members;
++	};
++
++	struct MessageIndex {
++		std::string key;
++		std::size_t index = 0;
++		bool isGroup = false;
+ 	};
+ 
+ 	static std::string makeConversationKey(const std::string& a, const std::string& b);
++	static std::string makeGroupId(const std::string& owner, const std::string& groupName);
++	void appendAudit(const std::string& actor, const std::string& action, const std::string& details);
++	void persistUsersToDiskUnlocked() const;
++	void loadUsersFromDisk();
+ 
+ 	mutable std::mutex mutex_;
+ 	std::unordered_map<std::string, UserRecord> users_;
+ 	std::unordered_map<std::string, std::vector<Message>> history_;
++	std::unordered_map<std::string, std::vector<Message>> groupHistory_;
++	std::unordered_map<std::string, MessageIndex> messageIndex_;
++	std::unordered_map<std::string, GroupRecord> groups_;
++	std::vector<AuditRecord> audit_;
+ 	TcpServer transport_;
+ };
+Index: CMakeLists.txt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>cmake_minimum_required(VERSION 3.10)\nproject(EvlampyMessenger VERSION 1.0 LANGUAGES CXX)\n\nset(CMAKE_CXX_STANDARD 17)\nset(CMAKE_CXX_STANDARD_REQUIRED ON)\nset(CMAKE_CXX_EXTENSIONS OFF)\n\nif(CMAKE_CXX_COMPILER_ID MATCHES \"GNU|Clang\")\n    add_compile_options(-Wall -Wextra -Wpedantic)\nendif()\n\nfind_package(OpenSSL REQUIRED)\nfind_package(Threads REQUIRED)\n\nset(PROJECT_SOURCES\n    src/chat/main.cpp\n    src/chat/ChatClient.cpp\n    src/chat/ChatServer.cpp\n    src/chat/Message.cpp\n\n    src/network/MessageProtocol.cpp\n    src/network/TcpClient.cpp\n    src/network/TcpServer.cpp\n\n    src/encryption/AES256GCMStrategy.cpp\n    src/encryption/OpenSSLKeyFactory.cpp\n\n    src/patterns/Command.cpp\n    src/patterns/Logger.cpp\n)\n\nadd_executable(target_exec)\ntarget_sources(target_exec PRIVATE ${PROJECT_SOURCES})\n\ntarget_include_directories(target_exec\n    PRIVATE\n        ${CMAKE_SOURCE_DIR}/include\n)\n\ntarget_link_libraries(target_exec\n    PRIVATE\n        OpenSSL::Crypto\n        Threads::Threads\n)\n
+===================================================================
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+--- a/CMakeLists.txt	(revision e6ed47be9e5bd23ff94a4fecbc1255876a7339f4)
++++ b/CMakeLists.txt	(date 1778842369586)
+@@ -11,9 +11,10 @@
+ 
+ find_package(OpenSSL REQUIRED)
+ find_package(Threads REQUIRED)
++option(BUILD_GUI "Build Qt6 GUI client" OFF)
++option(BUILD_TESTS "Build unit tests and scenario programs" ON)
+ 
+-set(PROJECT_SOURCES
+-    src/chat/main.cpp
++set(CORE_SOURCES
+     src/chat/ChatClient.cpp
+     src/chat/ChatServer.cpp
+     src/chat/Message.cpp
+@@ -29,16 +30,32 @@
+     src/patterns/Logger.cpp
+ )
+ 
+-add_executable(target_exec)
+-target_sources(target_exec PRIVATE ${PROJECT_SOURCES})
+-
+-target_include_directories(target_exec
+-    PRIVATE
++add_library(messenger_core STATIC)
++target_sources(messenger_core PRIVATE ${CORE_SOURCES})
++target_include_directories(messenger_core
++    PUBLIC
+         ${CMAKE_SOURCE_DIR}/include
+ )
+-
+-target_link_libraries(target_exec
+-    PRIVATE
++target_link_libraries(messenger_core
++    PUBLIC
+         OpenSSL::Crypto
+         Threads::Threads
+ )
++
++add_executable(target_exec src/chat/main.cpp)
++target_link_libraries(target_exec PRIVATE messenger_core)
++
++if(BUILD_GUI)
++    if(APPLE)
++        add_executable(messenger_gui src/gui/main_gui.mm)
++        target_link_libraries(messenger_gui PRIVATE messenger_core "-framework Cocoa")
++    else()
++        message(WARNING "messenger_gui is implemented for macOS AppKit in this repository")
++    endif()
++endif()
++
++if(BUILD_TESTS)
++    enable_testing()
++    add_subdirectory(tests)
++endif()
++
+Index: src/network/TcpServer.cpp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#include \"network/TcpServer.h\"\n\nbool TcpServer::connectClient(const std::string& username, ReceiveHandler handler) {\n\tstd::lock_guard<std::mutex> lock(mutex_);\n\treturn handlers_.emplace(username, std::move(handler)).second;\n}\n\nvoid TcpServer::disconnectClient(const std::string& username) {\n\tstd::lock_guard<std::mutex> lock(mutex_);\n\thandlers_.erase(username);\n}\n\nbool TcpServer::sendTo(const std::string& fromUser, const std::string& toUser, const std::string& payload) {\n\tReceiveHandler handler;\n\t{\n\t\tstd::lock_guard<std::mutex> lock(mutex_);\n\t\tconst auto it = handlers_.find(toUser);\n\t\tif (it == handlers_.end()) {\n\t\t\treturn false;\n\t\t}\n\t\thandler = it->second;\n\t}\n\n\thandler(fromUser, payload);\n\treturn true;\n}\n\nbool TcpServer::isOnline(const std::string& username) const {\n\tstd::lock_guard<std::mutex> lock(mutex_);\n\treturn handlers_.find(username) != handlers_.end();\n}\n\n
+===================================================================
+diff --git a/src/network/TcpServer.cpp b/src/network/TcpServer.cpp
+--- a/src/network/TcpServer.cpp	(revision e6ed47be9e5bd23ff94a4fecbc1255876a7339f4)
++++ b/src/network/TcpServer.cpp	(date 1778840029883)
+@@ -30,3 +30,13 @@
+ 	return handlers_.find(username) != handlers_.end();
+ }
+ 
++std::vector<std::string> TcpServer::listOnlineUsers() const {
++	std::lock_guard<std::mutex> lock(mutex_);
++	std::vector<std::string> out;
++	out.reserve(handlers_.size());
++	for (const auto& [username, _] : handlers_) {
++		out.push_back(username);
++	}
++	return out;
++}
++
+Index: src/chat/Message.cpp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#include \"chat/Message.h\"\n\n#include <chrono>\n#include <random>\n#include <sstream>\n\nnamespace {\nstd::string generateId() {\n    static std::mt19937_64 generator(std::random_device{}());\n    const auto now = std::chrono::steady_clock::now().time_since_epoch().count();\n    const auto rnd = generator();\n\n    std::ostringstream os;\n    os << std::hex << now << \"-\" << rnd;\n    return os.str();\n}\n\nstd::int64_t nowUnixMillis() {\n    using namespace std::chrono;\n    return duration_cast<milliseconds>(system_clock::now().time_since_epoch()).count();\n}\n}\n\nMessage Message::build(const std::string& sender,\n                      const std::string& receiver,\n                      std::vector<uint8_t> encryptedSessionKey,\n                      std::vector<uint8_t> encryptedPayload) {\n    Message message;\n    message.messageId = generateId();\n    message.sender = sender;\n    message.receiver = receiver;\n    message.encryptedSessionKey = std::move(encryptedSessionKey);\n    message.encryptedPayload = std::move(encryptedPayload);\n    message.timestamp = nowUnixMillis();\n    message.status = MessageStatus::Sent;\n    return message;\n}\n\n
+===================================================================
+diff --git a/src/chat/Message.cpp b/src/chat/Message.cpp
+--- a/src/chat/Message.cpp	(revision e6ed47be9e5bd23ff94a4fecbc1255876a7339f4)
++++ b/src/chat/Message.cpp	(date 1778839950642)
+@@ -23,16 +23,23 @@
+ 
+ Message Message::build(const std::string& sender,
+                       const std::string& receiver,
++                      const std::string& chatId,
++                      bool isGroupMessage,
+                       std::vector<uint8_t> encryptedSessionKey,
++                      std::vector<uint8_t> senderEncryptedSessionKey,
+                       std::vector<uint8_t> encryptedPayload) {
+     Message message;
+     message.messageId = generateId();
+     message.sender = sender;
+     message.receiver = receiver;
++    message.chatId = chatId;
++    message.isGroupMessage = isGroupMessage;
+     message.encryptedSessionKey = std::move(encryptedSessionKey);
++    message.senderEncryptedSessionKey = std::move(senderEncryptedSessionKey);
+     message.encryptedPayload = std::move(encryptedPayload);
+     message.timestamp = nowUnixMillis();
+     message.status = MessageStatus::Sent;
++    message.deletedForAll = false;
+     return message;
+ }
+ 
+Index: include/chat/Message.h
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#pragma once\n\n#include <cstdint>\n#include <string>\n#include <vector>\n\nenum class MessageStatus {\n\tSent,\n\tDelivered,\n\tRead\n};\n\nstruct Message {\n\tstd::string messageId;\n\tstd::string sender;\n\tstd::string receiver;\n\tstd::vector<uint8_t> encryptedSessionKey;\n\tstd::vector<uint8_t> encryptedPayload;\n\tstd::int64_t timestamp;\n\tMessageStatus status;\n\n\tstatic Message build(const std::string& sender,\n\t\t\t\t\t\t const std::string& receiver,\n\t\t\t\t\t\t std::vector<uint8_t> encryptedSessionKey,\n\t\t\t\t\t\t std::vector<uint8_t> encryptedPayload);\n};\n
+===================================================================
+diff --git a/include/chat/Message.h b/include/chat/Message.h
+--- a/include/chat/Message.h	(revision e6ed47be9e5bd23ff94a4fecbc1255876a7339f4)
++++ b/include/chat/Message.h	(date 1778839944297)
+@@ -14,13 +14,20 @@
+ 	std::string messageId;
+ 	std::string sender;
+ 	std::string receiver;
++	std::string chatId;
++	bool isGroupMessage = false;
+ 	std::vector<uint8_t> encryptedSessionKey;
++	std::vector<uint8_t> senderEncryptedSessionKey;
+ 	std::vector<uint8_t> encryptedPayload;
+ 	std::int64_t timestamp;
+ 	MessageStatus status;
++	bool deletedForAll = false;
+ 
+ 	static Message build(const std::string& sender,
+ 						 const std::string& receiver,
++						 const std::string& chatId,
++						 bool isGroupMessage,
+ 						 std::vector<uint8_t> encryptedSessionKey,
++						 std::vector<uint8_t> senderEncryptedSessionKey,
+ 						 std::vector<uint8_t> encryptedPayload);
+ };
+Index: include/network/TcpServer.h
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>#pragma once\n\n#include <functional>\n#include <mutex>\n#include <string>\n#include <unordered_map>\n\nclass TcpServer {\npublic:\n\tusing ReceiveHandler = std::function<void(const std::string& fromUser, const std::string& payload)>;\n\n\tbool connectClient(const std::string& username, ReceiveHandler handler);\n\tvoid disconnectClient(const std::string& username);\n\n\tbool sendTo(const std::string& fromUser, const std::string& toUser, const std::string& payload);\n\tbool isOnline(const std::string& username) const;\n\nprivate:\n\tmutable std::mutex mutex_;\n\tstd::unordered_map<std::string, ReceiveHandler> handlers_;\n};\n\n
+===================================================================
+diff --git a/include/network/TcpServer.h b/include/network/TcpServer.h
+--- a/include/network/TcpServer.h	(revision e6ed47be9e5bd23ff94a4fecbc1255876a7339f4)
++++ b/include/network/TcpServer.h	(date 1778840026006)
+@@ -4,6 +4,7 @@
+ #include <mutex>
+ #include <string>
+ #include <unordered_map>
++#include <vector>
+ 
+ class TcpServer {
+ public:
+@@ -14,6 +15,7 @@
+ 
+ 	bool sendTo(const std::string& fromUser, const std::string& toUser, const std::string& payload);
+ 	bool isOnline(const std::string& username) const;
++	std::vector<std::string> listOnlineUsers() const;
+ 
+ private:
+ 	mutable std::mutex mutex_;
