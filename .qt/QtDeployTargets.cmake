@@ -1,0 +1,6 @@
+set(__QT_DEPLOY_TARGET_messenger_core_FILE /Users/soldatov_a/CLionProjects/messanger_project/build/libmessenger_core.a)
+set(__QT_DEPLOY_TARGET_messenger_core_TYPE STATIC_LIBRARY)
+set(__QT_DEPLOY_TARGET_target_exec_FILE /Users/soldatov_a/CLionProjects/messanger_project/build/target_exec)
+set(__QT_DEPLOY_TARGET_target_exec_TYPE EXECUTABLE)
+set(__QT_DEPLOY_TARGET_messenger_gui_FILE /Users/soldatov_a/CLionProjects/messanger_project/build/messenger_gui)
+set(__QT_DEPLOY_TARGET_messenger_gui_TYPE EXECUTABLE)

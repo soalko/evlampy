@@ -1,0 +1,4 @@
+/Users/soldatov_a/CLionProjects/messanger_project/build/CMakeFiles/messenger_core.dir
+/Users/soldatov_a/CLionProjects/messanger_project/build/CMakeFiles/target_exec.dir
+/Users/soldatov_a/CLionProjects/messanger_project/build/CMakeFiles/edit_cache.dir
+/Users/soldatov_a/CLionProjects/messanger_project/build/CMakeFiles/rebuild_cache.dir
