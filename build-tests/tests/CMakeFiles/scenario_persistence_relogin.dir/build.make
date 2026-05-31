@@ -96,7 +96,7 @@ scenario_persistence_relogin_EXTERNAL_OBJECTS =
 tests/scenario_persistence_relogin: tests/CMakeFiles/scenario_persistence_relogin.dir/scenarios/scenario_persistence_relogin.cpp.o
 tests/scenario_persistence_relogin: tests/CMakeFiles/scenario_persistence_relogin.dir/build.make
 tests/scenario_persistence_relogin: libmessenger_core.a
-tests/scenario_persistence_relogin: /opt/homebrew/Cellar/openssl@3/3.6.1/lib/libcrypto.dylib
+tests/scenario_persistence_relogin: /opt/homebrew/opt/openssl@3/lib/libcrypto.dylib
 tests/scenario_persistence_relogin: tests/CMakeFiles/scenario_persistence_relogin.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/soldatov_a/CLionProjects/messanger_project/build-tests/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable scenario_persistence_relogin"
 	cd /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/scenario_persistence_relogin.dir/link.txt --verbose=$(VERBOSE)

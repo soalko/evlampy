@@ -1,20 +1,18 @@
-Start testing: May 15 13:57 MSK
+Start testing: May 31 17:29 MSK
 ----------------------------------------------------------
-1/16 Testing: test_message
-1/16 Test: test_message
+1/17 Testing: test_message
+1/17 Test: test_message
 Command: "/Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/test_message"
 Directory: /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests
-"test_message" start time: May 15 13:57 MSK
+"test_message" start time: May 31 17:29 MSK
 Output:
 ----------------------------------------------------------
 Running main() from /Users/soldatov_a/CLionProjects/messanger_project/build-tests/_deps/googletest-src/googletest/src/gtest_main.cc
-[==========] Running 7 tests from 1 test suite.
+[==========] Running 6 tests from 1 test suite.
 [----------] Global test environment set-up.
-[----------] 7 tests from MessageTests
+[----------] 6 tests from MessageTests
 [ RUN      ] MessageTests.BuildSetsSenderReceiverAndPayload
 [       OK ] MessageTests.BuildSetsSenderReceiverAndPayload (0 ms)
-[ RUN      ] MessageTests.BuildSetsGroupFields
-[       OK ] MessageTests.BuildSetsGroupFields (0 ms)
 [ RUN      ] MessageTests.BuildGeneratesNonEmptyId
 [       OK ] MessageTests.BuildGeneratesNonEmptyId (0 ms)
 [ RUN      ] MessageTests.BuildGeneratesUniqueIds
@@ -23,38 +21,38 @@ Running main() from /Users/soldatov_a/CLionProjects/messanger_project/build-test
 [       OK ] MessageTests.BuildSetsTimestampCloseToNow (0 ms)
 [ RUN      ] MessageTests.BuildSetsDefaultStatusToSent
 [       OK ] MessageTests.BuildSetsDefaultStatusToSent (0 ms)
-[ RUN      ] MessageTests.BuildSetsDeletedForAllFalse
-[       OK ] MessageTests.BuildSetsDeletedForAllFalse (0 ms)
-[----------] 7 tests from MessageTests (0 ms total)
+[ RUN      ] MessageTests.BuildSupportsEmptyCipherFields
+[       OK ] MessageTests.BuildSupportsEmptyCipherFields (0 ms)
+[----------] 6 tests from MessageTests (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 7 tests from 1 test suite ran. (0 ms total)
-[  PASSED  ] 7 tests.
+[==========] 6 tests from 1 test suite ran. (0 ms total)
+[  PASSED  ] 6 tests.
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"test_message" end time: May 15 13:57 MSK
+"test_message" end time: May 31 17:29 MSK
 "test_message" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-2/16 Testing: test_message_protocol
-2/16 Test: test_message_protocol
+2/17 Testing: test_message_protocol
+2/17 Test: test_message_protocol
 Command: "/Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/test_message_protocol"
 Directory: /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests
-"test_message_protocol" start time: May 15 13:57 MSK
+"test_message_protocol" start time: May 31 17:29 MSK
 Output:
 ----------------------------------------------------------
 Running main() from /Users/soldatov_a/CLionProjects/messanger_project/build-tests/_deps/googletest-src/googletest/src/gtest_main.cc
 [==========] Running 7 tests from 1 test suite.
 [----------] Global test environment set-up.
 [----------] 7 tests from MessageProtocolTests
-[ RUN      ] MessageProtocolTests.SerializeDeserializeRoundtripDirectMessage
-[       OK ] MessageProtocolTests.SerializeDeserializeRoundtripDirectMessage (0 ms)
-[ RUN      ] MessageProtocolTests.SerializeDeserializeRoundtripGroupDeletedMessage
-[       OK ] MessageProtocolTests.SerializeDeserializeRoundtripGroupDeletedMessage (0 ms)
+[ RUN      ] MessageProtocolTests.SerializeDeserializeRoundtripMessage
+[       OK ] MessageProtocolTests.SerializeDeserializeRoundtripMessage (0 ms)
 [ RUN      ] MessageProtocolTests.DeserializeRejectsInvalidFieldCount
 [       OK ] MessageProtocolTests.DeserializeRejectsInvalidFieldCount (0 ms)
+[ RUN      ] MessageProtocolTests.DeserializeRejectsInvalidNumericFields
+[       OK ] MessageProtocolTests.DeserializeRejectsInvalidNumericFields (0 ms)
 [ RUN      ] MessageProtocolTests.Base64EncodeDecodeRoundtripBinary
 [       OK ] MessageProtocolTests.Base64EncodeDecodeRoundtripBinary (0 ms)
 [ RUN      ] MessageProtocolTests.Base64DecodeInvalidTextThrows
@@ -69,18 +67,18 @@ Running main() from /Users/soldatov_a/CLionProjects/messanger_project/build-test
 [==========] 7 tests from 1 test suite ran. (0 ms total)
 [  PASSED  ] 7 tests.
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"test_message_protocol" end time: May 15 13:57 MSK
+"test_message_protocol" end time: May 31 17:29 MSK
 "test_message_protocol" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-3/16 Testing: test_tcp_server
-3/16 Test: test_tcp_server
+3/17 Testing: test_tcp_server
+3/17 Test: test_tcp_server
 Command: "/Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/test_tcp_server"
 Directory: /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests
-"test_tcp_server" start time: May 15 13:57 MSK
+"test_tcp_server" start time: May 31 17:29 MSK
 Output:
 ----------------------------------------------------------
 Running main() from /Users/soldatov_a/CLionProjects/messanger_project/build-tests/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -97,8 +95,8 @@ Running main() from /Users/soldatov_a/CLionProjects/messanger_project/build-test
 [       OK ] TcpServerTests.SendToOnlineClientDeliversPayload (0 ms)
 [ RUN      ] TcpServerTests.SendToOfflineClientFails
 [       OK ] TcpServerTests.SendToOfflineClientFails (0 ms)
-[ RUN      ] TcpServerTests.ListOnlineUsersContainsAllConnected
-[       OK ] TcpServerTests.ListOnlineUsersContainsAllConnected (0 ms)
+[ RUN      ] TcpServerTests.IsOnlineReflectsConnectedUsers
+[       OK ] TcpServerTests.IsOnlineReflectsConnectedUsers (0 ms)
 [ RUN      ] TcpServerTests.SendAfterDisconnectFails
 [       OK ] TcpServerTests.SendAfterDisconnectFails (0 ms)
 [----------] 7 tests from TcpServerTests (0 ms total)
@@ -107,18 +105,18 @@ Running main() from /Users/soldatov_a/CLionProjects/messanger_project/build-test
 [==========] 7 tests from 1 test suite ran. (0 ms total)
 [  PASSED  ] 7 tests.
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"test_tcp_server" end time: May 15 13:57 MSK
+"test_tcp_server" end time: May 31 17:29 MSK
 "test_tcp_server" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-4/16 Testing: test_tcp_client
-4/16 Test: test_tcp_client
+4/17 Testing: test_tcp_client
+4/17 Test: test_tcp_client
 Command: "/Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/test_tcp_client"
 Directory: /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests
-"test_tcp_client" start time: May 15 13:57 MSK
+"test_tcp_client" start time: May 31 17:29 MSK
 Output:
 ----------------------------------------------------------
 Running main() from /Users/soldatov_a/CLionProjects/messanger_project/build-tests/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -145,18 +143,18 @@ Running main() from /Users/soldatov_a/CLionProjects/messanger_project/build-test
 [==========] 7 tests from 1 test suite ran. (0 ms total)
 [  PASSED  ] 7 tests.
 <end of output>
-Test time =   0.01 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"test_tcp_client" end time: May 15 13:57 MSK
+"test_tcp_client" end time: May 31 17:29 MSK
 "test_tcp_client" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-5/16 Testing: test_encryption_aes
-5/16 Test: test_encryption_aes
+5/17 Testing: test_encryption_aes
+5/17 Test: test_encryption_aes
 Command: "/Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/test_encryption_aes"
 Directory: /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests
-"test_encryption_aes" start time: May 15 13:57 MSK
+"test_encryption_aes" start time: May 31 17:29 MSK
 Output:
 ----------------------------------------------------------
 Running main() from /Users/soldatov_a/CLionProjects/messanger_project/build-tests/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -177,24 +175,24 @@ Running main() from /Users/soldatov_a/CLionProjects/messanger_project/build-test
 [       OK ] AES256GCMStrategyTests.DecryptRejectsTamperedCiphertext (0 ms)
 [ RUN      ] AES256GCMStrategyTests.EncryptUsesRandomIv
 [       OK ] AES256GCMStrategyTests.EncryptUsesRandomIv (0 ms)
-[----------] 7 tests from AES256GCMStrategyTests (1 ms total)
+[----------] 7 tests from AES256GCMStrategyTests (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 7 tests from 1 test suite ran. (1 ms total)
+[==========] 7 tests from 1 test suite ran. (0 ms total)
 [  PASSED  ] 7 tests.
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"test_encryption_aes" end time: May 15 13:57 MSK
+"test_encryption_aes" end time: May 31 17:29 MSK
 "test_encryption_aes" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-6/16 Testing: test_encryption_key_factory
-6/16 Test: test_encryption_key_factory
+6/17 Testing: test_encryption_key_factory
+6/17 Test: test_encryption_key_factory
 Command: "/Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/test_encryption_key_factory"
 Directory: /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests
-"test_encryption_key_factory" start time: May 15 13:57 MSK
+"test_encryption_key_factory" start time: May 31 17:29 MSK
 Output:
 ----------------------------------------------------------
 Running main() from /Users/soldatov_a/CLionProjects/messanger_project/build-tests/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -202,43 +200,43 @@ Running main() from /Users/soldatov_a/CLionProjects/messanger_project/build-test
 [----------] Global test environment set-up.
 [----------] 7 tests from OpenSSLKeyFactoryTests
 [ RUN      ] OpenSSLKeyFactoryTests.GenerateRsaPairHasPemHeaders
-[       OK ] OpenSSLKeyFactoryTests.GenerateRsaPairHasPemHeaders (40 ms)
+[       OK ] OpenSSLKeyFactoryTests.GenerateRsaPairHasPemHeaders (20 ms)
 [ RUN      ] OpenSSLKeyFactoryTests.GenerateSymmetricKeyDefaultSizeIs32
 [       OK ] OpenSSLKeyFactoryTests.GenerateSymmetricKeyDefaultSizeIs32 (0 ms)
 [ RUN      ] OpenSSLKeyFactoryTests.GenerateSymmetricKeyCustomSize
 [       OK ] OpenSSLKeyFactoryTests.GenerateSymmetricKeyCustomSize (0 ms)
 [ RUN      ] OpenSSLKeyFactoryTests.EncryptDecryptRoundtrip
-[       OK ] OpenSSLKeyFactoryTests.EncryptDecryptRoundtrip (51 ms)
+[       OK ] OpenSSLKeyFactoryTests.EncryptDecryptRoundtrip (52 ms)
 [ RUN      ] OpenSSLKeyFactoryTests.EncryptWithInvalidPublicKeyThrows
 [       OK ] OpenSSLKeyFactoryTests.EncryptWithInvalidPublicKeyThrows (0 ms)
 [ RUN      ] OpenSSLKeyFactoryTests.DecryptWithInvalidPrivateKeyThrows
-[       OK ] OpenSSLKeyFactoryTests.DecryptWithInvalidPrivateKeyThrows (29 ms)
+[       OK ] OpenSSLKeyFactoryTests.DecryptWithInvalidPrivateKeyThrows (46 ms)
 [ RUN      ] OpenSSLKeyFactoryTests.OaepProducesDifferentCiphertextForSameInput
-[       OK ] OpenSSLKeyFactoryTests.OaepProducesDifferentCiphertextForSameInput (44 ms)
-[----------] 7 tests from OpenSSLKeyFactoryTests (166 ms total)
+[       OK ] OpenSSLKeyFactoryTests.OaepProducesDifferentCiphertextForSameInput (41 ms)
+[----------] 7 tests from OpenSSLKeyFactoryTests (159 ms total)
 
 [----------] Global test environment tear-down
-[==========] 7 tests from 1 test suite ran. (166 ms total)
+[==========] 7 tests from 1 test suite ran. (159 ms total)
 [  PASSED  ] 7 tests.
 <end of output>
-Test time =   0.17 sec
+Test time =   0.16 sec
 ----------------------------------------------------------
 Test Passed.
-"test_encryption_key_factory" end time: May 15 13:57 MSK
+"test_encryption_key_factory" end time: May 31 17:29 MSK
 "test_encryption_key_factory" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-7/16 Testing: test_chat_server
-7/16 Test: test_chat_server
+7/17 Testing: test_chat_server
+7/17 Test: test_chat_server
 Command: "/Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/test_chat_server"
 Directory: /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests
-"test_chat_server" start time: May 15 13:57 MSK
+"test_chat_server" start time: May 31 17:29 MSK
 Output:
 ----------------------------------------------------------
 Running main() from /Users/soldatov_a/CLionProjects/messanger_project/build-tests/_deps/googletest-src/googletest/src/gtest_main.cc
-[==========] Running 12 tests from 1 test suite.
+[==========] Running 8 tests from 1 test suite.
 [----------] Global test environment set-up.
-[----------] 12 tests from ChatServerTests
+[----------] 8 tests from ChatServerTests
 [ RUN      ] ChatServerTests.RegisterUserSuccess
 [       OK ] ChatServerTests.RegisterUserSuccess (0 ms)
 [ RUN      ] ChatServerTests.RegisterDuplicateFails
@@ -247,122 +245,122 @@ Running main() from /Users/soldatov_a/CLionProjects/messanger_project/build-test
 [       OK ] ChatServerTests.AuthenticateSuccessAndFail (0 ms)
 [ RUN      ] ChatServerTests.PublicKeyLookupWorks
 [       OK ] ChatServerTests.PublicKeyLookupWorks (0 ms)
-[ RUN      ] ChatServerTests.BlockAndUnblockFlow
-[       OK ] ChatServerTests.BlockAndUnblockFlow (1 ms)
-[ RUN      ] ChatServerTests.ResetPasswordHashByAdmin
-[       OK ] ChatServerTests.ResetPasswordHashByAdmin (0 ms)
-[ RUN      ] ChatServerTests.ContactsAddRemoveList
-[       OK ] ChatServerTests.ContactsAddRemoveList (0 ms)
 [ RUN      ] ChatServerTests.StoreAndReadConversation
 [       OK ] ChatServerTests.StoreAndReadConversation (0 ms)
-[ RUN      ] ChatServerTests.MarkDeliveredAndReadFlow
-[       OK ] ChatServerTests.MarkDeliveredAndReadFlow (0 ms)
+[ RUN      ] ChatServerTests.ConversationLookupSymmetricByParticipants
+[       OK ] ChatServerTests.ConversationLookupSymmetricByParticipants (0 ms)
 [ RUN      ] ChatServerTests.DeleteMessageForAllOnlyBySender
 [       OK ] ChatServerTests.DeleteMessageForAllOnlyBySender (0 ms)
-[ RUN      ] ChatServerTests.GroupCreateAndSendConversation
-[       OK ] ChatServerTests.GroupCreateAndSendConversation (0 ms)
-[ RUN      ] ChatServerTests.AuditLogHasEntriesAfterOperations
-[       OK ] ChatServerTests.AuditLogHasEntriesAfterOperations (0 ms)
-[----------] 12 tests from ChatServerTests (6 ms total)
+[ RUN      ] ChatServerTests.DeleteUnknownMessageFails
+[       OK ] ChatServerTests.DeleteUnknownMessageFails (0 ms)
+[----------] 8 tests from ChatServerTests (1 ms total)
 
 [----------] Global test environment tear-down
-[==========] 12 tests from 1 test suite ran. (6 ms total)
-[  PASSED  ] 12 tests.
+[==========] 8 tests from 1 test suite ran. (1 ms total)
+[  PASSED  ] 8 tests.
 <end of output>
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"test_chat_server" end time: May 15 13:57 MSK
+"test_chat_server" end time: May 31 17:29 MSK
 "test_chat_server" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-8/16 Testing: test_chat_client
-8/16 Test: test_chat_client
+8/17 Testing: test_chat_client
+8/17 Test: test_chat_client
 Command: "/Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/test_chat_client"
 Directory: /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests
-"test_chat_client" start time: May 15 13:57 MSK
+"test_chat_client" start time: May 31 17:29 MSK
 Output:
 ----------------------------------------------------------
 Running main() from /Users/soldatov_a/CLionProjects/messanger_project/build-tests/_deps/googletest-src/googletest/src/gtest_main.cc
-[==========] Running 11 tests from 1 test suite.
+[==========] Running 9 tests from 1 test suite.
 [----------] Global test environment set-up.
-[----------] 11 tests from ChatClientTests
+[----------] 9 tests from ChatClientTests
 [ RUN      ] ChatClientTests.RegisterAndLoginSuccess
-[INFO] 2026-05-15 13:57:57 | User 'alice' registered
-[INFO] 2026-05-15 13:57:57 | User 'alice' logged in
-[       OK ] ChatClientTests.RegisterAndLoginSuccess (34 ms)
+[INFO] 2026-05-31 17:29:51 | Saved keys for user 'alice' to /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243239909708/.evlampy/keys
+[INFO] 2026-05-31 17:29:51 | User 'alice' registered
+[INFO] 2026-05-31 17:29:51 | Loaded keys for user 'alice' from /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243239909708/.evlampy/keys
+[INFO] 2026-05-31 17:29:51 | User 'alice' logged in
+[       OK ] ChatClientTests.RegisterAndLoginSuccess (36 ms)
 [ RUN      ] ChatClientTests.LoginFailsWithWrongPassword
-[INFO] 2026-05-15 13:57:57 | User 'alice' registered
-[       OK ] ChatClientTests.LoginFailsWithWrongPassword (50 ms)
+[INFO] 2026-05-31 17:29:51 | Saved keys for user 'alice' to /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243276660666/.evlampy/keys
+[INFO] 2026-05-31 17:29:51 | User 'alice' registered
+[       OK ] ChatClientTests.LoginFailsWithWrongPassword (15 ms)
 [ RUN      ] ChatClientTests.LoginFailsForUnknownUser
 [       OK ] ChatClientTests.LoginFailsForUnknownUser (0 ms)
 [ RUN      ] ChatClientTests.ReloginAfterLogoutSucceeds
-[INFO] 2026-05-15 13:57:57 | User 'alice' registered
-[INFO] 2026-05-15 13:57:57 | User 'alice' logged in
-[INFO] 2026-05-15 13:57:57 | User 'alice' logged out
-[INFO] 2026-05-15 13:57:57 | User 'alice' logged in
-[       OK ] ChatClientTests.ReloginAfterLogoutSucceeds (26 ms)
-[ RUN      ] ChatClientTests.LoginNewClientInstanceWithPersistedKeysSucceeds
-[INFO] 2026-05-15 13:57:57 | User 'alice' registered
-[INFO] 2026-05-15 13:57:57 | User 'alice' logged in
-[INFO] 2026-05-15 13:57:57 | User 'alice' logged out
-[INFO] 2026-05-15 13:57:57 | User 'alice' logged in
-[       OK ] ChatClientTests.LoginNewClientInstanceWithPersistedKeysSucceeds (19 ms)
-[ RUN      ] ChatClientTests.SendMessageAndReadConversation
-[INFO] 2026-05-15 13:57:57 | User 'alice' registered
-[INFO] 2026-05-15 13:57:57 | User 'bob' registered
-[INFO] 2026-05-15 13:57:57 | User 'alice' logged in
-[INFO] 2026-05-15 13:57:57 | User 'bob' logged in
-[INFO] 2026-05-15 13:57:57 | User 'bob' received message from 'alice'
-[       OK ] ChatClientTests.SendMessageAndReadConversation (35 ms)
+[INFO] 2026-05-31 17:29:51 | Saved keys for user 'alice' to /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243292075041/.evlampy/keys
+[INFO] 2026-05-31 17:29:51 | User 'alice' registered
+[INFO] 2026-05-31 17:29:51 | Loaded keys for user 'alice' from /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243292075041/.evlampy/keys
+[INFO] 2026-05-31 17:29:51 | User 'alice' logged in
+[INFO] 2026-05-31 17:29:51 | User 'alice' logged out
+[INFO] 2026-05-31 17:29:51 | Loaded keys for user 'alice' from /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243292075041/.evlampy/keys
+[INFO] 2026-05-31 17:29:51 | User 'alice' logged in
+[       OK ] ChatClientTests.ReloginAfterLogoutSucceeds (22 ms)
+[ RUN      ] ChatClientTests.SendMessageStoresConversationOnServer
+[INFO] 2026-05-31 17:29:51 | Saved keys for user 'alice' to /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243314864125/.evlampy/keys
+[INFO] 2026-05-31 17:29:51 | User 'alice' registered
+[INFO] 2026-05-31 17:29:51 | Saved keys for user 'bob' to /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243314864125/.evlampy/keys
+[INFO] 2026-05-31 17:29:51 | User 'bob' registered
+[INFO] 2026-05-31 17:29:51 | Loaded keys for user 'alice' from /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243314864125/.evlampy/keys
+[INFO] 2026-05-31 17:29:51 | User 'alice' logged in
+[INFO] 2026-05-31 17:29:51 | Loaded keys for user 'bob' from /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243314864125/.evlampy/keys
+[INFO] 2026-05-31 17:29:51 | User 'bob' logged in
+[INFO] 2026-05-31 17:29:51 | User 'bob' received message from 'alice'
+[       OK ] ChatClientTests.SendMessageStoresConversationOnServer (34 ms)
+[ RUN      ] ChatClientTests.ObserverGetsDecryptedIncomingMessage
+[INFO] 2026-05-31 17:29:51 | Saved keys for user 'alice' to /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243349266708/.evlampy/keys
+[INFO] 2026-05-31 17:29:51 | User 'alice' registered
+[INFO] 2026-05-31 17:29:51 | Saved keys for user 'bob' to /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243349266708/.evlampy/keys
+[INFO] 2026-05-31 17:29:51 | User 'bob' registered
+[INFO] 2026-05-31 17:29:51 | Loaded keys for user 'alice' from /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243349266708/.evlampy/keys
+[INFO] 2026-05-31 17:29:51 | User 'alice' logged in
+[INFO] 2026-05-31 17:29:51 | Loaded keys for user 'bob' from /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243349266708/.evlampy/keys
+[INFO] 2026-05-31 17:29:51 | User 'bob' logged in
+[INFO] 2026-05-31 17:29:51 | User 'bob' received message from 'alice'
+[       OK ] ChatClientTests.ObserverGetsDecryptedIncomingMessage (107 ms)
 [ RUN      ] ChatClientTests.SendMessageToUnknownUserFails
-[INFO] 2026-05-15 13:57:57 | User 'alice' registered
-[INFO] 2026-05-15 13:57:57 | User 'alice' logged in
-[ERROR] 2026-05-15 13:57:57 | Receiver 'nobody' not found
-[       OK ] ChatClientTests.SendMessageToUnknownUserFails (31 ms)
-[ RUN      ] ChatClientTests.ContactsAddAndRemoveFlow
-[INFO] 2026-05-15 13:57:57 | User 'alice' registered
-[INFO] 2026-05-15 13:57:58 | User 'bob' registered
-[INFO] 2026-05-15 13:57:58 | User 'alice' logged in
-[       OK ] ChatClientTests.ContactsAddAndRemoveFlow (39 ms)
-[ RUN      ] ChatClientTests.CreateGroupAndSendGroupMessage
-[INFO] 2026-05-15 13:57:58 | User 'alice' registered
-[INFO] 2026-05-15 13:57:58 | User 'bob' registered
-[INFO] 2026-05-15 13:57:58 | User 'alice' logged in
-[INFO] 2026-05-15 13:57:58 | User 'bob' logged in
-[INFO] 2026-05-15 13:57:58 | User 'bob' received message from 'alice'
-[       OK ] ChatClientTests.CreateGroupAndSendGroupMessage (114 ms)
-[ RUN      ] ChatClientTests.DeleteMessageForAllFlow
-[INFO] 2026-05-15 13:57:58 | User 'alice' registered
-[INFO] 2026-05-15 13:57:58 | User 'bob' registered
-[INFO] 2026-05-15 13:57:58 | User 'alice' logged in
-[INFO] 2026-05-15 13:57:58 | User 'bob' logged in
-[INFO] 2026-05-15 13:57:58 | User 'bob' received message from 'alice'
-[       OK ] ChatClientTests.DeleteMessageForAllFlow (34 ms)
-[ RUN      ] ChatClientTests.ListOnlineUsersReflectsCurrentState
-[INFO] 2026-05-15 13:57:58 | User 'alice' registered
-[INFO] 2026-05-15 13:57:58 | User 'bob' registered
-[INFO] 2026-05-15 13:57:58 | User 'alice' logged in
-[INFO] 2026-05-15 13:57:58 | User 'bob' logged in
-[       OK ] ChatClientTests.ListOnlineUsersReflectsCurrentState (130 ms)
-[----------] 11 tests from ChatClientTests (515 ms total)
+[INFO] 2026-05-31 17:29:51 | Saved keys for user 'alice' to /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243457231708/.evlampy/keys
+[INFO] 2026-05-31 17:29:51 | User 'alice' registered
+[INFO] 2026-05-31 17:29:51 | Loaded keys for user 'alice' from /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243457231708/.evlampy/keys
+[INFO] 2026-05-31 17:29:51 | User 'alice' logged in
+[ERROR] 2026-05-31 17:29:51 | Receiver 'nobody' not found
+[       OK ] ChatClientTests.SendMessageToUnknownUserFails (19 ms)
+[ RUN      ] ChatClientTests.DeleteMessageForAllRemovesMessageFromHistory
+[INFO] 2026-05-31 17:29:51 | Saved keys for user 'alice' to /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243476662375/.evlampy/keys
+[INFO] 2026-05-31 17:29:51 | User 'alice' registered
+[INFO] 2026-05-31 17:29:51 | Saved keys for user 'bob' to /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243476662375/.evlampy/keys
+[INFO] 2026-05-31 17:29:51 | User 'bob' registered
+[INFO] 2026-05-31 17:29:51 | Loaded keys for user 'alice' from /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243476662375/.evlampy/keys
+[INFO] 2026-05-31 17:29:51 | User 'alice' logged in
+[INFO] 2026-05-31 17:29:51 | Loaded keys for user 'bob' from /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243476662375/.evlampy/keys
+[INFO] 2026-05-31 17:29:51 | User 'bob' logged in
+[INFO] 2026-05-31 17:29:51 | User 'bob' received message from 'alice'
+[INFO] 2026-05-31 17:29:51 | User 'alice' deleted message '2d6e8613f3bfd-f7e5a2cb52a77d7d' for all
+[       OK ] ChatClientTests.DeleteMessageForAllRemovesMessageFromHistory (29 ms)
+[ RUN      ] ChatClientTests.DeleteMessageFailsWhenNotLoggedIn
+[INFO] 2026-05-31 17:29:51 | Saved keys for user 'alice' to /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243506632166/.evlampy/keys
+[INFO] 2026-05-31 17:29:51 | User 'alice' registered
+[       OK ] ChatClientTests.DeleteMessageFailsWhenNotLoggedIn (71 ms)
+[----------] 9 tests from ChatClientTests (338 ms total)
 
 [----------] Global test environment tear-down
-[==========] 11 tests from 1 test suite ran. (515 ms total)
-[  PASSED  ] 11 tests.
+[==========] 9 tests from 1 test suite ran. (338 ms total)
+[  PASSED  ] 9 tests.
 <end of output>
-Test time =   0.52 sec
+Test time =   0.34 sec
 ----------------------------------------------------------
 Test Passed.
-"test_chat_client" end time: May 15 13:57 MSK
+"test_chat_client" end time: May 31 17:29 MSK
 "test_chat_client" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-9/16 Testing: test_patterns_observer
-9/16 Test: test_patterns_observer
+9/17 Testing: test_patterns_observer
+9/17 Test: test_patterns_observer
 Command: "/Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/test_patterns_observer"
 Directory: /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests
-"test_patterns_observer" start time: May 15 13:57 MSK
+"test_patterns_observer" start time: May 31 17:29 MSK
 Output:
 ----------------------------------------------------------
 Running main() from /Users/soldatov_a/CLionProjects/messanger_project/build-tests/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -392,15 +390,15 @@ Running main() from /Users/soldatov_a/CLionProjects/messanger_project/build-test
 Test time =   0.01 sec
 ----------------------------------------------------------
 Test Passed.
-"test_patterns_observer" end time: May 15 13:57 MSK
+"test_patterns_observer" end time: May 31 17:29 MSK
 "test_patterns_observer" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-10/16 Testing: test_patterns_command_logger
-10/16 Test: test_patterns_command_logger
+10/17 Testing: test_patterns_command_logger
+10/17 Test: test_patterns_command_logger
 Command: "/Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/test_patterns_command_logger"
 Directory: /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests
-"test_patterns_command_logger" start time: May 15 13:57 MSK
+"test_patterns_command_logger" start time: May 31 17:29 MSK
 Output:
 ----------------------------------------------------------
 Running main() from /Users/soldatov_a/CLionProjects/messanger_project/build-tests/_deps/googletest-src/googletest/src/gtest_main.cc
@@ -408,167 +406,235 @@ Running main() from /Users/soldatov_a/CLionProjects/messanger_project/build-test
 [----------] Global test environment set-up.
 [----------] 3 tests from CommandLoggerTests
 [ RUN      ] CommandLoggerTests.SendMessageCommandExecuteSuccess
-[INFO] 2026-05-15 13:57:58 | User 'alice' registered
-[INFO] 2026-05-15 13:57:58 | User 'bob' registered
-[INFO] 2026-05-15 13:57:58 | User 'alice' logged in
-[INFO] 2026-05-15 13:57:58 | User 'bob' logged in
-[INFO] 2026-05-15 13:57:58 | User 'bob' received message from 'alice'
-[       OK ] CommandLoggerTests.SendMessageCommandExecuteSuccess (36 ms)
+[INFO] 2026-05-31 17:29:52 | Saved keys for user 'alice' to /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243588923250/.evlampy/keys
+[INFO] 2026-05-31 17:29:52 | User 'alice' registered
+[INFO] 2026-05-31 17:29:52 | Saved keys for user 'bob' to /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243588923250/.evlampy/keys
+[INFO] 2026-05-31 17:29:52 | User 'bob' registered
+[INFO] 2026-05-31 17:29:52 | Loaded keys for user 'alice' from /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243588923250/.evlampy/keys
+[INFO] 2026-05-31 17:29:52 | User 'alice' logged in
+[INFO] 2026-05-31 17:29:52 | Loaded keys for user 'bob' from /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243588923250/.evlampy/keys
+[INFO] 2026-05-31 17:29:52 | User 'bob' logged in
+[INFO] 2026-05-31 17:29:52 | User 'bob' received message from 'alice'
+[       OK ] CommandLoggerTests.SendMessageCommandExecuteSuccess (57 ms)
 [ RUN      ] CommandLoggerTests.SendMessageCommandFailsWhenNotLoggedIn
-[INFO] 2026-05-15 13:57:58 | User 'alice' registered
-[INFO] 2026-05-15 13:57:58 | User 'bob' registered
-[       OK ] CommandLoggerTests.SendMessageCommandFailsWhenNotLoggedIn (32 ms)
+[INFO] 2026-05-31 17:29:52 | Saved keys for user 'alice' to /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243646287958/.evlampy/keys
+[INFO] 2026-05-31 17:29:52 | User 'alice' registered
+[INFO] 2026-05-31 17:29:52 | Saved keys for user 'bob' to /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243646287958/.evlampy/keys
+[INFO] 2026-05-31 17:29:52 | User 'bob' registered
+[       OK ] CommandLoggerTests.SendMessageCommandFailsWhenNotLoggedIn (48 ms)
 [ RUN      ] CommandLoggerTests.SendMessageCommandFailsForUnknownReceiver
-[INFO] 2026-05-15 13:57:58 | User 'alice' registered
-[INFO] 2026-05-15 13:57:58 | User 'alice' logged in
-[ERROR] 2026-05-15 13:57:58 | Receiver 'ghost' not found
-[       OK ] CommandLoggerTests.SendMessageCommandFailsForUnknownReceiver (19 ms)
-[----------] 3 tests from CommandLoggerTests (88 ms total)
+[INFO] 2026-05-31 17:29:52 | Saved keys for user 'alice' to /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243695081875/.evlampy/keys
+[INFO] 2026-05-31 17:29:52 | User 'alice' registered
+[INFO] 2026-05-31 17:29:52 | Loaded keys for user 'alice' from /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243695081875/.evlampy/keys
+[INFO] 2026-05-31 17:29:52 | User 'alice' logged in
+[ERROR] 2026-05-31 17:29:52 | Receiver 'ghost' not found
+[       OK ] CommandLoggerTests.SendMessageCommandFailsForUnknownReceiver (34 ms)
+[----------] 3 tests from CommandLoggerTests (141 ms total)
 
 [----------] 4 tests from CommandLoggerStandaloneTests
 [ RUN      ] CommandLoggerStandaloneTests.LoggerSingletonReturnsSameInstance
 [       OK ] CommandLoggerStandaloneTests.LoggerSingletonReturnsSameInstance (0 ms)
 [ RUN      ] CommandLoggerStandaloneTests.LoggerInfoDoesNotThrow
-[INFO] 2026-05-15 13:57:58 | test info
+[INFO] 2026-05-31 17:29:52 | test info
 [       OK ] CommandLoggerStandaloneTests.LoggerInfoDoesNotThrow (0 ms)
 [ RUN      ] CommandLoggerStandaloneTests.LoggerErrorDoesNotThrow
-[ERROR] 2026-05-15 13:57:58 | test error
+[ERROR] 2026-05-31 17:29:52 | test error
 [       OK ] CommandLoggerStandaloneTests.LoggerErrorDoesNotThrow (0 ms)
 [ RUN      ] CommandLoggerStandaloneTests.LoggerSupportsMultipleCalls
-[INFO] 2026-05-15 13:57:58 | line1
-[INFO] 2026-05-15 13:57:58 | line2
-[ERROR] 2026-05-15 13:57:58 | line3
+[INFO] 2026-05-31 17:29:52 | line1
+[INFO] 2026-05-31 17:29:52 | line2
+[ERROR] 2026-05-31 17:29:52 | line3
 [       OK ] CommandLoggerStandaloneTests.LoggerSupportsMultipleCalls (0 ms)
 [----------] 4 tests from CommandLoggerStandaloneTests (0 ms total)
 
 [----------] Global test environment tear-down
-[==========] 7 tests from 2 test suites ran. (88 ms total)
+[==========] 7 tests from 2 test suites ran. (141 ms total)
 [  PASSED  ] 7 tests.
 <end of output>
-Test time =   0.10 sec
+Test time =   0.15 sec
 ----------------------------------------------------------
 Test Passed.
-"test_patterns_command_logger" end time: May 15 13:57 MSK
+"test_patterns_command_logger" end time: May 31 17:29 MSK
 "test_patterns_command_logger" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-11/16 Testing: scenario_auth_flow
-11/16 Test: scenario_auth_flow
+11/17 Testing: scenario_auth_flow
+11/17 Test: scenario_auth_flow
 Command: "/Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/scenario_auth_flow"
 Directory: /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests
-"scenario_auth_flow" start time: May 15 13:57 MSK
+"scenario_auth_flow" start time: May 31 17:29 MSK
 Output:
 ----------------------------------------------------------
-[INFO] 2026-05-15 13:57:58 | User 'scenario_alice' registered
-[INFO] 2026-05-15 13:57:58 | User 'scenario_alice' logged in
-[INFO] 2026-05-15 13:57:58 | User 'scenario_alice' logged out
-[INFO] 2026-05-15 13:57:58 | User 'scenario_alice' logged in
+[INFO] 2026-05-31 17:29:52 | Saved keys for user 'scenario_alice' to /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243733560083/.evlampy/keys
+[INFO] 2026-05-31 17:29:52 | User 'scenario_alice' registered
+[INFO] 2026-05-31 17:29:52 | Loaded keys for user 'scenario_alice' from /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243733560083/.evlampy/keys
+[INFO] 2026-05-31 17:29:52 | User 'scenario_alice' logged in
+[INFO] 2026-05-31 17:29:52 | User 'scenario_alice' logged out
+[INFO] 2026-05-31 17:29:52 | Loaded keys for user 'scenario_alice' from /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243733560083/.evlampy/keys
+[INFO] 2026-05-31 17:29:52 | User 'scenario_alice' logged in
 scenario_auth_flow: PASS
 <end of output>
-Test time =   0.45 sec
+Test time =   0.02 sec
 ----------------------------------------------------------
 Test Passed.
-"scenario_auth_flow" end time: May 15 13:57 MSK
+"scenario_auth_flow" end time: May 31 17:29 MSK
 "scenario_auth_flow" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-12/16 Testing: scenario_direct_message
-12/16 Test: scenario_direct_message
+12/17 Testing: scenario_direct_message
+12/17 Test: scenario_direct_message
 Command: "/Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/scenario_direct_message"
 Directory: /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests
-"scenario_direct_message" start time: May 15 13:57 MSK
+"scenario_direct_message" start time: May 31 17:29 MSK
 Output:
 ----------------------------------------------------------
-[INFO] 2026-05-15 13:57:59 | User 'dm_alice' registered
-[INFO] 2026-05-15 13:57:59 | User 'dm_bob' registered
-[INFO] 2026-05-15 13:57:59 | User 'dm_alice' logged in
-[INFO] 2026-05-15 13:57:59 | User 'dm_bob' logged in
-[INFO] 2026-05-15 13:57:59 | User 'dm_bob' received message from 'dm_alice'
+[INFO] 2026-05-31 17:29:52 | Saved keys for user 'dm_alice' to /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243752181291/.evlampy/keys
+[INFO] 2026-05-31 17:29:52 | User 'dm_alice' registered
+[INFO] 2026-05-31 17:29:52 | Saved keys for user 'dm_bob' to /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243752181291/.evlampy/keys
+[INFO] 2026-05-31 17:29:52 | User 'dm_bob' registered
+[INFO] 2026-05-31 17:29:52 | Loaded keys for user 'dm_alice' from /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243752181291/.evlampy/keys
+[INFO] 2026-05-31 17:29:52 | User 'dm_alice' logged in
+[INFO] 2026-05-31 17:29:52 | Loaded keys for user 'dm_bob' from /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243752181291/.evlampy/keys
+[INFO] 2026-05-31 17:29:52 | User 'dm_bob' logged in
+[INFO] 2026-05-31 17:29:52 | User 'dm_bob' received message from 'dm_alice'
 scenario_direct_message: PASS
 <end of output>
-Test time =   0.42 sec
+Test time =   0.05 sec
 ----------------------------------------------------------
 Test Passed.
-"scenario_direct_message" end time: May 15 13:57 MSK
+"scenario_direct_message" end time: May 31 17:29 MSK
 "scenario_direct_message" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-13/16 Testing: scenario_group_flow
-13/16 Test: scenario_group_flow
+13/17 Testing: scenario_group_flow
+13/17 Test: scenario_group_flow
 Command: "/Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/scenario_group_flow"
 Directory: /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests
-"scenario_group_flow" start time: May 15 13:57 MSK
+"scenario_group_flow" start time: May 31 17:29 MSK
 Output:
 ----------------------------------------------------------
-[INFO] 2026-05-15 13:57:59 | User 'group_alice' registered
-[INFO] 2026-05-15 13:57:59 | User 'group_bob' registered
-[INFO] 2026-05-15 13:57:59 | User 'group_alice' logged in
-[INFO] 2026-05-15 13:57:59 | User 'group_bob' logged in
-[INFO] 2026-05-15 13:57:59 | User 'group_bob' received message from 'group_alice'
+[INFO] 2026-05-31 17:29:52 | Saved keys for user 'group_alice' to /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243801744125/.evlampy/keys
+[INFO] 2026-05-31 17:29:52 | User 'group_alice' registered
+[INFO] 2026-05-31 17:29:52 | Saved keys for user 'group_bob' to /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243801744125/.evlampy/keys
+[INFO] 2026-05-31 17:29:52 | User 'group_bob' registered
+[INFO] 2026-05-31 17:29:52 | Saved keys for user 'group_charlie' to /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243801744125/.evlampy/keys
+[INFO] 2026-05-31 17:29:52 | User 'group_charlie' registered
+[INFO] 2026-05-31 17:29:52 | Loaded keys for user 'group_alice' from /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243801744125/.evlampy/keys
+[INFO] 2026-05-31 17:29:52 | User 'group_alice' logged in
+[INFO] 2026-05-31 17:29:52 | Loaded keys for user 'group_bob' from /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243801744125/.evlampy/keys
+[INFO] 2026-05-31 17:29:52 | User 'group_bob' logged in
+[INFO] 2026-05-31 17:29:52 | Loaded keys for user 'group_charlie' from /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243801744125/.evlampy/keys
+[INFO] 2026-05-31 17:29:52 | User 'group_charlie' logged in
+[INFO] 2026-05-31 17:29:52 | User 'group_bob' received message from 'group_alice'
+[INFO] 2026-05-31 17:29:52 | User 'group_charlie' received message from 'group_alice'
 scenario_group_flow: PASS
 <end of output>
-Test time =   0.36 sec
+Test time =   0.11 sec
 ----------------------------------------------------------
 Test Passed.
-"scenario_group_flow" end time: May 15 13:57 MSK
+"scenario_group_flow" end time: May 31 17:29 MSK
 "scenario_group_flow" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-14/16 Testing: scenario_delete_for_all
-14/16 Test: scenario_delete_for_all
+14/17 Testing: scenario_delete_for_all
+14/17 Test: scenario_delete_for_all
 Command: "/Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/scenario_delete_for_all"
 Directory: /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests
-"scenario_delete_for_all" start time: May 15 13:57 MSK
+"scenario_delete_for_all" start time: May 31 17:29 MSK
 Output:
 ----------------------------------------------------------
-[INFO] 2026-05-15 13:58:00 | User 'del_alice' registered
-[INFO] 2026-05-15 13:58:00 | User 'del_bob' registered
-[INFO] 2026-05-15 13:58:00 | User 'del_alice' logged in
-[INFO] 2026-05-15 13:58:00 | User 'del_bob' logged in
-[INFO] 2026-05-15 13:58:00 | User 'del_bob' received message from 'del_alice'
+[INFO] 2026-05-31 17:29:52 | Saved keys for user 'del_alice' to /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243907417375/.evlampy/keys
+[INFO] 2026-05-31 17:29:52 | User 'del_alice' registered
+[INFO] 2026-05-31 17:29:52 | Saved keys for user 'del_bob' to /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243907417375/.evlampy/keys
+[INFO] 2026-05-31 17:29:52 | User 'del_bob' registered
+[INFO] 2026-05-31 17:29:52 | Loaded keys for user 'del_alice' from /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243907417375/.evlampy/keys
+[INFO] 2026-05-31 17:29:52 | User 'del_alice' logged in
+[INFO] 2026-05-31 17:29:52 | Loaded keys for user 'del_bob' from /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243907417375/.evlampy/keys
+[INFO] 2026-05-31 17:29:52 | User 'del_bob' logged in
+[INFO] 2026-05-31 17:29:52 | User 'del_bob' received message from 'del_alice'
+[INFO] 2026-05-31 17:29:52 | User 'del_alice' deleted message '2d6e87cee76b7-2d030466e987d01' for all
 scenario_delete_for_all: PASS
 <end of output>
-Test time =   0.38 sec
+Test time =   0.07 sec
 ----------------------------------------------------------
 Test Passed.
-"scenario_delete_for_all" end time: May 15 13:58 MSK
+"scenario_delete_for_all" end time: May 31 17:29 MSK
 "scenario_delete_for_all" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-15/16 Testing: scenario_admin_actions
-15/16 Test: scenario_admin_actions
+15/17 Testing: scenario_admin_actions
+15/17 Test: scenario_admin_actions
 Command: "/Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/scenario_admin_actions"
 Directory: /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests
-"scenario_admin_actions" start time: May 15 13:58 MSK
+"scenario_admin_actions" start time: May 31 17:29 MSK
 Output:
 ----------------------------------------------------------
 scenario_admin_actions: PASS
 <end of output>
-Test time =   0.34 sec
+Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"scenario_admin_actions" end time: May 15 13:58 MSK
+"scenario_admin_actions" end time: May 31 17:29 MSK
 "scenario_admin_actions" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-16/16 Testing: scenario_persistence_relogin
-16/16 Test: scenario_persistence_relogin
+16/17 Testing: scenario_persistence_relogin
+16/17 Test: scenario_persistence_relogin
 Command: "/Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/scenario_persistence_relogin"
 Directory: /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests
-"scenario_persistence_relogin" start time: May 15 13:58 MSK
+"scenario_persistence_relogin" start time: May 31 17:29 MSK
 Output:
 ----------------------------------------------------------
-[INFO] 2026-05-15 13:58:00 | User 'persist_user' registered
-[INFO] 2026-05-15 13:58:00 | User 'persist_user' logged in
-[INFO] 2026-05-15 13:58:00 | User 'persist_user' logged out
-[INFO] 2026-05-15 13:58:00 | User 'persist_user' logged in
+[INFO] 2026-05-31 17:29:52 | Saved keys for user 'persist_user' to /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243978040208/.evlampy/keys
+[INFO] 2026-05-31 17:29:52 | User 'persist_user' registered
+[INFO] 2026-05-31 17:29:52 | Loaded keys for user 'persist_user' from /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243978040208/.evlampy/keys
+[INFO] 2026-05-31 17:29:52 | User 'persist_user' logged in
+[INFO] 2026-05-31 17:29:52 | User 'persist_user' logged out
+[INFO] 2026-05-31 17:29:52 | Loaded keys for user 'persist_user' from /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799243978040208/.evlampy/keys
+[INFO] 2026-05-31 17:29:52 | User 'persist_user' logged in
 scenario_persistence_relogin: PASS
 <end of output>
-Test time =   0.32 sec
+Test time =   0.03 sec
 ----------------------------------------------------------
 Test Passed.
-"scenario_persistence_relogin" end time: May 15 13:58 MSK
+"scenario_persistence_relogin" end time: May 31 17:29 MSK
 "scenario_persistence_relogin" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: May 15 13:58 MSK
+17/17 Testing: scenario_multi_user_gui
+17/17 Test: scenario_multi_user_gui
+Command: "/Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/scenario_multi_user_gui"
+Directory: /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests
+"scenario_multi_user_gui" start time: May 31 17:29 MSK
+Output:
+----------------------------------------------------------
+[INFO] 2026-05-31 17:29:52 | Saved keys for user 'alice' to /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799244006314416/.evlampy/keys
+[INFO] 2026-05-31 17:29:52 | User 'alice' registered
+[INFO] 2026-05-31 17:29:52 | Loaded keys for user 'alice' from /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799244006314416/.evlampy/keys
+[INFO] 2026-05-31 17:29:52 | User 'alice' logged in
+[INFO] 2026-05-31 17:29:52 | User 'alice' logged out
+[INFO] 2026-05-31 17:29:52 | Saved keys for user 'bob' to /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799244006314416/.evlampy/keys
+[INFO] 2026-05-31 17:29:52 | User 'bob' registered
+[INFO] 2026-05-31 17:29:52 | Loaded keys for user 'bob' from /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799244006314416/.evlampy/keys
+[INFO] 2026-05-31 17:29:52 | User 'bob' logged in
+[INFO] 2026-05-31 17:29:52 | User 'bob' logged out
+[INFO] 2026-05-31 17:29:52 | Loaded keys for user 'alice' from /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799244006314416/.evlampy/keys
+[INFO] 2026-05-31 17:29:52 | User 'alice' logged in
+[INFO] 2026-05-31 17:29:52 | Loaded keys for user 'bob' from /var/folders/5h/zshkg9_j4z95z0wj2l0ghng00000gn/T/evlampy_test_home_799244006314416/.evlampy/keys
+[INFO] 2026-05-31 17:29:52 | User 'bob' logged in
+Event: alice -> Hello Bob! This is encrypted!
+[INFO] 2026-05-31 17:29:52 | User 'bob' received message from 'alice'
+Message sent successfully from alice to bob
+Message successfully decrypted: Hello Bob! This is encrypted!
+Scenario: Multi-user GUI login/register - PASSED
+[INFO] 2026-05-31 17:29:52 | User 'alice' logged out
+[INFO] 2026-05-31 17:29:52 | User 'bob' logged out
+<end of output>
+Test time =   0.05 sec
+----------------------------------------------------------
+Test Passed.
+"scenario_multi_user_gui" end time: May 31 17:29 MSK
+"scenario_multi_user_gui" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: May 31 17:29 MSK

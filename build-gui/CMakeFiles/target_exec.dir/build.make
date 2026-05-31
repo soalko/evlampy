@@ -96,7 +96,7 @@ target_exec_EXTERNAL_OBJECTS =
 target_exec: CMakeFiles/target_exec.dir/src/chat/main.cpp.o
 target_exec: CMakeFiles/target_exec.dir/build.make
 target_exec: libmessenger_core.a
-target_exec: /opt/homebrew/Cellar/openssl@3/3.6.1/lib/libcrypto.dylib
+target_exec: /opt/homebrew/opt/openssl@3/lib/libcrypto.dylib
 target_exec: CMakeFiles/target_exec.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/soldatov_a/CLionProjects/messanger_project/build-gui/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable target_exec"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/target_exec.dir/link.txt --verbose=$(VERBOSE)

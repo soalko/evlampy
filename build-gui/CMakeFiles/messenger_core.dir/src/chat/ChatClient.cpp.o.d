@@ -799,10 +799,6 @@ CMakeFiles/messenger_core.dir/src/chat/ChatClient.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/default_searcher.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/not_fn.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/perfect_forward.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/set \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/set.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__tree \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/map.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/unordered_set \
   /Users/soldatov_a/CLionProjects/messanger_project/include/encryption/AES256GCMStrategy.h \
   /Users/soldatov_a/CLionProjects/messanger_project/include/encryption/IEncryptionStrategy.h \
@@ -812,42 +808,34 @@ CMakeFiles/messenger_core.dir/src/chat/ChatClient.cpp.o: \
   /Users/soldatov_a/CLionProjects/messanger_project/include/patterns/Observer.h \
   /Users/soldatov_a/CLionProjects/messanger_project/include/network/MessageProtocol.h \
   /Users/soldatov_a/CLionProjects/messanger_project/include/patterns/Logger.h \
-  /opt/homebrew/Cellar/openssl@3/3.6.1/include/openssl/evp.h \
-  /opt/homebrew/Cellar/openssl@3/3.6.1/include/openssl/macros.h \
-  /opt/homebrew/Cellar/openssl@3/3.6.1/include/openssl/opensslconf.h \
-  /opt/homebrew/Cellar/openssl@3/3.6.1/include/openssl/configuration.h \
-  /opt/homebrew/Cellar/openssl@3/3.6.1/include/openssl/opensslv.h \
-  /opt/homebrew/Cellar/openssl@3/3.6.1/include/openssl/types.h \
-  /opt/homebrew/Cellar/openssl@3/3.6.1/include/openssl/e_os2.h \
-  /opt/homebrew/Cellar/openssl@3/3.6.1/include/openssl/safestack.h \
-  /opt/homebrew/Cellar/openssl@3/3.6.1/include/openssl/stack.h \
-  /opt/homebrew/Cellar/openssl@3/3.6.1/include/openssl/core.h \
-  /opt/homebrew/Cellar/openssl@3/3.6.1/include/openssl/core_dispatch.h \
-  /opt/homebrew/Cellar/openssl@3/3.6.1/include/openssl/indicator.h \
-  /opt/homebrew/Cellar/openssl@3/3.6.1/include/openssl/params.h \
-  /opt/homebrew/Cellar/openssl@3/3.6.1/include/openssl/bn.h \
-  /opt/homebrew/Cellar/openssl@3/3.6.1/include/openssl/crypto.h \
-  /opt/homebrew/Cellar/openssl@3/3.6.1/include/openssl/cryptoerr.h \
-  /opt/homebrew/Cellar/openssl@3/3.6.1/include/openssl/symhacks.h \
-  /opt/homebrew/Cellar/openssl@3/3.6.1/include/openssl/cryptoerr_legacy.h \
-  /opt/homebrew/Cellar/openssl@3/3.6.1/include/openssl/bnerr.h \
-  /opt/homebrew/Cellar/openssl@3/3.6.1/include/openssl/bio.h \
-  /opt/homebrew/Cellar/openssl@3/3.6.1/include/openssl/bioerr.h \
-  /opt/homebrew/Cellar/openssl@3/3.6.1/include/openssl/evperr.h \
-  /opt/homebrew/Cellar/openssl@3/3.6.1/include/openssl/objects.h \
-  /opt/homebrew/Cellar/openssl@3/3.6.1/include/openssl/obj_mac.h \
-  /opt/homebrew/Cellar/openssl@3/3.6.1/include/openssl/asn1.h \
-  /opt/homebrew/Cellar/openssl@3/3.6.1/include/openssl/asn1err.h \
-  /opt/homebrew/Cellar/openssl@3/3.6.1/include/openssl/objectserr.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/filesystem \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/copy_options.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/directory_entry.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/file_status.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/file_type.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/perms.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/file_time_type.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__chrono/file_clock.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/filesystem_error.h \
+  /opt/homebrew/opt/openssl@3/include/openssl/evp.h \
+  /opt/homebrew/opt/openssl@3/include/openssl/macros.h \
+  /opt/homebrew/opt/openssl@3/include/openssl/opensslconf.h \
+  /opt/homebrew/opt/openssl@3/include/openssl/configuration.h \
+  /opt/homebrew/opt/openssl@3/include/openssl/opensslv.h \
+  /opt/homebrew/opt/openssl@3/include/openssl/types.h \
+  /opt/homebrew/opt/openssl@3/include/openssl/e_os2.h \
+  /opt/homebrew/opt/openssl@3/include/openssl/safestack.h \
+  /opt/homebrew/opt/openssl@3/include/openssl/stack.h \
+  /opt/homebrew/opt/openssl@3/include/openssl/core.h \
+  /opt/homebrew/opt/openssl@3/include/openssl/core_dispatch.h \
+  /opt/homebrew/opt/openssl@3/include/openssl/indicator.h \
+  /opt/homebrew/opt/openssl@3/include/openssl/params.h \
+  /opt/homebrew/opt/openssl@3/include/openssl/bn.h \
+  /opt/homebrew/opt/openssl@3/include/openssl/crypto.h \
+  /opt/homebrew/opt/openssl@3/include/openssl/cryptoerr.h \
+  /opt/homebrew/opt/openssl@3/include/openssl/symhacks.h \
+  /opt/homebrew/opt/openssl@3/include/openssl/cryptoerr_legacy.h \
+  /opt/homebrew/opt/openssl@3/include/openssl/bnerr.h \
+  /opt/homebrew/opt/openssl@3/include/openssl/bio.h \
+  /opt/homebrew/opt/openssl@3/include/openssl/bioerr.h \
+  /opt/homebrew/opt/openssl@3/include/openssl/evperr.h \
+  /opt/homebrew/opt/openssl@3/include/openssl/objects.h \
+  /opt/homebrew/opt/openssl@3/include/openssl/obj_mac.h \
+  /opt/homebrew/opt/openssl@3/include/openssl/asn1.h \
+  /opt/homebrew/opt/openssl@3/include/openssl/asn1err.h \
+  /opt/homebrew/opt/openssl@3/include/openssl/objectserr.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/fstream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/path.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iomanip \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__ostream/put_character_sequence.h \
@@ -865,6 +853,15 @@ CMakeFiles/messenger_core.dir/src/chat/ChatClient.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ostream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/print \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/unistd.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/filesystem \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/copy_options.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/directory_entry.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/file_status.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/file_type.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/perms.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/file_time_type.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__chrono/file_clock.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/filesystem_error.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/operations.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/perm_options.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/space_info.h \
@@ -873,4 +870,4 @@ CMakeFiles/messenger_core.dir/src/chat/ChatClient.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/path_iterator.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/recursive_directory_iterator.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/u8path.h \
-  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/fstream
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/sstream

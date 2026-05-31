@@ -75,16 +75,16 @@ CMakeFiles/messenger_gui.dir/codegen:
 CMakeFiles/messenger_gui.dir/src/gui/main_gui.mm.o: CMakeFiles/messenger_gui.dir/flags.make
 CMakeFiles/messenger_gui.dir/src/gui/main_gui.mm.o: /Users/soldatov_a/CLionProjects/messanger_project/src/gui/main_gui.mm
 CMakeFiles/messenger_gui.dir/src/gui/main_gui.mm.o: CMakeFiles/messenger_gui.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/soldatov_a/CLionProjects/messanger_project/build-gui/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/messenger_gui.dir/src/gui/main_gui.mm.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/messenger_gui.dir/src/gui/main_gui.mm.o -MF CMakeFiles/messenger_gui.dir/src/gui/main_gui.mm.o.d -o CMakeFiles/messenger_gui.dir/src/gui/main_gui.mm.o -c /Users/soldatov_a/CLionProjects/messanger_project/src/gui/main_gui.mm
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/soldatov_a/CLionProjects/messanger_project/build-gui/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building OBJCXX object CMakeFiles/messenger_gui.dir/src/gui/main_gui.mm.o"
+	/usr/bin/c++ $(OBJCXX_DEFINES) $(OBJCXX_INCLUDES) -x objective-c++ $(OBJCXX_FLAGS) -MD -MT CMakeFiles/messenger_gui.dir/src/gui/main_gui.mm.o -MF CMakeFiles/messenger_gui.dir/src/gui/main_gui.mm.o.d -o CMakeFiles/messenger_gui.dir/src/gui/main_gui.mm.o -c /Users/soldatov_a/CLionProjects/messanger_project/src/gui/main_gui.mm
 
 CMakeFiles/messenger_gui.dir/src/gui/main_gui.mm.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/messenger_gui.dir/src/gui/main_gui.mm.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/soldatov_a/CLionProjects/messanger_project/src/gui/main_gui.mm > CMakeFiles/messenger_gui.dir/src/gui/main_gui.mm.i
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing OBJCXX source to CMakeFiles/messenger_gui.dir/src/gui/main_gui.mm.i"
+	/usr/bin/c++ $(OBJCXX_DEFINES) $(OBJCXX_INCLUDES) $(OBJCXX_FLAGS) -E /Users/soldatov_a/CLionProjects/messanger_project/src/gui/main_gui.mm > CMakeFiles/messenger_gui.dir/src/gui/main_gui.mm.i
 
 CMakeFiles/messenger_gui.dir/src/gui/main_gui.mm.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/messenger_gui.dir/src/gui/main_gui.mm.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/soldatov_a/CLionProjects/messanger_project/src/gui/main_gui.mm -o CMakeFiles/messenger_gui.dir/src/gui/main_gui.mm.s
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling OBJCXX source to assembly CMakeFiles/messenger_gui.dir/src/gui/main_gui.mm.s"
+	/usr/bin/c++ $(OBJCXX_DEFINES) $(OBJCXX_INCLUDES) $(OBJCXX_FLAGS) -S /Users/soldatov_a/CLionProjects/messanger_project/src/gui/main_gui.mm -o CMakeFiles/messenger_gui.dir/src/gui/main_gui.mm.s
 
 # Object files for target messenger_gui
 messenger_gui_OBJECTS = \
@@ -96,7 +96,7 @@ messenger_gui_EXTERNAL_OBJECTS =
 messenger_gui: CMakeFiles/messenger_gui.dir/src/gui/main_gui.mm.o
 messenger_gui: CMakeFiles/messenger_gui.dir/build.make
 messenger_gui: libmessenger_core.a
-messenger_gui: /opt/homebrew/Cellar/openssl@3/3.6.1/lib/libcrypto.dylib
+messenger_gui: /opt/homebrew/opt/openssl@3/lib/libcrypto.dylib
 messenger_gui: CMakeFiles/messenger_gui.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/soldatov_a/CLionProjects/messanger_project/build-gui/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable messenger_gui"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/messenger_gui.dir/link.txt --verbose=$(VERBOSE)

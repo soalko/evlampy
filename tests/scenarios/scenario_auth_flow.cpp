@@ -11,7 +11,7 @@ int main() {
 
     ChatClient alice("scenario_alice", server, keyFactory, encryption);
 
-    if (!alice.registerOnServer("pass123", "alice@example.com")) {
+    if (!alice.registerOnServer("pass123")) {
         std::cerr << "register failed\n";
         return 1;
     }
@@ -28,4 +28,3 @@ int main() {
     std::cout << "scenario_auth_flow: PASS\n";
     return 0;
 }
-

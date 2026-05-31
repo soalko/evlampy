@@ -1,0 +1,56 @@
+Index: README.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+># Evlampy Messenger (C++/CMake)\n\n`Evlampy` — клиент-серверный мессенджер с шифрованием сообщений.\n\nТекущая версия реализует минимальный MVP-демо-сценарий:\n- регистрация и аутентификация пользователей на сервере;\n- обмен сообщениями в реальном времени через серверный транспорт;\n- шифрование сообщения AES-256-GCM;\n- шифрование сеансового AES-ключа RSA-2048 (OpenSSL);\n- хранение серверной истории сообщений в памяти процесса.\n\n## Стек и зависимости\n\n- C++17\n- CMake >= 3.10\n- OpenSSL (Crypto)\n- Threads (pthread на Linux/macOS)\n\n## Структура проекта\n\n- `include/` — публичные заголовочные файлы по модулям\n  - `chat/`\n  - `network/`\n  - `encryption/`\n  - `patterns/`\n- `src/` — исходники модулей\n  - `chat/`\n  - `network/`\n  - `encryption/`\n  - `patterns/` \n- `CMakeLists.txt` — конфигурация сборки\n\n## Сборка (out-of-source)\n\n```bash\ncmake -S . -B build\ncmake --build build\n```\n\n## Запуск\n\n```bash\ncd build\n./target_exec\n```\n\nОжидаемый результат: в консоли появится лог регистрации/входа пользователей и расшифрованное сообщение у получателя.\n\n## Что демонстрирует `target_exec`\n\n1. Создает сервер и двух клиентов (`alice`, `bob`).\n2. Регистрирует пользователей и генерирует RSA-пары ключей.\n3. Выполняет логин пользователей.\n4. Отправляет сообщение от `alice` к `bob` через `SendMessageCommand`.\n5. `bob` получает и расшифровывает текст сообщения.\n
+===================================================================
+diff --git a/README.md b/README.md
+--- a/README.md	(revision cc86fa651883f13b28a2a576c64eecab8276a6e1)
++++ b/README.md	(date 1778846939693)
+@@ -37,6 +37,47 @@
+ cmake --build build
+ ```
+ 
++## Запуск тестов
++
++Тесты проекта собираются в отдельном build-дереве `build-tests`.
++
++Если нужно собрать тесты с нуля:
++
++```bash
++cmake -S . -B build-tests
++cmake --build build-tests
++```
++
++Запуск всех тестов через `ctest`:
++
++```bash
++cd build-tests
++ctest --output-on-failure
++```
++
++Посмотреть список зарегистрированных тестов:
++
++```bash
++cd build-tests
++ctest -N
++```
++
++Запустить только один тест или сценарий по имени:
++
++```bash
++cd build-tests
++ctest -R test_message --output-on-failure
++ctest -R scenario_auth_flow --output-on-failure
++```
++
++При необходимости можно запустить конкретный бинарник напрямую из папки `build-tests/tests`:
++
++```bash
++cd build-tests
++./tests/test_message
++./tests/scenario_direct_message
++```
++
+ ## Запуск
+ 
+ ```bash

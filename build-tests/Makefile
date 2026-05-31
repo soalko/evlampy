@@ -406,6 +406,19 @@ scenario_persistence_relogin/fast:
 .PHONY : scenario_persistence_relogin/fast
 
 #=============================================================================
+# Target rules for targets named scenario_multi_user_gui
+
+# Build rule for target.
+scenario_multi_user_gui: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 scenario_multi_user_gui
+.PHONY : scenario_multi_user_gui
+
+# fast build rule for target.
+scenario_multi_user_gui/fast:
+	$(MAKE) $(MAKESILENT) -f tests/CMakeFiles/scenario_multi_user_gui.dir/build.make tests/CMakeFiles/scenario_multi_user_gui.dir/build
+.PHONY : scenario_multi_user_gui/fast
+
+#=============================================================================
 # Target rules for targets named gmock
 
 # Build rule for target.
@@ -744,6 +757,7 @@ help:
 	@echo "... scenario_delete_for_all"
 	@echo "... scenario_direct_message"
 	@echo "... scenario_group_flow"
+	@echo "... scenario_multi_user_gui"
 	@echo "... scenario_persistence_relogin"
 	@echo "... target_exec"
 	@echo "... test_chat_client"

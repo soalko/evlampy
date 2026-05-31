@@ -97,7 +97,7 @@ tests/test_patterns_command_logger: tests/CMakeFiles/test_patterns_command_logge
 tests/test_patterns_command_logger: tests/CMakeFiles/test_patterns_command_logger.dir/build.make
 tests/test_patterns_command_logger: libmessenger_core.a
 tests/test_patterns_command_logger: lib/libgtest_main.a
-tests/test_patterns_command_logger: /opt/homebrew/Cellar/openssl@3/3.6.1/lib/libcrypto.dylib
+tests/test_patterns_command_logger: /opt/homebrew/opt/openssl@3/lib/libcrypto.dylib
 tests/test_patterns_command_logger: lib/libgtest.a
 tests/test_patterns_command_logger: tests/CMakeFiles/test_patterns_command_logger.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/soldatov_a/CLionProjects/messanger_project/build-tests/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable test_patterns_command_logger"

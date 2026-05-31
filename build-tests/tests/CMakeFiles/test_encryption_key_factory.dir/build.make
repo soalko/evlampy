@@ -97,7 +97,7 @@ tests/test_encryption_key_factory: tests/CMakeFiles/test_encryption_key_factory.
 tests/test_encryption_key_factory: tests/CMakeFiles/test_encryption_key_factory.dir/build.make
 tests/test_encryption_key_factory: libmessenger_core.a
 tests/test_encryption_key_factory: lib/libgtest_main.a
-tests/test_encryption_key_factory: /opt/homebrew/Cellar/openssl@3/3.6.1/lib/libcrypto.dylib
+tests/test_encryption_key_factory: /opt/homebrew/opt/openssl@3/lib/libcrypto.dylib
 tests/test_encryption_key_factory: lib/libgtest.a
 tests/test_encryption_key_factory: tests/CMakeFiles/test_encryption_key_factory.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/soldatov_a/CLionProjects/messanger_project/build-tests/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable test_encryption_key_factory"

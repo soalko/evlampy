@@ -1,0 +1,10 @@
+build/
+build-*/
+cmake-build-*/
+CMakeFiles/
+.idea/
+.git/
+.DS_Store
+*.log
+*.tmp
+

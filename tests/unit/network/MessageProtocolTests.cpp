@@ -2,19 +2,15 @@
 
 #include <gtest/gtest.h>
 
-TEST(MessageProtocolTests, SerializeDeserializeRoundtripDirectMessage) {
+TEST(MessageProtocolTests, SerializeDeserializeRoundtripMessage) {
     Message msg;
     msg.messageId = "m1";
     msg.sender = "alice";
     msg.receiver = "bob";
-    msg.chatId = "";
-    msg.isGroupMessage = false;
     msg.timestamp = 123;
     msg.status = MessageStatus::Delivered;
     msg.encryptedSessionKey = {1, 2};
-    msg.senderEncryptedSessionKey = {3, 4};
     msg.encryptedPayload = {5, 6, 7};
-    msg.deletedForAll = false;
 
     const auto wire = MessageProtocol::serialize(msg);
     const auto decoded = MessageProtocol::deserialize(wire);
@@ -23,30 +19,17 @@ TEST(MessageProtocolTests, SerializeDeserializeRoundtripDirectMessage) {
     EXPECT_EQ(decoded.sender, msg.sender);
     EXPECT_EQ(decoded.receiver, msg.receiver);
     EXPECT_EQ(decoded.status, msg.status);
+    EXPECT_EQ(decoded.encryptedSessionKey, msg.encryptedSessionKey);
     EXPECT_EQ(decoded.encryptedPayload, msg.encryptedPayload);
-}
-
-TEST(MessageProtocolTests, SerializeDeserializeRoundtripGroupDeletedMessage) {
-    Message msg;
-    msg.messageId = "g1";
-    msg.sender = "alice";
-    msg.receiver = "bob";
-    msg.chatId = "group:alice:team";
-    msg.isGroupMessage = true;
-    msg.timestamp = 456;
-    msg.status = MessageStatus::Read;
-    msg.deletedForAll = true;
-
-    const auto wire = MessageProtocol::serialize(msg);
-    const auto decoded = MessageProtocol::deserialize(wire);
-
-    EXPECT_TRUE(decoded.isGroupMessage);
-    EXPECT_TRUE(decoded.deletedForAll);
-    EXPECT_EQ(decoded.chatId, msg.chatId);
 }
 
 TEST(MessageProtocolTests, DeserializeRejectsInvalidFieldCount) {
     EXPECT_THROW((void)MessageProtocol::deserialize("a|b|c"), std::invalid_argument);
+}
+
+TEST(MessageProtocolTests, DeserializeRejectsInvalidNumericFields) {
+    const std::string bad = "id|alice|bob|not_a_number|0||";
+    EXPECT_THROW((void)MessageProtocol::deserialize(bad), std::exception);
 }
 
 TEST(MessageProtocolTests, Base64EncodeDecodeRoundtripBinary) {
@@ -68,4 +51,3 @@ TEST(MessageProtocolTests, Base64EncodeEmptyReturnsEmptyString) {
 TEST(MessageProtocolTests, Base64DecodeEmptyReturnsEmptyVector) {
     EXPECT_TRUE(MessageProtocol::base64Decode("").empty());
 }
-

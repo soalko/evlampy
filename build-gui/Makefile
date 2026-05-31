@@ -307,22 +307,6 @@ src/gui/main_gui.mm.o:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/messenger_gui.dir/build.make CMakeFiles/messenger_gui.dir/src/gui/main_gui.mm.o
 .PHONY : src/gui/main_gui.mm.o
 
-src/gui/main_gui.i: src/gui/main_gui.mm.i
-.PHONY : src/gui/main_gui.i
-
-# target to preprocess a source file
-src/gui/main_gui.mm.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/messenger_gui.dir/build.make CMakeFiles/messenger_gui.dir/src/gui/main_gui.mm.i
-.PHONY : src/gui/main_gui.mm.i
-
-src/gui/main_gui.s: src/gui/main_gui.mm.s
-.PHONY : src/gui/main_gui.s
-
-# target to generate assembly for a file
-src/gui/main_gui.mm.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/messenger_gui.dir/build.make CMakeFiles/messenger_gui.dir/src/gui/main_gui.mm.s
-.PHONY : src/gui/main_gui.mm.s
-
 src/network/MessageProtocol.o: src/network/MessageProtocol.cpp.o
 .PHONY : src/network/MessageProtocol.o
 
@@ -473,8 +457,6 @@ help:
 	@echo "... src/encryption/OpenSSLKeyFactory.i"
 	@echo "... src/encryption/OpenSSLKeyFactory.s"
 	@echo "... src/gui/main_gui.o"
-	@echo "... src/gui/main_gui.i"
-	@echo "... src/gui/main_gui.s"
 	@echo "... src/network/MessageProtocol.o"
 	@echo "... src/network/MessageProtocol.i"
 	@echo "... src/network/MessageProtocol.s"

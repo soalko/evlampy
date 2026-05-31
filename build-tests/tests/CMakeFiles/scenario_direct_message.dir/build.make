@@ -96,7 +96,7 @@ scenario_direct_message_EXTERNAL_OBJECTS =
 tests/scenario_direct_message: tests/CMakeFiles/scenario_direct_message.dir/scenarios/scenario_direct_message.cpp.o
 tests/scenario_direct_message: tests/CMakeFiles/scenario_direct_message.dir/build.make
 tests/scenario_direct_message: libmessenger_core.a
-tests/scenario_direct_message: /opt/homebrew/Cellar/openssl@3/3.6.1/lib/libcrypto.dylib
+tests/scenario_direct_message: /opt/homebrew/opt/openssl@3/lib/libcrypto.dylib
 tests/scenario_direct_message: tests/CMakeFiles/scenario_direct_message.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/soldatov_a/CLionProjects/messanger_project/build-tests/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable scenario_direct_message"
 	cd /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/scenario_direct_message.dir/link.txt --verbose=$(VERBOSE)

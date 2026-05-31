@@ -6,6 +6,6 @@ file(REMOVE_RECURSE
 )
 
 # Per-language clean rules from dependency scanning.
-foreach(lang CXX)
+foreach(lang OBJCXX)
   include(CMakeFiles/messenger_gui.dir/cmake_clean_${lang}.cmake OPTIONAL)
 endforeach()

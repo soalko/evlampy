@@ -2,8 +2,6 @@
 
 #include <gtest/gtest.h>
 
-#include <algorithm>
-
 TEST(TcpServerTests, ConnectClientSucceeds) {
     TcpServer server;
     EXPECT_TRUE(server.connectClient("alice", [](const std::string&, const std::string&) {}));
@@ -41,15 +39,14 @@ TEST(TcpServerTests, SendToOfflineClientFails) {
     EXPECT_FALSE(server.sendTo("alice", "bob", "hello"));
 }
 
-TEST(TcpServerTests, ListOnlineUsersContainsAllConnected) {
+TEST(TcpServerTests, IsOnlineReflectsConnectedUsers) {
     TcpServer server;
+    EXPECT_FALSE(server.isOnline("alice"));
     server.connectClient("alice", [](const std::string&, const std::string&) {});
     server.connectClient("bob", [](const std::string&, const std::string&) {});
 
-    const auto users = server.listOnlineUsers();
-    EXPECT_EQ(users.size(), 2u);
-    EXPECT_TRUE(std::find(users.begin(), users.end(), "alice") != users.end());
-    EXPECT_TRUE(std::find(users.begin(), users.end(), "bob") != users.end());
+    EXPECT_TRUE(server.isOnline("alice"));
+    EXPECT_TRUE(server.isOnline("bob"));
 }
 
 TEST(TcpServerTests, SendAfterDisconnectFails) {
@@ -59,4 +56,3 @@ TEST(TcpServerTests, SendAfterDisconnectFails) {
 
     EXPECT_FALSE(server.sendTo("alice", "bob", "hello"));
 }
-

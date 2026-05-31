@@ -25,8 +25,8 @@ int main() {
         return 3;
     }
 
-    const auto conv = bob.getConversation("dm_alice");
-    if (conv.size() != 1 || conv[0].text != "hello direct") {
+    const auto conv = server.getConversation("dm_alice", "dm_bob");
+    if (conv.size() != 1 || conv[0].sender != "dm_alice" || conv[0].receiver != "dm_bob") {
         std::cerr << "conversation validation failed\n";
         return 4;
     }
@@ -34,4 +34,3 @@ int main() {
     std::cout << "scenario_direct_message: PASS\n";
     return 0;
 }
-

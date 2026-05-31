@@ -1,1 +1,1 @@
-/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/test_tcp_server.dir/unit/network/TcpServerTests.cpp.o -o test_tcp_server  ../libmessenger_core.a ../lib/libgtest_main.a /opt/homebrew/Cellar/openssl@3/3.6.1/lib/libcrypto.dylib ../lib/libgtest.a
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/test_tcp_server.dir/unit/network/TcpServerTests.cpp.o -o test_tcp_server  ../libmessenger_core.a ../lib/libgtest_main.a /opt/homebrew/opt/openssl@3/lib/libcrypto.dylib ../lib/libgtest.a

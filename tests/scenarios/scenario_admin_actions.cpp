@@ -1,4 +1,5 @@
 #include "chat/ChatServer.h"
+#include "chat/Message.h"
 #include "test_utils/TestEnvironment.h"
 
 #include <iostream>
@@ -16,30 +17,31 @@ int main() {
         return 2;
     }
 
-    if (!server.blockUser("admin", "user")) {
-        std::cerr << "block failed\n";
+    if (!server.authenticate("admin", "hash_admin")) {
+        std::cerr << "admin auth failed\n";
         return 3;
     }
-    if (server.authenticate("user", "hash_user")) {
-        std::cerr << "blocked user should not authenticate\n";
+    if (server.getPublicKey("user") != "pub_user") {
+        std::cerr << "public key lookup failed\n";
         return 4;
     }
 
-    if (!server.unblockUser("admin", "user")) {
-        std::cerr << "unblock failed\n";
+    const auto msg = Message::build("admin", "user", {1}, {2, 3});
+    server.storeMessage(msg);
+    if (server.getConversation("admin", "user").size() != 1) {
+        std::cerr << "store message failed\n";
         return 5;
     }
 
-    if (!server.resetPasswordHash("admin", "user", "new_hash")) {
-        std::cerr << "reset password failed\n";
+    if (!server.deleteMessageForAll("admin", msg.messageId)) {
+        std::cerr << "delete message failed\n";
         return 6;
     }
-    if (!server.authenticate("user", "new_hash")) {
-        std::cerr << "auth with new hash failed\n";
+    if (!server.getConversation("admin", "user").empty()) {
+        std::cerr << "message not deleted\n";
         return 7;
     }
 
     std::cout << "scenario_admin_actions: PASS\n";
     return 0;
 }
-

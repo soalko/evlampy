@@ -23,6 +23,7 @@
 /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/CMakeFiles/scenario_delete_for_all.dir
 /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/CMakeFiles/scenario_admin_actions.dir
 /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/CMakeFiles/scenario_persistence_relogin.dir
+/Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/CMakeFiles/scenario_multi_user_gui.dir
 /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/CMakeFiles/test.dir
 /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/CMakeFiles/edit_cache.dir
 /Users/soldatov_a/CLionProjects/messanger_project/build-tests/tests/CMakeFiles/rebuild_cache.dir

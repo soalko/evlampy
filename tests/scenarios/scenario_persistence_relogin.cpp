@@ -11,7 +11,7 @@ int main() {
 
     {
         ChatClient user("persist_user", server, keyFactory, encryption);
-        if (!user.registerOnServer("persist_pass", "persist@example.com")) {
+        if (!user.registerOnServer("persist_pass")) {
             std::cerr << "register failed\n";
             return 1;
         }
@@ -33,4 +33,3 @@ int main() {
     std::cout << "scenario_persistence_relogin: PASS\n";
     return 0;
 }
-

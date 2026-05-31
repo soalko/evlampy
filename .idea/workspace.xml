@@ -8,7 +8,7 @@
     <option name="/Default/Housekeeping/GlobalSettingsUpgraded/IsUpgraded/@EntryValue" value="true" type="bool" />
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexedValue" value="true" type="bool" />
     <option name="/Default/Housekeeping/OptionsDialog/SelectedPageId/@EntryValue" value="CppIncludesOrderOptions" type="string" />
-    <option name="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue" value="4" type="long" />
+    <option name="/Default/Environment/Hierarchy/GeneratedFilesCacheKey/Timestamp/@EntryValue" value="3" type="long" />
     <option name="/Default/Housekeeping/FeatureSuggestion/FeatureSuggestionManager/DisabledSuggesters/=SwitchToGoToActionSuggester/@EntryIndexRemoved" />
   </component>
   <component name="CMakePresetLoader">{
@@ -30,797 +30,280 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="613f188f-d9f9-45b5-b464-a420216586f2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/editor.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/messanger_project.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15_05_2026,_14_52_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15_05_2026,_14_52_[Changes]1/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_15_05_2026__14_52__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/.qt/QtDeploySupport.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/.qt/QtDeployTargets.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeCache.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/4.0.0/CMakeCXXCompiler.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/4.0.0/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/4.0.0/CMakeSystem.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/4.0.0/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/4.0.0/CompilerIdCXX/a.out" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/InstallScripts.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/Makefile2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/cmake.check_cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/DependInfo.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/build.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/cmake_clean.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/cmake_clean_target.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/compiler_depend.internal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/compiler_depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/compiler_depend.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/flags.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/link.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/progress.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/chat/ChatClient.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/chat/ChatClient.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/chat/ChatServer.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/chat/ChatServer.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/chat/Message.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/chat/Message.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/encryption/AES256GCMStrategy.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/encryption/AES256GCMStrategy.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/encryption/OpenSSLKeyFactory.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/encryption/OpenSSLKeyFactory.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/network/MessageProtocol.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/network/MessageProtocol.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/network/TcpClient.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/network/TcpClient.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/network/TcpServer.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/network/TcpServer.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/patterns/Command.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/patterns/Command.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/patterns/Logger.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/patterns/Logger.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_gui.dir/DependInfo.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_gui.dir/build.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_gui.dir/cmake_clean.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_gui.dir/compiler_depend.internal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_gui.dir/compiler_depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_gui.dir/compiler_depend.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_gui.dir/depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_gui.dir/flags.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_gui.dir/link.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_gui.dir/progress.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_gui.dir/src/gui/MessengerWindow.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_gui.dir/src/gui/MessengerWindow.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_gui.dir/src/gui/main_gui.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_gui.dir/src/gui/main_gui.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_gui.dir/src/gui/main_gui.mm.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_gui.dir/src/gui/main_gui.mm.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/progress.marks" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/target_exec.dir/DependInfo.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/target_exec.dir/build.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/target_exec.dir/cmake_clean.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/target_exec.dir/compiler_depend.internal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/target_exec.dir/compiler_depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/target_exec.dir/compiler_depend.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/target_exec.dir/depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/target_exec.dir/flags.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/target_exec.dir/link.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/target_exec.dir/progress.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/target_exec.dir/src/chat/main.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/target_exec.dir/src/chat/main.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/cmake_install.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/libmessenger_core.a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/messenger_gui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-gui/target_exec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeCache.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/4.0.0/CMakeCCompiler.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/4.0.0/CMakeCXXCompiler.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/4.0.0/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/4.0.0/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/4.0.0/CMakeSystem.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/4.0.0/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/4.0.0/CompilerIdC/a.out" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/4.0.0/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/4.0.0/CompilerIdCXX/a.out" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/InstallScripts.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/Makefile2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/cmake.check_cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/DependInfo.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/build.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/cmake_clean.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/cmake_clean_target.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/compiler_depend.internal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/compiler_depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/compiler_depend.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/flags.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/link.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/progress.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/chat/ChatClient.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/chat/ChatClient.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/chat/ChatServer.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/chat/ChatServer.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/chat/Message.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/chat/Message.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/encryption/AES256GCMStrategy.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/encryption/AES256GCMStrategy.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/encryption/OpenSSLKeyFactory.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/encryption/OpenSSLKeyFactory.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/network/MessageProtocol.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/network/MessageProtocol.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/network/TcpClient.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/network/TcpClient.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/network/TcpServer.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/network/TcpServer.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/patterns/Command.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/patterns/Command.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/patterns/Logger.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/patterns/Logger.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/progress.marks" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/target_exec.dir/DependInfo.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/target_exec.dir/build.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/target_exec.dir/cmake_clean.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/target_exec.dir/compiler_depend.internal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/target_exec.dir/compiler_depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/target_exec.dir/compiler_depend.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/target_exec.dir/depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/target_exec.dir/flags.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/target_exec.dir/link.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/target_exec.dir/progress.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/target_exec.dir/src/chat/main.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/target_exec.dir/src/chat/main.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/CTestTestfile.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/Testing/Temporary/CTestCostData.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/Testing/Temporary/LastTestsFailed.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/CMakeFiles/progress.marks" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/CTestTestfile.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/cmake_install.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/cmake_clean.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/cmake_clean_target.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/compiler_depend.internal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/compiler_depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/compiler_depend.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/flags.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/link.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/progress.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/cmake_clean.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/cmake_clean_target.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/compiler_depend.internal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/compiler_depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/compiler_depend.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/flags.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/link.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/progress.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/CMakeFiles/progress.marks" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/CTestTestfile.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/cmake_install.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/Export/0c08b8e77dd885bfe55a19a9659d9fc1/GTestTargets-noconfig.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/Export/0c08b8e77dd885bfe55a19a9659d9fc1/GTestTargets.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/DependInfo.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/cmake_clean.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/cmake_clean_target.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/compiler_depend.internal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/compiler_depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/compiler_depend.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/flags.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/link.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/progress.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/cmake_clean.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/cmake_clean_target.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/compiler_depend.internal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/compiler_depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/compiler_depend.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/flags.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/link.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/progress.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/progress.marks" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CTestTestfile.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/cmake_install.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/generated/GTestConfig.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/generated/GTestConfigVersion.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/generated/gmock.pc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/generated/gmock_main.pc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/generated/gtest.pc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/generated/gtest_main.pc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/.clang-format" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/.github/ISSUE_TEMPLATE/00-bug_report.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/.github/ISSUE_TEMPLATE/10-feature_request.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/.github/ISSUE_TEMPLATE/config.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/.github/workflows/gtest-ci.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/BUILD.bazel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/CONTRIBUTING.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/CONTRIBUTORS" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/WORKSPACE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/ci/linux-presubmit.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/ci/macos-presubmit.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/ci/windows-presubmit.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/docs/_config.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/docs/_data/navigation.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/docs/_layouts/default.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/docs/_sass/main.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/docs/advanced.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/docs/assets/css/style.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/docs/community_created_documentation.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/docs/faq.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/docs/gmock_cheat_sheet.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/docs/gmock_cook_book.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/docs/gmock_faq.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/docs/gmock_for_dummies.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/docs/index.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/docs/pkgconfig.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/docs/platforms.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/docs/primer.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/docs/quickstart-bazel.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/docs/quickstart-cmake.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/docs/reference/actions.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/docs/reference/assertions.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/docs/reference/matchers.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/docs/reference/mocking.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/docs/reference/testing.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/docs/samples.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/cmake/gmock.pc.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/cmake/gmock_main.pc.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/docs/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/include/gmock/gmock-actions.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/include/gmock/gmock-cardinalities.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/include/gmock/gmock-function-mocker.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/include/gmock/gmock-matchers.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/include/gmock/gmock-more-actions.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/include/gmock/gmock-more-matchers.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/include/gmock/gmock-nice-strict.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/include/gmock/gmock-spec-builders.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/include/gmock/gmock.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/include/gmock/internal/custom/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/include/gmock/internal/custom/gmock-generated-actions.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/include/gmock/internal/custom/gmock-matchers.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/include/gmock/internal/custom/gmock-port.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/include/gmock/internal/gmock-internal-utils.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/include/gmock/internal/gmock-port.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/include/gmock/internal/gmock-pp.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/src/gmock-all.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/src/gmock-cardinalities.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/src/gmock-internal-utils.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/src/gmock-matchers.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/src/gmock-spec-builders.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/src/gmock.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/src/gmock_main.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/test/BUILD.bazel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/test/gmock-actions_test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/test/gmock-cardinalities_test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/test/gmock-function-mocker_test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/test/gmock-internal-utils_test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/test/gmock-matchers-arithmetic_test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/test/gmock-matchers-comparisons_test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/test/gmock-matchers-containers_test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/test/gmock-matchers-misc_test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/test/gmock-matchers_test.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/test/gmock-more-actions_test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/test/gmock-nice-strict_test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/test/gmock-port_test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/test/gmock-pp-string_test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/test/gmock-pp_test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/test/gmock-spec-builders_test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/test/gmock_all_test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/test/gmock_ex_test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/test/gmock_leak_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/test/gmock_leak_test_.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/test/gmock_link2_test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/test/gmock_link_test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/test/gmock_link_test.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/test/gmock_output_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/test/gmock_output_test_.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/test/gmock_output_test_golden.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/test/gmock_stress_test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/test/gmock_test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googlemock/test/gmock_test_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/cmake/Config.cmake.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/cmake/gtest.pc.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/cmake/gtest_main.pc.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/cmake/internal_utils.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/cmake/libgtest.la.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/docs/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/include/gtest/gtest-assertion-result.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/include/gtest/gtest-death-test.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/include/gtest/gtest-matchers.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/include/gtest/gtest-message.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/include/gtest/gtest-param-test.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/include/gtest/gtest-printers.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/include/gtest/gtest-spi.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/include/gtest/gtest-test-part.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/include/gtest/gtest-typed-test.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/include/gtest/gtest.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/include/gtest/gtest_pred_impl.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/include/gtest/gtest_prod.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/include/gtest/internal/custom/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/include/gtest/internal/custom/gtest-port.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/include/gtest/internal/custom/gtest-printers.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/include/gtest/internal/custom/gtest.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/include/gtest/internal/gtest-death-test-internal.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/include/gtest/internal/gtest-filepath.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/include/gtest/internal/gtest-internal.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/include/gtest/internal/gtest-param-util.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/include/gtest/internal/gtest-port-arch.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/include/gtest/internal/gtest-port.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/include/gtest/internal/gtest-string.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/include/gtest/internal/gtest-type-util.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/samples/prime_tables.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/samples/sample1.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/samples/sample1.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/samples/sample10_unittest.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/samples/sample1_unittest.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/samples/sample2.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/samples/sample2.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/samples/sample2_unittest.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/samples/sample3-inl.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/samples/sample3_unittest.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/samples/sample4.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/samples/sample4.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/samples/sample4_unittest.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/samples/sample5_unittest.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/samples/sample6_unittest.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/samples/sample7_unittest.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/samples/sample8_unittest.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/samples/sample9_unittest.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/src/gtest-all.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/src/gtest-assertion-result.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/src/gtest-death-test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/src/gtest-filepath.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/src/gtest-internal-inl.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/src/gtest-matchers.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/src/gtest-port.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/src/gtest-printers.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/src/gtest-test-part.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/src/gtest-typed-test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/src/gtest.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/src/gtest_main.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/BUILD.bazel" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-break-on-failure-unittest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-break-on-failure-unittest_.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-catch-exceptions-test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-catch-exceptions-test_.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-color-test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-color-test_.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-death-test-test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-death-test_ex_test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-env-var-test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-env-var-test_.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-failfast-unittest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-failfast-unittest_.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-filepath-test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-filter-unittest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-filter-unittest_.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-global-environment-unittest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-global-environment-unittest_.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-json-outfiles-test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-json-output-unittest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-list-tests-unittest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-list-tests-unittest_.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-listener-test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-message-test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-options-test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-output-test-golden-lin.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-output-test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-output-test_.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-param-test-invalid-name1-test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-param-test-invalid-name1-test_.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-param-test-invalid-name2-test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-param-test-invalid-name2-test_.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-param-test-test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-param-test-test.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-param-test2-test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-port-test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-printers-test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-setuptestsuite-test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-setuptestsuite-test_.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-shuffle-test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-shuffle-test_.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-test-part-test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-throw-on-failure-test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-throw-on-failure-test_.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-uninitialized-test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/googletest-uninitialized-test_.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/gtest-typed-test2_test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/gtest-typed-test_test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/gtest-typed-test_test.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/gtest-unittest-api_test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/gtest_all_test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/gtest_assert_by_exception_test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/gtest_dirs_test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/gtest_environment_test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/gtest_help_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/gtest_help_test_.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/gtest_json_test_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/gtest_list_output_unittest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/gtest_list_output_unittest_.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/gtest_main_unittest.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/gtest_no_test_unittest.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/gtest_pred_impl_unittest.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/gtest_premature_exit_test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/gtest_prod_test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/gtest_repeat_test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/gtest_skip_check_output_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/gtest_skip_environment_check_output_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/gtest_skip_in_environment_setup_test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/gtest_skip_test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/gtest_sole_header_test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/gtest_stress_test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/gtest_test_macro_stack_footprint_test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/gtest_test_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/gtest_testbridge_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/gtest_testbridge_test_.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/gtest_throw_on_failure_ex_test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/gtest_unittest.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/gtest_xml_outfile1_test_.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/gtest_xml_outfile2_test_.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/gtest_xml_outfiles_test.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/gtest_xml_output_unittest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/gtest_xml_output_unittest_.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/gtest_xml_test_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/production.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest/test/production.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-src/googletest_deps.bzl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/CMakeCache.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/CMakeFiles/4.0.0/CMakeSystem.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/CMakeFiles/CMakeRuleHashes.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/CMakeFiles/InstallScripts.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/CMakeFiles/Makefile2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/CMakeFiles/cmake.check_cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/CMakeFiles/googletest-populate-complete" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/DependInfo.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/Labels.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/Labels.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/build.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/cmake_clean.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/compiler_depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/compiler_depend.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/CMakeFiles/googletest-populate.dir/progress.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/CMakeFiles/progress.marks" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/cmake_install.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/download-googletest-populate.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/extract-googletest-populate.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-build" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-configure" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-done" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-download" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-install" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-mkdir" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-patch-info.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-test" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-update-info.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/googletest-populate-urlinfo.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/googletest-populate-prefix/src/googletest-populate-stamp/verify-googletest-populate.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/googletest-populate-prefix/src/v1.14.0.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-cfgcmd.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/googletest-populate-prefix/tmp/googletest-populate-mkdirs.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/cmake_install.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/lib/libgmock.a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/lib/libgmock_main.a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/lib/libgtest.a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/lib/libgtest_main.a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/libmessenger_core.a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/target_exec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/progress.marks" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_admin_actions.dir/DependInfo.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_admin_actions.dir/build.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_admin_actions.dir/cmake_clean.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_admin_actions.dir/compiler_depend.internal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_admin_actions.dir/compiler_depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_admin_actions.dir/compiler_depend.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_admin_actions.dir/depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_admin_actions.dir/flags.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_admin_actions.dir/link.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_admin_actions.dir/progress.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_admin_actions.dir/scenarios/scenario_admin_actions.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_admin_actions.dir/scenarios/scenario_admin_actions.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_auth_flow.dir/DependInfo.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_auth_flow.dir/build.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_auth_flow.dir/cmake_clean.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_auth_flow.dir/compiler_depend.internal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_auth_flow.dir/compiler_depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_auth_flow.dir/compiler_depend.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_auth_flow.dir/depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_auth_flow.dir/flags.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_auth_flow.dir/link.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_auth_flow.dir/progress.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_auth_flow.dir/scenarios/scenario_auth_flow.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_auth_flow.dir/scenarios/scenario_auth_flow.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_delete_for_all.dir/DependInfo.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_delete_for_all.dir/build.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_delete_for_all.dir/cmake_clean.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_delete_for_all.dir/compiler_depend.internal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_delete_for_all.dir/compiler_depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_delete_for_all.dir/compiler_depend.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_delete_for_all.dir/depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_delete_for_all.dir/flags.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_delete_for_all.dir/link.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_delete_for_all.dir/progress.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_delete_for_all.dir/scenarios/scenario_delete_for_all.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_delete_for_all.dir/scenarios/scenario_delete_for_all.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_direct_message.dir/DependInfo.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_direct_message.dir/build.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_direct_message.dir/cmake_clean.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_direct_message.dir/compiler_depend.internal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_direct_message.dir/compiler_depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_direct_message.dir/compiler_depend.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_direct_message.dir/depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_direct_message.dir/flags.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_direct_message.dir/link.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_direct_message.dir/progress.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_direct_message.dir/scenarios/scenario_direct_message.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_direct_message.dir/scenarios/scenario_direct_message.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_group_flow.dir/DependInfo.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_group_flow.dir/build.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_group_flow.dir/cmake_clean.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_group_flow.dir/compiler_depend.internal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_group_flow.dir/compiler_depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_group_flow.dir/compiler_depend.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_group_flow.dir/depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_group_flow.dir/flags.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_group_flow.dir/link.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_group_flow.dir/progress.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_group_flow.dir/scenarios/scenario_group_flow.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_group_flow.dir/scenarios/scenario_group_flow.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_persistence_relogin.dir/DependInfo.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_persistence_relogin.dir/build.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_persistence_relogin.dir/cmake_clean.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_persistence_relogin.dir/compiler_depend.internal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_persistence_relogin.dir/compiler_depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_persistence_relogin.dir/compiler_depend.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_persistence_relogin.dir/depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_persistence_relogin.dir/flags.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_persistence_relogin.dir/link.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_persistence_relogin.dir/progress.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_persistence_relogin.dir/scenarios/scenario_persistence_relogin.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_persistence_relogin.dir/scenarios/scenario_persistence_relogin.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_client.dir/DependInfo.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_client.dir/build.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_client.dir/cmake_clean.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_client.dir/compiler_depend.internal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_client.dir/compiler_depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_client.dir/compiler_depend.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_client.dir/depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_client.dir/flags.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_client.dir/link.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_client.dir/progress.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_client.dir/unit/chat/ChatClientTests.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_client.dir/unit/chat/ChatClientTests.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_server.dir/DependInfo.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_server.dir/build.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_server.dir/cmake_clean.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_server.dir/compiler_depend.internal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_server.dir/compiler_depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_server.dir/compiler_depend.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_server.dir/depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_server.dir/flags.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_server.dir/link.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_server.dir/progress.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_server.dir/unit/chat/ChatServerTests.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_server.dir/unit/chat/ChatServerTests.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_aes.dir/DependInfo.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_aes.dir/build.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_aes.dir/cmake_clean.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_aes.dir/compiler_depend.internal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_aes.dir/compiler_depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_aes.dir/compiler_depend.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_aes.dir/depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_aes.dir/flags.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_aes.dir/link.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_aes.dir/progress.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_aes.dir/unit/encryption/AES256GCMStrategyTests.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_aes.dir/unit/encryption/AES256GCMStrategyTests.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_key_factory.dir/DependInfo.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_key_factory.dir/build.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_key_factory.dir/cmake_clean.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_key_factory.dir/compiler_depend.internal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_key_factory.dir/compiler_depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_key_factory.dir/compiler_depend.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_key_factory.dir/depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_key_factory.dir/flags.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_key_factory.dir/link.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_key_factory.dir/progress.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_key_factory.dir/unit/encryption/OpenSSLKeyFactoryTests.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_key_factory.dir/unit/encryption/OpenSSLKeyFactoryTests.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message.dir/DependInfo.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message.dir/build.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message.dir/cmake_clean.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message.dir/compiler_depend.internal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message.dir/compiler_depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message.dir/compiler_depend.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message.dir/depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message.dir/flags.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message.dir/link.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message.dir/progress.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message.dir/unit/chat/MessageTests.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message.dir/unit/chat/MessageTests.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message_protocol.dir/DependInfo.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message_protocol.dir/build.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message_protocol.dir/cmake_clean.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message_protocol.dir/compiler_depend.internal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message_protocol.dir/compiler_depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message_protocol.dir/compiler_depend.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message_protocol.dir/depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message_protocol.dir/flags.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message_protocol.dir/link.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message_protocol.dir/progress.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message_protocol.dir/unit/network/MessageProtocolTests.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message_protocol.dir/unit/network/MessageProtocolTests.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_command_logger.dir/DependInfo.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_command_logger.dir/build.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_command_logger.dir/cmake_clean.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_command_logger.dir/compiler_depend.internal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_command_logger.dir/compiler_depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_command_logger.dir/compiler_depend.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_command_logger.dir/depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_command_logger.dir/flags.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_command_logger.dir/link.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_command_logger.dir/progress.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_command_logger.dir/unit/patterns/CommandLoggerTests.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_command_logger.dir/unit/patterns/CommandLoggerTests.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_observer.dir/DependInfo.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_observer.dir/build.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_observer.dir/cmake_clean.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_observer.dir/compiler_depend.internal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_observer.dir/compiler_depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_observer.dir/compiler_depend.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_observer.dir/depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_observer.dir/flags.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_observer.dir/link.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_observer.dir/progress.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_observer.dir/unit/patterns/ObserverTests.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_observer.dir/unit/patterns/ObserverTests.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_client.dir/DependInfo.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_client.dir/build.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_client.dir/cmake_clean.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_client.dir/compiler_depend.internal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_client.dir/compiler_depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_client.dir/compiler_depend.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_client.dir/depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_client.dir/flags.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_client.dir/link.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_client.dir/progress.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_client.dir/unit/network/TcpClientTests.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_client.dir/unit/network/TcpClientTests.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_server.dir/DependInfo.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_server.dir/build.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_server.dir/cmake_clean.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_server.dir/compiler_depend.internal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_server.dir/compiler_depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_server.dir/compiler_depend.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_server.dir/depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_server.dir/flags.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_server.dir/link.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_server.dir/progress.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_server.dir/unit/network/TcpServerTests.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_server.dir/unit/network/TcpServerTests.cpp.o.d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/CTestTestfile.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/cmake_install.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/scenario_admin_actions" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/scenario_auth_flow" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/scenario_delete_for_all" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/scenario_direct_message" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/scenario_group_flow" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/scenario_persistence_relogin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/test_chat_client" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/test_chat_server" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/test_encryption_aes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/test_encryption_key_factory" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/test_message" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/test_message_protocol" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/test_patterns_command_logger" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/test_patterns_observer" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/test_tcp_client" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build-tests/tests/test_tcp_server" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/cache-v2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-eec636ea885c514416af.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-7ee5143f11040fe3a35f.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-d7f0085f9dd2da311099.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-f5ebdc15457944623624.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2026-05-15T10-25-20-0787.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-messenger_core-Debug-ab041a81d16f9c92351b.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-target_exec-Debug-67e9af948e4ea8d3135d.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-6cfec061bc38c2083cb8.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CMakeCCompiler.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CMakeSystem.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CompilerIdC/CMakeCCompilerId.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.30.5/CompilerIdCXX/CMakeCXXCompilerId.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/build.ninja" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/include/gui/MessengerWindow.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/MessengerWindow.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/main_gui.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gui/main_gui.mm" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/docs/test_scenarios.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/docs/unit_test_matrix.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/scenarios/scenario_admin_actions.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/scenarios/scenario_auth_flow.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/scenarios/scenario_delete_for_all.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/scenarios/scenario_direct_message.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/scenarios/scenario_group_flow.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/scenarios/scenario_persistence_relogin.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_utils/TestEnvironment.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/unit/chat/ChatClientTests.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/unit/chat/ChatServerTests.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/unit/chat/MessageTests.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/unit/encryption/AES256GCMStrategyTests.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/unit/encryption/OpenSSLKeyFactoryTests.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/unit/network/MessageProtocolTests.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/unit/network/TcpClientTests.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/unit/network/TcpServerTests.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/unit/patterns/CommandLoggerTests.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/unit/patterns/ObserverTests.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/.qt/QtDeploySupport.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/.qt/QtDeployTargets.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/4.0.0/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/4.0.0/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/4.0.0/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/4.0.0/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/4.0.0/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/4.0.0/CMakeSystem.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/4.0.0/CompilerIdCXX/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/4.0.0/CompilerIdCXX/a.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/chat/ChatClient.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/chat/ChatClient.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/chat/ChatClient.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/chat/ChatClient.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/chat/ChatServer.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/chat/ChatServer.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/chat/ChatServer.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/chat/ChatServer.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/chat/Message.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/chat/Message.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/encryption/AES256GCMStrategy.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/encryption/AES256GCMStrategy.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/encryption/AES256GCMStrategy.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/encryption/AES256GCMStrategy.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/encryption/OpenSSLKeyFactory.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/encryption/OpenSSLKeyFactory.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/encryption/OpenSSLKeyFactory.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/encryption/OpenSSLKeyFactory.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/network/MessageProtocol.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/network/MessageProtocol.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/network/MessageProtocol.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/network/MessageProtocol.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/network/TcpClient.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/network/TcpClient.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/network/TcpServer.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/network/TcpServer.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/patterns/Command.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/patterns/Command.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/patterns/Command.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/patterns/Command.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/patterns/Logger.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_core.dir/src/patterns/Logger.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_gui.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_gui.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_gui.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_gui.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_gui.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_gui.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_gui.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_gui.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_gui.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_gui.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_gui.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_gui.dir/src/gui/MessengerWindow.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_gui.dir/src/gui/MessengerWindow.cpp.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_gui.dir/src/gui/main_gui.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_gui.dir/src/gui/main_gui.cpp.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_gui.dir/src/gui/main_gui.mm.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_gui.dir/src/gui/main_gui.mm.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_gui.dir/src/gui/main_gui.mm.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/messenger_gui.dir/src/gui/main_gui.mm.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/target_exec.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/target_exec.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/target_exec.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/target_exec.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/target_exec.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/target_exec.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/target_exec.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/target_exec.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/target_exec.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/target_exec.dir/src/chat/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/target_exec.dir/src/chat/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/CMakeFiles/target_exec.dir/src/chat/main.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/CMakeFiles/target_exec.dir/src/chat/main.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/libmessenger_core.a" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/libmessenger_core.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/messenger_gui" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/messenger_gui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-gui/target_exec" beforeDir="false" afterPath="$PROJECT_DIR$/build-gui/target_exec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeFiles/4.0.0/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/4.0.0/CMakeCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeFiles/4.0.0/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/4.0.0/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeFiles/4.0.0/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/4.0.0/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeFiles/4.0.0/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/4.0.0/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeFiles/4.0.0/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/4.0.0/CMakeSystem.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeFiles/4.0.0/CompilerIdC/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/4.0.0/CompilerIdC/a.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeFiles/4.0.0/CompilerIdCXX/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/4.0.0/CompilerIdCXX/a.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/chat/ChatClient.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/chat/ChatClient.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/chat/ChatClient.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/chat/ChatClient.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/chat/ChatServer.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/chat/ChatServer.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/chat/ChatServer.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/chat/ChatServer.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/chat/Message.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/chat/Message.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/encryption/AES256GCMStrategy.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/encryption/AES256GCMStrategy.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/encryption/AES256GCMStrategy.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/encryption/AES256GCMStrategy.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/encryption/OpenSSLKeyFactory.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/encryption/OpenSSLKeyFactory.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/encryption/OpenSSLKeyFactory.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/encryption/OpenSSLKeyFactory.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/network/MessageProtocol.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/network/MessageProtocol.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/network/MessageProtocol.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/network/MessageProtocol.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/network/TcpClient.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/network/TcpClient.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/network/TcpServer.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/network/TcpServer.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/patterns/Command.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/patterns/Command.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/patterns/Command.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/patterns/Command.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/patterns/Logger.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/messenger_core.dir/src/patterns/Logger.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeFiles/target_exec.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/target_exec.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeFiles/target_exec.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeFiles/target_exec.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/target_exec.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeFiles/target_exec.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/target_exec.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeFiles/target_exec.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/target_exec.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeFiles/target_exec.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/target_exec.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeFiles/target_exec.dir/src/chat/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/target_exec.dir/src/chat/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/CMakeFiles/target_exec.dir/src/chat/main.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/CMakeFiles/target_exec.dir/src/chat/main.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/Testing/Temporary/CTestCostData.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/Testing/Temporary/CTestCostData.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/Testing/Temporary/LastTestsFailed.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/CMakeFiles/4.0.0/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/CMakeFiles/4.0.0/CMakeSystem.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/_deps/googletest-subbuild/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/lib/libgmock.a" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/lib/libgmock.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/lib/libgmock_main.a" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/lib/libgmock_main.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/lib/libgtest.a" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/lib/libgtest.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/lib/libgtest_main.a" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/lib/libgtest_main.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/libmessenger_core.a" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/libmessenger_core.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/target_exec" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/target_exec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_admin_actions.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_admin_actions.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_admin_actions.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_admin_actions.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_admin_actions.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_admin_actions.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_admin_actions.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_admin_actions.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_admin_actions.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_admin_actions.dir/scenarios/scenario_admin_actions.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_admin_actions.dir/scenarios/scenario_admin_actions.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_admin_actions.dir/scenarios/scenario_admin_actions.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_admin_actions.dir/scenarios/scenario_admin_actions.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_auth_flow.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_auth_flow.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_auth_flow.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_auth_flow.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_auth_flow.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_auth_flow.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_auth_flow.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_auth_flow.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_auth_flow.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_auth_flow.dir/scenarios/scenario_auth_flow.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_auth_flow.dir/scenarios/scenario_auth_flow.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_auth_flow.dir/scenarios/scenario_auth_flow.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_auth_flow.dir/scenarios/scenario_auth_flow.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_delete_for_all.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_delete_for_all.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_delete_for_all.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_delete_for_all.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_delete_for_all.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_delete_for_all.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_delete_for_all.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_delete_for_all.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_delete_for_all.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_delete_for_all.dir/scenarios/scenario_delete_for_all.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_delete_for_all.dir/scenarios/scenario_delete_for_all.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_delete_for_all.dir/scenarios/scenario_delete_for_all.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_delete_for_all.dir/scenarios/scenario_delete_for_all.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_direct_message.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_direct_message.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_direct_message.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_direct_message.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_direct_message.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_direct_message.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_direct_message.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_direct_message.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_direct_message.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_direct_message.dir/scenarios/scenario_direct_message.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_direct_message.dir/scenarios/scenario_direct_message.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_direct_message.dir/scenarios/scenario_direct_message.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_direct_message.dir/scenarios/scenario_direct_message.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_group_flow.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_group_flow.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_group_flow.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_group_flow.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_group_flow.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_group_flow.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_group_flow.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_group_flow.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_group_flow.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_group_flow.dir/scenarios/scenario_group_flow.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_group_flow.dir/scenarios/scenario_group_flow.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_group_flow.dir/scenarios/scenario_group_flow.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_group_flow.dir/scenarios/scenario_group_flow.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_persistence_relogin.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_persistence_relogin.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_persistence_relogin.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_persistence_relogin.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_persistence_relogin.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_persistence_relogin.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_persistence_relogin.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_persistence_relogin.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_persistence_relogin.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_persistence_relogin.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_persistence_relogin.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_persistence_relogin.dir/scenarios/scenario_persistence_relogin.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_persistence_relogin.dir/scenarios/scenario_persistence_relogin.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_persistence_relogin.dir/scenarios/scenario_persistence_relogin.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/scenario_persistence_relogin.dir/scenarios/scenario_persistence_relogin.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_client.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_client.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_client.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_client.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_client.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_client.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_client.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_client.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_client.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_client.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_client.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_client.dir/unit/chat/ChatClientTests.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_client.dir/unit/chat/ChatClientTests.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_client.dir/unit/chat/ChatClientTests.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_client.dir/unit/chat/ChatClientTests.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_server.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_server.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_server.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_server.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_server.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_server.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_server.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_server.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_server.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_server.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_server.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_server.dir/unit/chat/ChatServerTests.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_server.dir/unit/chat/ChatServerTests.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_server.dir/unit/chat/ChatServerTests.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_chat_server.dir/unit/chat/ChatServerTests.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_aes.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_aes.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_aes.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_aes.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_aes.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_aes.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_aes.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_aes.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_aes.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_aes.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_aes.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_aes.dir/unit/encryption/AES256GCMStrategyTests.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_aes.dir/unit/encryption/AES256GCMStrategyTests.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_key_factory.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_key_factory.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_key_factory.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_key_factory.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_key_factory.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_key_factory.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_key_factory.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_key_factory.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_key_factory.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_key_factory.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_key_factory.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_key_factory.dir/unit/encryption/OpenSSLKeyFactoryTests.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_encryption_key_factory.dir/unit/encryption/OpenSSLKeyFactoryTests.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message.dir/unit/chat/MessageTests.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message.dir/unit/chat/MessageTests.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message_protocol.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message_protocol.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message_protocol.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message_protocol.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message_protocol.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message_protocol.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message_protocol.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message_protocol.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message_protocol.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message_protocol.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message_protocol.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message_protocol.dir/unit/network/MessageProtocolTests.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_message_protocol.dir/unit/network/MessageProtocolTests.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_command_logger.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_command_logger.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_command_logger.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_command_logger.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_command_logger.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_command_logger.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_command_logger.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_command_logger.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_command_logger.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_command_logger.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_command_logger.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_command_logger.dir/unit/patterns/CommandLoggerTests.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_command_logger.dir/unit/patterns/CommandLoggerTests.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_command_logger.dir/unit/patterns/CommandLoggerTests.cpp.o.d" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_command_logger.dir/unit/patterns/CommandLoggerTests.cpp.o.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_observer.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_observer.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_observer.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_observer.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_observer.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_observer.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_observer.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_observer.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_observer.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_observer.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_observer.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_observer.dir/unit/patterns/ObserverTests.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_patterns_observer.dir/unit/patterns/ObserverTests.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_client.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_client.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_client.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_client.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_client.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_client.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_client.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_client.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_client.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_client.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_client.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_client.dir/unit/network/TcpClientTests.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_client.dir/unit/network/TcpClientTests.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_server.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_server.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_server.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_server.dir/compiler_depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_server.dir/compiler_depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_server.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_server.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_server.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_server.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_server.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_server.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_server.dir/unit/network/TcpServerTests.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CMakeFiles/test_tcp_server.dir/unit/network/TcpServerTests.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/CTestTestfile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/CTestTestfile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/scenario_admin_actions" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/scenario_admin_actions" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/scenario_auth_flow" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/scenario_auth_flow" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/scenario_delete_for_all" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/scenario_delete_for_all" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/scenario_direct_message" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/scenario_direct_message" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/scenario_group_flow" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/scenario_group_flow" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/scenario_persistence_relogin" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/scenario_persistence_relogin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/test_chat_client" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/test_chat_client" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/test_chat_server" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/test_chat_server" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/test_encryption_aes" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/test_encryption_aes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/test_encryption_key_factory" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/test_encryption_key_factory" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/test_message" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/test_message" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/test_message_protocol" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/test_message_protocol" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/test_patterns_command_logger" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/test_patterns_command_logger" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/test_patterns_observer" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/test_patterns_observer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/test_tcp_client" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/test_tcp_client" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build-tests/tests/test_tcp_server" beforeDir="false" afterPath="$PROJECT_DIR$/build-tests/tests/test_tcp_server" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/libmessenger_core.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/main_gui.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/main_gui.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/main_gui.mm" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/main_gui.mm" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target_exec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/tests/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/scenarios/scenario_admin_actions.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/scenarios/scenario_admin_actions.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/scenarios/scenario_auth_flow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/scenarios/scenario_auth_flow.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/scenarios/scenario_delete_for_all.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/scenarios/scenario_delete_for_all.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/scenarios/scenario_direct_message.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/scenarios/scenario_direct_message.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/scenarios/scenario_group_flow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/scenarios/scenario_group_flow.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/scenarios/scenario_persistence_relogin.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/scenarios/scenario_persistence_relogin.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit/chat/ChatClientTests.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/chat/ChatClientTests.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit/chat/ChatServerTests.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/chat/ChatServerTests.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit/chat/MessageTests.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/chat/MessageTests.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit/network/MessageProtocolTests.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/network/MessageProtocolTests.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit/network/TcpServerTests.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/network/TcpServerTests.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit/patterns/CommandLoggerTests.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit/patterns/CommandLoggerTests.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -849,14 +332,28 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CMakeLists.txt" />
+        <option value="Dockerfile" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="MIXED" />
+    <option name="ROOT_SYNC" value="SYNC" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;soalko&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/soalko/evlampy.git&quot;,
+    &quot;accountId&quot;: &quot;82d00df7-53f7-430f-ad1e-f352f093a6b8&quot;
+  }
+}</component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
     <option name="majorVersion" value="2024" />
@@ -879,12 +376,13 @@
     &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.west.config.association.type.startup.service&quot;: &quot;true&quot;,
     &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/soldatov_a/CLionProjects/messanger_project&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/soldatov_a/CLionProjects/messanger_project/include&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -897,6 +395,12 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/include" />
+      <recent name="$PROJECT_DIR$/src" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/build" />
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
@@ -915,6 +419,15 @@
       <workItem from="1778839594443" duration="1118000" />
       <workItem from="1778840720586" duration="4339000" />
       <workItem from="1778846012075" duration="328000" />
+      <workItem from="1778920607226" duration="128000" />
+      <workItem from="1778957022699" duration="586000" />
+      <workItem from="1779091461938" duration="2078000" />
+      <workItem from="1780233806333" duration="2766000" />
+      <workItem from="1780236582180" duration="379000" />
+      <workItem from="1780236967838" duration="1238000" />
+      <workItem from="1780238212851" duration="228000" />
+      <workItem from="1780238449686" duration="3402000" />
+      <workItem from="1780256064107" duration="1499000" />
     </task>
     <servers />
   </component>

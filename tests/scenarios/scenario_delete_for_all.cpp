@@ -25,19 +25,19 @@ int main() {
         return 3;
     }
 
-    const auto sent = alice.getConversation("del_bob");
-    if (sent.empty()) {
+    const auto beforeDelete = server.getConversation("del_alice", "del_bob");
+    if (beforeDelete.empty()) {
         std::cerr << "no message in history\n";
         return 4;
     }
 
-    if (!alice.deleteMessageForAll(sent.front().messageId)) {
+    if (!alice.deleteMessageForAll(beforeDelete.front().messageId)) {
         std::cerr << "delete for all failed\n";
         return 5;
     }
 
-    const auto received = bob.getConversation("del_alice");
-    if (received.size() != 1 || received.front().text != "[message deleted]") {
+    const auto afterDelete = server.getConversation("del_alice", "del_bob");
+    if (!afterDelete.empty()) {
         std::cerr << "delete propagation failed\n";
         return 6;
     }
@@ -45,4 +45,3 @@ int main() {
     std::cout << "scenario_delete_for_all: PASS\n";
     return 0;
 }
-

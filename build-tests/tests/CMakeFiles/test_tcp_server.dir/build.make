@@ -97,7 +97,7 @@ tests/test_tcp_server: tests/CMakeFiles/test_tcp_server.dir/unit/network/TcpServ
 tests/test_tcp_server: tests/CMakeFiles/test_tcp_server.dir/build.make
 tests/test_tcp_server: libmessenger_core.a
 tests/test_tcp_server: lib/libgtest_main.a
-tests/test_tcp_server: /opt/homebrew/Cellar/openssl@3/3.6.1/lib/libcrypto.dylib
+tests/test_tcp_server: /opt/homebrew/opt/openssl@3/lib/libcrypto.dylib
 tests/test_tcp_server: lib/libgtest.a
 tests/test_tcp_server: tests/CMakeFiles/test_tcp_server.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/soldatov_a/CLionProjects/messanger_project/build-tests/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable test_tcp_server"

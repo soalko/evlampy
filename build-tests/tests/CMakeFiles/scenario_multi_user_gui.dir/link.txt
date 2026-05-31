@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/scenario_multi_user_gui.dir/scenarios/scenario_multi_user_gui.cpp.o -o scenario_multi_user_gui  ../libmessenger_core.a /opt/homebrew/opt/openssl@3/lib/libcrypto.dylib

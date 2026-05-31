@@ -97,7 +97,7 @@ tests/test_chat_client: tests/CMakeFiles/test_chat_client.dir/unit/chat/ChatClie
 tests/test_chat_client: tests/CMakeFiles/test_chat_client.dir/build.make
 tests/test_chat_client: libmessenger_core.a
 tests/test_chat_client: lib/libgtest_main.a
-tests/test_chat_client: /opt/homebrew/Cellar/openssl@3/3.6.1/lib/libcrypto.dylib
+tests/test_chat_client: /opt/homebrew/opt/openssl@3/lib/libcrypto.dylib
 tests/test_chat_client: lib/libgtest.a
 tests/test_chat_client: tests/CMakeFiles/test_chat_client.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/soldatov_a/CLionProjects/messanger_project/build-tests/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable test_chat_client"

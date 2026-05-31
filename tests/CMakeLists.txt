@@ -1,13 +1,17 @@
 cmake_minimum_required(VERSION 3.14)
 
-include(FetchContent)
+find_package(GTest QUIET)
 
-FetchContent_Declare(
-    googletest
-    URL https://github.com/google/googletest/archive/refs/tags/v1.14.0.zip
-)
-set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
-FetchContent_MakeAvailable(googletest)
+if(NOT GTest_FOUND)
+    include(FetchContent)
+
+    FetchContent_Declare(
+        googletest
+        URL https://github.com/google/googletest/archive/refs/tags/v1.14.0.zip
+    )
+    set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+    FetchContent_MakeAvailable(googletest)
+endif()
 
 function(add_evlampy_unit_test test_name)
     add_executable(${test_name} ${ARGN})
@@ -81,4 +85,4 @@ add_evlampy_scenario(scenario_group_flow scenarios/scenario_group_flow.cpp)
 add_evlampy_scenario(scenario_delete_for_all scenarios/scenario_delete_for_all.cpp)
 add_evlampy_scenario(scenario_admin_actions scenarios/scenario_admin_actions.cpp)
 add_evlampy_scenario(scenario_persistence_relogin scenarios/scenario_persistence_relogin.cpp)
-
+add_evlampy_scenario(scenario_multi_user_gui scenarios/scenario_multi_user_gui.cpp)

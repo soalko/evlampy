@@ -97,7 +97,7 @@ tests/test_message: tests/CMakeFiles/test_message.dir/unit/chat/MessageTests.cpp
 tests/test_message: tests/CMakeFiles/test_message.dir/build.make
 tests/test_message: libmessenger_core.a
 tests/test_message: lib/libgtest_main.a
-tests/test_message: /opt/homebrew/Cellar/openssl@3/3.6.1/lib/libcrypto.dylib
+tests/test_message: /opt/homebrew/opt/openssl@3/lib/libcrypto.dylib
 tests/test_message: lib/libgtest.a
 tests/test_message: tests/CMakeFiles/test_message.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/soldatov_a/CLionProjects/messanger_project/build-tests/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable test_message"

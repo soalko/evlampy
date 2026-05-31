@@ -18,8 +18,8 @@ TEST_F(CommandLoggerTests, SendMessageCommandExecuteSuccess) {
     ChatClient alice("alice", server, keyFactory, encryption);
     ChatClient bob("bob", server, keyFactory, encryption);
 
-    ASSERT_TRUE(alice.registerOnServer("alice_pass", "a@a.com"));
-    ASSERT_TRUE(bob.registerOnServer("bob_pass", "b@b.com"));
+    ASSERT_TRUE(alice.registerOnServer("alice_pass"));
+    ASSERT_TRUE(bob.registerOnServer("bob_pass"));
     ASSERT_TRUE(alice.login("alice_pass"));
     ASSERT_TRUE(bob.login("bob_pass"));
 
@@ -30,8 +30,8 @@ TEST_F(CommandLoggerTests, SendMessageCommandExecuteSuccess) {
 TEST_F(CommandLoggerTests, SendMessageCommandFailsWhenNotLoggedIn) {
     ChatClient alice("alice", server, keyFactory, encryption);
     ChatClient bob("bob", server, keyFactory, encryption);
-    ASSERT_TRUE(alice.registerOnServer("alice_pass", "a@a.com"));
-    ASSERT_TRUE(bob.registerOnServer("bob_pass", "b@b.com"));
+    ASSERT_TRUE(alice.registerOnServer("alice_pass"));
+    ASSERT_TRUE(bob.registerOnServer("bob_pass"));
 
     SendMessageCommand cmd(alice, "bob", "hello");
     EXPECT_FALSE(cmd.execute());
@@ -39,7 +39,7 @@ TEST_F(CommandLoggerTests, SendMessageCommandFailsWhenNotLoggedIn) {
 
 TEST_F(CommandLoggerTests, SendMessageCommandFailsForUnknownReceiver) {
     ChatClient alice("alice", server, keyFactory, encryption);
-    ASSERT_TRUE(alice.registerOnServer("alice_pass", "a@a.com"));
+    ASSERT_TRUE(alice.registerOnServer("alice_pass"));
     ASSERT_TRUE(alice.login("alice_pass"));
 
     SendMessageCommand cmd(alice, "ghost", "hello");
@@ -65,4 +65,3 @@ TEST(CommandLoggerStandaloneTests, LoggerSupportsMultipleCalls) {
     EXPECT_NO_THROW(Logger::instance().info("line2"));
     EXPECT_NO_THROW(Logger::instance().error("line3"));
 }
-

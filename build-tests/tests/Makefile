@@ -395,6 +395,20 @@ scenario_persistence_relogin/fast:
 	cd /Users/soldatov_a/CLionProjects/messanger_project/build-tests && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/scenario_persistence_relogin.dir/build.make tests/CMakeFiles/scenario_persistence_relogin.dir/build
 .PHONY : scenario_persistence_relogin/fast
 
+# Convenience name for target.
+tests/CMakeFiles/scenario_multi_user_gui.dir/rule:
+	cd /Users/soldatov_a/CLionProjects/messanger_project/build-tests && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tests/CMakeFiles/scenario_multi_user_gui.dir/rule
+.PHONY : tests/CMakeFiles/scenario_multi_user_gui.dir/rule
+
+# Convenience name for target.
+scenario_multi_user_gui: tests/CMakeFiles/scenario_multi_user_gui.dir/rule
+.PHONY : scenario_multi_user_gui
+
+# fast build rule for target.
+scenario_multi_user_gui/fast:
+	cd /Users/soldatov_a/CLionProjects/messanger_project/build-tests && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/scenario_multi_user_gui.dir/build.make tests/CMakeFiles/scenario_multi_user_gui.dir/build
+.PHONY : scenario_multi_user_gui/fast
+
 scenarios/scenario_admin_actions.o: scenarios/scenario_admin_actions.cpp.o
 .PHONY : scenarios/scenario_admin_actions.o
 
@@ -514,6 +528,30 @@ scenarios/scenario_group_flow.s: scenarios/scenario_group_flow.cpp.s
 scenarios/scenario_group_flow.cpp.s:
 	cd /Users/soldatov_a/CLionProjects/messanger_project/build-tests && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/scenario_group_flow.dir/build.make tests/CMakeFiles/scenario_group_flow.dir/scenarios/scenario_group_flow.cpp.s
 .PHONY : scenarios/scenario_group_flow.cpp.s
+
+scenarios/scenario_multi_user_gui.o: scenarios/scenario_multi_user_gui.cpp.o
+.PHONY : scenarios/scenario_multi_user_gui.o
+
+# target to build an object file
+scenarios/scenario_multi_user_gui.cpp.o:
+	cd /Users/soldatov_a/CLionProjects/messanger_project/build-tests && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/scenario_multi_user_gui.dir/build.make tests/CMakeFiles/scenario_multi_user_gui.dir/scenarios/scenario_multi_user_gui.cpp.o
+.PHONY : scenarios/scenario_multi_user_gui.cpp.o
+
+scenarios/scenario_multi_user_gui.i: scenarios/scenario_multi_user_gui.cpp.i
+.PHONY : scenarios/scenario_multi_user_gui.i
+
+# target to preprocess a source file
+scenarios/scenario_multi_user_gui.cpp.i:
+	cd /Users/soldatov_a/CLionProjects/messanger_project/build-tests && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/scenario_multi_user_gui.dir/build.make tests/CMakeFiles/scenario_multi_user_gui.dir/scenarios/scenario_multi_user_gui.cpp.i
+.PHONY : scenarios/scenario_multi_user_gui.cpp.i
+
+scenarios/scenario_multi_user_gui.s: scenarios/scenario_multi_user_gui.cpp.s
+.PHONY : scenarios/scenario_multi_user_gui.s
+
+# target to generate assembly for a file
+scenarios/scenario_multi_user_gui.cpp.s:
+	cd /Users/soldatov_a/CLionProjects/messanger_project/build-tests && $(MAKE) $(MAKESILENT) -f tests/CMakeFiles/scenario_multi_user_gui.dir/build.make tests/CMakeFiles/scenario_multi_user_gui.dir/scenarios/scenario_multi_user_gui.cpp.s
+.PHONY : scenarios/scenario_multi_user_gui.cpp.s
 
 scenarios/scenario_persistence_relogin.o: scenarios/scenario_persistence_relogin.cpp.o
 .PHONY : scenarios/scenario_persistence_relogin.o
@@ -797,6 +835,7 @@ help:
 	@echo "... scenario_delete_for_all"
 	@echo "... scenario_direct_message"
 	@echo "... scenario_group_flow"
+	@echo "... scenario_multi_user_gui"
 	@echo "... scenario_persistence_relogin"
 	@echo "... test_chat_client"
 	@echo "... test_chat_server"
@@ -823,6 +862,9 @@ help:
 	@echo "... scenarios/scenario_group_flow.o"
 	@echo "... scenarios/scenario_group_flow.i"
 	@echo "... scenarios/scenario_group_flow.s"
+	@echo "... scenarios/scenario_multi_user_gui.o"
+	@echo "... scenarios/scenario_multi_user_gui.i"
+	@echo "... scenarios/scenario_multi_user_gui.s"
 	@echo "... scenarios/scenario_persistence_relogin.o"
 	@echo "... scenarios/scenario_persistence_relogin.i"
 	@echo "... scenarios/scenario_persistence_relogin.s"

@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/soldatov_a/CLionProjects/messanger_project/include -isystem /opt/homebrew/Cellar/openssl@3/3.6.1/include
+CXX_INCLUDES = -I/Users/soldatov_a/CLionProjects/messanger_project/include
 
 CXX_FLAGSarm64 = -std=c++17 -arch arm64 -Wall -Wextra -Wpedantic
 
